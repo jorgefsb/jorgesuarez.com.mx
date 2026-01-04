@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all features
+  initLanguage();
   initSmoothScroll();
   initScrollReveal();
   initMobileNav();
@@ -16,20 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       const target = document.querySelector(targetId);
-      
+
       if (target) {
         const navHeight = document.querySelector('.navbar').offsetHeight;
         const targetPosition = target.offsetTop - navHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-        
+
         // Close mobile nav if open
         closeMobileNav();
       }
@@ -42,13 +43,13 @@ function initSmoothScroll() {
  */
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal');
-  
+
   const revealOptions = {
     root: null,
     rootMargin: '0px',
     threshold: 0.1
   };
-  
+
   const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -57,9 +58,9 @@ function initScrollReveal() {
       }
     });
   };
-  
+
   const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
-  
+
   revealElements.forEach(element => {
     revealObserver.observe(element);
   });
@@ -71,7 +72,7 @@ function initScrollReveal() {
 function initMobileNav() {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
-  
+
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
@@ -83,7 +84,7 @@ function initMobileNav() {
 function closeMobileNav() {
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
-  
+
   if (navToggle && navLinks) {
     navLinks.classList.remove('active');
     navToggle.classList.remove('active');
@@ -95,7 +96,7 @@ function closeMobileNav() {
  */
 function initNavbarScroll() {
   const navbar = document.querySelector('.navbar');
-  
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
@@ -218,3 +219,55 @@ additionalStyles.textContent = `
   }
 `;
 document.head.appendChild(additionalStyles);
+
+/**
+ * Language Switching System
+ */
+function initLanguage() {
+  const langToggle = document.querySelector('.lang-switcher');
+  if (!langToggle) return;
+
+  const esLink = langToggle.querySelector('.es-btn') || langToggle.children[0];
+  const enLink = langToggle.querySelector('.en-btn') || langToggle.children[1];
+
+  const updateUI = (lang) => {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-es]').forEach(el => {
+      // Prioritize dataset content
+      const content = el.getAttribute(`data-${lang}`);
+      if (content) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = content;
+        } else {
+          el.innerHTML = content;
+        }
+      }
+    });
+
+    // Update switcher state
+    if (lang === 'es') {
+      esLink.classList.add('active');
+      enLink.classList.remove('active');
+    } else {
+      enLink.classList.add('active');
+      esLink.classList.remove('active');
+    }
+
+    // Save preference
+    localStorage.setItem('preferred-lang', lang);
+  };
+
+  esLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    updateUI('es');
+  });
+
+  enLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    updateUI('en');
+  });
+
+  // Load saved or default
+  const savedLang = localStorage.getItem('preferred-lang') || 'es';
+  updateUI(savedLang);
+}
