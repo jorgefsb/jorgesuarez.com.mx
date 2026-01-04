@@ -238,6 +238,8 @@ function initLanguage() {
       if (content) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = content;
+        } else if (el.tagName === 'META') {
+          el.setAttribute('content', content);
         } else {
           el.innerHTML = content;
         }

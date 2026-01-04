@@ -940,6 +940,124 @@ section {
   }
 }
 
+/* ================================
+   JOURNEY / TIMELINE
+   ================================ */
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 31px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: var(--space-2xl);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  border: 4px solid var(--bg-primary);
+  z-index: 1;
+}
+
+.timeline-date {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.timeline-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.timeline-content:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(10px);
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+/* ================================
+   BUSINESS VEHICLES
+   ================================ */
+.business-vehicles .card {
+  height: 100%;
+  border: 1px solid var(--border-color);
+  background: rgba(22, 22, 22, 0.5);
+  cursor: pointer;
+}
+
+.business-vehicles .card:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-primary);
+}
+
+.business-vehicles .card h3 {
+  font-size: 1.5rem;
+  margin: var(--space-sm) 0;
+  color: var(--text-primary);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+  }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;
