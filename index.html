@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jorge Suárez - 20+ años construyendo videojuegos y escalando compañías. De KaraOkulta a GM de Amber México. Documentando el viaje de un emprendedor.">
+  <meta name="author" content="Jorge Suárez">
+
+  <title>Jorge Suárez | Building Games, Scaling Studios, Documenting the Journey</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+  <!-- Canvas for Fluid Effect -->
+  <canvas id="fluid-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">JorgeSuarez<span>.com.mx</span></a>
+      <ul class="nav-links">
+        <li><a href="#journey">Trayectoria</a></li>
+        <li><a href="#amber">Amber México</a></li>
+        <li><a href="#ecosystem">Ecosistema</a></li>
+        <li><a href="#frameworks">Frameworks</a></li>
+        <li><a href="#contact">Conecta</a></li>
+      </ul>
+      <div class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero: Documentary Tone + Fluid Background -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tagline">20+ Years Video Game Veteran & Entrepreneur</span>
+        <h1 class="hero-title">
+          Colaborando con el futuro del <span class="text-gradient">Gaming</span>.
+        </h1>
+        <p class="hero-description">
+          He pasado las últimas dos décadas fundando estudios, escalando equipos de 20 a 200+ personas y buscando cómo
+          poner una sonrisa en la cara del jugador. No soy un gurú, estoy documentando el viaje.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://vip.jorgesuarez.com.mx/" target="_blank" class="btn btn-primary">
+            <span>VIP Access</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </a>
+          <a href="#journey" class="btn btn-secondary">Mi Historia</a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <img src="jorge-suarez.png" alt="Jorge Suárez - GM Amber México">
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Strip -->
+  <div class="social-proof-strip">
+    <div class="container">
+      <div class="proof-logos">
+        <span>Forbes 30 Promesas</span>
+        <span>Shark Tank México</span>
+        <span>Cinépolis Seedcamp Winner</span>
+        <span>PhD & MBA 2023</span>
+        <span>Tec de Monterrey</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kudos: Atmospheric Testimonials -->
+  <section class="kudos">
+    <div class="kudos-title">Social Proof & Industry Recognition</div>
+    <div class="marquee">
+      <div class="marquee-content">
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Jorge is a visionary leader, whose humanity shines bright and inspires all those around
+            him."</p>
+          <div class="kudos-author"><span class="kudos-name">Mihai Pohonţu</span><span class="kudos-role">CEO of
+              Amber</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"The heart and soul of Game Development in Mexico. He leads by inspiring others."</p>
+          <div class="kudos-author"><span class="kudos-name">Bradd McBrearty</span><span class="kudos-role">Creative
+              Director (Ex-Apple, Disney, EA)</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Amazing gaming veteran who leads by example. Always guided by kind soul and sharp
+            instincts."</p>
+          <div class="kudos-author"><span class="kudos-name">Vlad Popovici</span><span class="kudos-role">COO | Tech
+              Leader | Board Member</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"One of these rare people that can create something out of nothing, anytime, anywhere."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Bogdan Constantinescu</span><span class="kudos-role">Head
+              of Product & Innovation</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Persistence beats resistance. If I know someone who definitely does not give up, it is
+            Jorge."</p>
+          <div class="kudos-author"><span class="kudos-name">Alvaro Jauregui</span><span class="kudos-role">Concept
+              Artist | Visual Developer (AAA)</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Dynamic, visionary, and inspiring. One of the most remarkable professionals."</p>
+          <div class="kudos-author"><span class="kudos-name">Mihaela Duță</span><span class="kudos-role">IT Project
+              Manager</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"He's pure energy. Working with Jorge is akin of working with the Duracell Teddy bear."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Gwenael Heliou</span><span class="kudos-role">Regional GM @
+              Kabam</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Instrumental to Ambers' international presence. His positive attitude made this
+            possible."</p>
+          <div class="kudos-author"><span class="kudos-name">Vlad Anghelahar</span><span class="kudos-role">Head of
+              Engineering at Amber</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"The living example of Kaizen. Always looking for a way of improving whatever he is
+            working on."</p>
+          <div class="kudos-author"><span class="kudos-name">Alberto Ramírez</span><span class="kudos-role">Game
+              Designer</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Extraordinary person. Maintains a personal touch, helping you feel valued and heard."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Stone Perales</span><span class="kudos-role">Senior Art
+              Director</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Charisma and a great sparkle to ignite fire into projects. I am happy to consider him
+            my friend."</p>
+          <div class="kudos-author"><span class="kudos-name">Hector Padilla Perez</span><span
+              class="kudos-role">Director of Engineering</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Persistence and determination to achieve goals are truly inspiring. Sharing is caring."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Abraham Lara</span><span class="kudos-role">3D Animation
+              Director</span></div>
+        </a>
+      </div>
+      <!-- Duplicate for infinite scroll -->
+      <div class="marquee-content" aria-hidden="true">
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Jorge is a visionary leader, whose humanity shines bright and inspires all those around
+            him."</p>
+          <div class="kudos-author"><span class="kudos-name">Mihai Pohonţu</span><span class="kudos-role">CEO of
+              Amber</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"The heart and soul of Game Development in Mexico. He leads by inspiring others."</p>
+          <div class="kudos-author"><span class="kudos-name">Bradd McBrearty</span><span class="kudos-role">Creative
+              Director (Ex-Apple, Disney, EA)</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Amazing gaming veteran who leads by example. Always guided by kind soul and sharp
+            instincts."</p>
+          <div class="kudos-author"><span class="kudos-name">Vlad Popovici</span><span class="kudos-role">COO | Tech
+              Leader | Board Member</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"One of these rare people that can create something out of nothing, anytime, anywhere."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Bogdan Constantinescu</span><span class="kudos-role">Head
+              of Product & Innovation</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Persistence beats resistance. If I know someone who definitely does not give up, it is
+            Jorge."</p>
+          <div class="kudos-author"><span class="kudos-name">Alvaro Jauregui</span><span class="kudos-role">Concept
+              Artist | Visual Developer (AAA)</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Dynamic, visionary, and inspiring. One of the most remarkable professionals."</p>
+          <div class="kudos-author"><span class="kudos-name">Mihaela Duță</span><span class="kudos-role">IT Project
+              Manager</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"He's pure energy. Working with Jorge is akin of working with the Duracell Teddy bear."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Gwenael Heliou</span><span class="kudos-role">Regional GM @
+              Kabam</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Instrumental to Ambers' international presence. His positive attitude made this
+            possible."</p>
+          <div class="kudos-author"><span class="kudos-name">Vlad Anghelahar</span><span class="kudos-role">Head of
+              Engineering at Amber</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"The living example of Kaizen. Always looking for a way of improving whatever he is
+            working on."</p>
+          <div class="kudos-author"><span class="kudos-name">Alberto Ramírez</span><span class="kudos-role">Game
+              Designer</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Extraordinary person. Maintains a personal touch, helping you feel valued and heard."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Stone Perales</span><span class="kudos-role">Senior Art
+              Director</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Charisma and a great sparkle to ignite fire into projects. I am happy to consider him
+            my friend."</p>
+          <div class="kudos-author"><span class="kudos-name">Hector Padilla Perez</span><span
+              class="kudos-role">Director of Engineering</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+          target="_blank" class="kudos-card">
+          <p class="kudos-text">"Persistence and determination to achieve goals are truly inspiring. Sharing is caring."
+          </p>
+          <div class="kudos-author"><span class="kudos-name">Abraham Lara</span><span class="kudos-role">3D Animation
+              Director</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Journey Section (GaryVee Style: Documentation) -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <h2>Documentando el <span class="text-gradient">Camino</span></h2>
+        <p>Dos décadas de lecciones en la trinchera del emprendimiento tecnológico y el gaming global.</p>
+      </div>
+
+      <div class="grid-4">
+        <a href="https://www.karaokulta.com" target="_blank" class="card-link">
+          <div class="card reveal">
+            <span class="card-date">2004 - 2020</span>
+            <h3>KaraOkulta & KOGameStudios</h3>
+            <p>
+              Fundé el estudio que marcó un hito en la industria nacional al convertirse en el
+              <strong>primer estudio jalisciense en ser adquirido por una firma internacional</strong> (Amber).
+            </p>
+            <span class="text-accent" style="margin-top: auto; padding-top: 1rem;">Visitar Sitio →</span>
+          </div>
+        </a>
+        <a href="https://www.getsparkplug.com" target="_blank" class="card-link">
+          <div class="card reveal">
+            <span class="card-date">2015 - Presente</span>
+            <h3>Sparkplug Technologies</h3>
+            <p>
+              Revolucionamos la industria con <strong>Creative Services as a Subscription</strong>. Ofrecemos desarrollo
+              de software, arte AAA y VFX bajo un modelo flexible y escalable.
+            </p>
+            <span class="text-accent" style="margin-top: auto; padding-top: 1rem;">Visitar Sitio →</span>
+          </div>
+        </a>
+        <a href="https://www.amberstudio.com" target="_blank" class="card-link">
+          <div class="card reveal">
+            <span class="card-date">2019 - Presente</span>
+            <h3>Amber México</h3>
+            <p>
+              Tras la adquisición, lideré el crecimiento del estudio de <strong>20 a 200+ artesanos</strong>,
+              supervisando
+              operaciones estratégicas y expandiendo la influencia AAA en la región.
+            </p>
+            <span class="text-accent" style="margin-top: auto; padding-top: 1rem;">Visitar Sitio →</span>
+          </div>
+        </a>
+        <a href="https://www.uetc.mx" target="_blank" class="card-link">
+          <div class="card reveal">
+            <span class="card-date">2021 - Presente</span>
+            <h3>UETC (Echo Training Center)</h3>
+            <p>
+              Fundado para profesionalizar la industria y escalar talentos a estándares AAA. Somos el <strong>único
+                centro
+                autorizado por Epic Games en México</strong> enfocado en Unreal Engine.
+            </p>
+            <span class="text-accent" style="margin-top: auto; padding-top: 1rem;">Visitar Sitio →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amber México Section (Extreme Prominence) -->
+  <section class="amber-hero" id="amber">
+    <div class="container">
+      <div class="amber-grid">
+        <div class="amber-visual reveal">
+          <img src="https://amberstudio.com/images/amber.svg" alt="Amber Studio Logo" class="amber-official-logo">
+          <div class="amber-stats-grid">
+            <div class="a-stat"><span>200+</span><label>Talentos en México</label></div>
+            <div class="a-stat"><span>9</span><label>Sedes Globales</label></div>
+            <div class="a-stat"><span>850+</span><label>Artisans</label></div>
+          </div>
+        </div>
+        <div class="amber-text reveal">
+          <span class="hero-tagline">General Manager México</span>
+          <h2>Evolucionando la ciencia y el <span class="text-gradient">arte de jugar</span>.</h2>
+          <p>
+            Somos un colectivo global de artesanos entregando impacto positivo. Como Socio de Innovación, mi misión en
+            México es evolucionar cómo se crean y consumen los videojuegos a nivel AAA.
+          </p>
+          <div class="framework-pills">
+            <span>AAA Games</span><span>Full Dev</span><span>Engineering</span><span>Art Production</span><span>Live
+              Ops</span>
+          </div>
+          <div class="hero-ctas" style="margin-top: 2rem;">
+            <a href="https://www.amberstudio.com" target="_blank" class="btn btn-primary">Website Oficial</a>
+            <a href="https://amberstudio.com/overview-deck/" target="_blank" class="btn btn-secondary">Overview Deck</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community & Ecosystem (Everything from jorgesuarez.com.mx) -->
+  <section class="ecosystem" id="ecosystem">
+    <div class="container">
+      <div class="section-header">
+        <h2>Mi <span class="text-gradient">Ecosistema</span></h2>
+        <p>Iniciativas, comunidades y recursos que forman parte de mi DNA como emprendedor.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <!-- PlayPitch -->
+        <div class="card card-highlight">
+          <h3>🚀 PlayPitch</h3>
+          <p>Conectando juegos Indie con creadores de contenido. La plataforma definitiva para amplificar el alcance de
+            nuevos títulos.</p>
+          <a href="https://playpitch.io" target="_blank" class="text-accent">Explorar PlayPitch →</a>
+        </div>
+
+        <!-- Master Prompt Builder -->
+        <div class="card card-highlight">
+          <h3>🧠 Master Prompt Builder</h3>
+          <p>Inyecta tu DNA profesional en la IA. Una herramienta para profesionales que dominan la colaboración con
+            modelos generativos.</p>
+          <a href="https://master-prompt-builder.vercel.app" target="_blank" class="text-accent">Crear mi Prompt →</a>
+        </div>
+
+        <!-- YouTube Shorts -->
+        <div class="card">
+          <h3>📹 Shorts Diarios</h3>
+          <p>Suscríbete GRATIS para recibir lecciones cortas sobre gaming, tech y emprendimiento cada día.</p>
+          <a href="https://www.youtube.com/@jorgefsb/shorts?sub_confirmation=1" target="_blank"
+            class="text-accent">Suscribirse en YouTube →</a>
+        </div>
+
+        <!-- GameArtShirt -->
+        <div class="card">
+          <h3>👕 GameArtShirt.com</h3>
+          <p>El punto de unión entre el arte de los videojuegos y el diseño de moda independiente.</p>
+          <a href="https://gameartshirt.com" target="_blank" class="text-accent">Ver Colección →</a>
+        </div>
+
+        <!-- Pet City Mania -->
+        <div class="card">
+          <h3>🐾 Pet City Mania</h3>
+          <p>Nuestra IP propia utilizada para entrenamiento de talento y pruebas de frameworks en Amber/KaraOkulta.</p>
+          <a href="https://www.youtube.com/channel/UCvja7Q0AIlJO2N_lDkMLsAw?sub_confirmation=1" target="_blank"
+            class="text-accent">Ver Canal →</a>
+        </div>
+
+        <!-- La KOmunidad -->
+        <div class="card">
+          <h3>👥 La KOmunidad</h3>
+          <p>La red social de desarrolladores de videojuegos más activa de México. Conecta con otros builders.</p>
+          <a href="http://comunidad.karaokulta.com/" target="_blank" class="text-accent">Unirse en Facebook →</a>
+        </div>
+
+        <!-- EGDC -->
+        <div class="card card-highlight">
+          <h3>🎮 EGDC (Echo Gamedev Club)</h3>
+          <p>La comunidad gamedev más grande de LATAM con +3,500 miembros. Mentoria, retos Epic y conexión directa con
+            Lighthouse y programas de inversión.</p>
+          <a href="https://comunidad.uetc.mx" target="_blank" class="text-accent">Unirse al Club →</a>
+        </div>
+
+        <!-- SparkChatbots -->
+        <div class="card card-highlight">
+          <h3>🤖 SparkChatbots</h3>
+          <p>Potenciando la atención al cliente con IA avanzada. Automatización de DMs, generación de leads y
+            crecimiento escalable para marcas modernas.</p>
+          <a href="https://www.sparkchatbots.com" target="_blank" class="text-accent">Explorar Chatbots →</a>
+        </div>
+
+        <!-- GitHub / Builder Lab -->
+        <div class="card card-highlight">
+          <h3>🛠️ The Builder Lab (GitHub)</h3>
+          <p>Donde la visión empresarial se encuentra con el código. Documentando mis frameworks, agentes de IA y
+            experimentos de <strong>Vibecoding</strong> para potenciar equipos de alto rendimiento.</p>
+          <a href="https://github.com/jorgefsb" target="_blank" class="text-accent">Explorar Repositorios →</a>
+        </div>
+      </div>
+
+      <div class="grid-2 reveal" style="margin-top: var(--space-lg);">
+        <!-- Spotify Gamedev -->
+        <div class="card card-glass">
+          <h4>🎵 KOGameStudios #Gamedev Playlist</h4>
+          <p>La música que nos inspira a construir mundos virtuales.</p>
+          <a href="https://open.spotify.com/playlist/1hwRvxU7lMmIXLpqLdQLAL?si=5d16031f69e34cfa" target="_blank"
+            class="text-accent">Escuchar en Spotify →</a>
+        </div>
+        <!-- VIP PASS -->
+        <div class="card card-highlight">
+          <h4>✨ Starter Pass 24/7 (VIP Access)</h4>
+          <p>Acceso exclusivo, Yorgen AI y comunicación directa con mis iniciativas.</p>
+          <a href="https://vip.jorgesuarez.com.mx/" target="_blank" class="text-accent">Obtener Acceso VIP →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frameworks Section (The Thought Leader / Mentor) -->
+  <section class="frameworks" id="frameworks">
+    <div class="container">
+      <div class="section-header">
+        <h2>Mis <span class="text-gradient">Frameworks</span></h2>
+        <p>Modelos operativos en <strong>"Eterno Beta"</strong> diseñados para optimizar la innovación y el crecimiento
+          de estudios tecnológicos.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card-glass reveal">
+          <div class="f-icon">GDF</div>
+          <h3>Game Development Framework</h3>
+          <p>Metodologías ágiles aplicadas específicamente a la creación de IPs memorables y productos free-to-play.</p>
+        </div>
+        <div class="card-glass reveal">
+          <div class="f-icon">SDF</div>
+          <h3>Studio Development Framework</h3>
+          <p>El blueprint que usé para escalar de 20 a 200+ personas. Cultura, procesos y escalabilidad humana.</p>
+        </div>
+        <div class="card-glass reveal">
+          <div class="f-icon">AGF</div>
+          <h3>Agile Development Framework</h3>
+          <p>Optimización de flujos de trabajo en equipos multidisciplinarios de alta intensidad.</p>
+        </div>
+      </div>
+      <div class="reveal" style="text-align: center; margin-top: var(--space-xl);">
+        <p style="margin-bottom: var(--space-md); color: var(--text-secondary);">¿Quieres profundizar en estas
+          metodologías y escuchar mi podcast personal?</p>
+        <a href="https://jorgesuarez.substack.com/?r=43ucq&utm_campaign=pub-share-checklist" target="_blank"
+          class="btn btn-primary">Suscribirse al Substack & Podcast →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Hub Section -->
+  <section class="social-hub" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Conecta con el <span class="text-gradient">Viaje</span></h2>
+        <p>Sígueme en mis canales principales donde comparto el "behind the scenes" del gaming.</p>
+      </div>
+
+      <div class="social-grid reveal">
+        <a href="https://linkedin.com/in/yorgenmeister" target="_blank" rel="noopener" aria-label="LinkedIn"
+          class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://x.com/jorgefsb" target="_blank" rel="noopener" aria-label="Twitter/X" class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          <span>X / Twitter</span>
+        </a>
+        <a href="https://facebook.jorgesuarez.com.mx/" target="_blank" rel="noopener" aria-label="Facebook"
+          class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.493v-8.784h-2.956v-3.424h2.956v-2.527c0-2.929 1.789-4.524 4.402-4.524 1.251 0 2.327.093 2.64.135v3.06h-1.812c-1.42 0-1.695.675-1.695 1.666v2.19h3.388l-.441 3.424h-2.947v8.784h6.065c.733 0 1.325-.593 1.325-1.324v-21.351c0-.732-.592-1.325-1.325-1.325z" />
+          </svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://github.com/jorgefsb" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://instagram.com/jorgefsb" target="_blank" rel="noopener" aria-label="Instagram"
+          class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.youtube.com/@jorgefsb" target="_blank" rel="noopener" aria-label="YouTube"
+          class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088C19.267 3.5 12 3.5 12 3.5s-7.267 0-9.407.617a3.007 3.007 0 00-2.088 2.088C.5 8.343.5 12 .5 12s0 3.657.617 5.795a3.007 3.007 0 002.088 2.088c2.14.617 9.407.617 9.407.617s7.267 0 9.407-.617a3.007 3.007 0 002.088-2.088C23.5 15.657 23.5 12 23.5 12s0-3.657-.617-5.795zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+          <span>YouTube</span>
+        </a>
+        <a href="https://tiktok.com/@jorgesuarez.com.mx" target="_blank" rel="noopener" aria-label="TikTok"
+          class="social-link">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+            <path
+              d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+          </svg>
+          <span>TikTok</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA: The VIP Entry -->
+  <section class="contact" id="contact-cta">
+    <div class="container">
+      <div class="card card-highlight text-center reveal">
+        <h2 class="mb-md">¿Listo para el <span class="text-gradient">Siguiente Nivel</span>?</h2>
+        <p class="mb-lg" style="max-width: 600px; margin: 0 auto;">
+          Obtén el <strong>Starter Pass 24/7</strong> para acceso VIP, consultas a Yorgen AI y
+          noticias exclusivas antes que nadie.
+        </p>
+        <a href="https://vip.jorgesuarez.com.mx/" target="_blank" class="btn btn-primary">
+          Acceso VIP
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Jorge Suárez | © 2024 | Built on Kaizen & Play.</p>
+    </div>
+  </footer>
+
+  <script src="vfx/fluid-v2.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
