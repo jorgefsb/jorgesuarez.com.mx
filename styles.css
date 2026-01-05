@@ -760,9 +760,11 @@ section {
 }
 
 .amber-card-logo {
-  width: 180px;
+  width: 240px;
   margin-bottom: 5rem;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+  display: flex;
+  justify-content: center;
 }
 
 .amber-card-stats {
