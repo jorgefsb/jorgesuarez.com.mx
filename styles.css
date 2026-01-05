@@ -691,83 +691,176 @@ section {
 }
 
 /* ================================
-   AMBER HERO (X-RAY VIEW)
+   AMBER PREMIUM SECTION
    ================================ */
-.amber-hero {
-  background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+.amber {
+  background: var(--bg-primary);
   position: relative;
   overflow: hidden;
+  padding: var(--space-4xl) 0;
 }
 
-.amber-hero::before {
-  content: 'AMBER';
+.amber-bg-text {
   position: absolute;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 15rem;
-  color: rgba(255, 107, 53, 0.03);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(10rem, 30vw, 40rem);
+  color: rgba(255, 107, 53, 0.04);
   pointer-events: none;
+  line-height: 1;
+  z-index: 0;
+  white-space: nowrap;
 }
 
-.amber-grid {
+.amber .container {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: var(--space-4xl);
   align-items: center;
 }
 
-.amber-visual {
-  background: var(--bg-card);
-  padding: var(--space-3xl);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--accent-primary);
-  box-shadow: var(--shadow-glow);
+@media (max-width: 992px) {
+  .amber .container {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
 }
 
-.amber-official-logo {
-  display: block;
-  max-width: 240px;
-  height: auto;
-  margin: 0 auto var(--space-xl);
-  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.3));
+.amber-visual-card {
+  background: #111111;
+  padding: 4rem 3rem;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 107, 53, 0.5);
+  box-shadow: 0 0 80px rgba(255, 107, 53, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all var(--transition-base);
 }
 
-.amber-stats-grid {
+.amber-visual-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.6) 0%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.amber-card-logo {
+  width: 180px;
+  margin-bottom: 5rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.amber-card-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  gap: 2rem;
+  width: 100%;
 }
 
-.a-stat span {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
+.amber-card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.amber-card-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+
+.amber-card-stat-label {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.amber-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .amber-content {
+    align-items: center;
+  }
+}
+
+.amber-label-pill {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.amber-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
   color: white;
 }
 
-.a-stat label {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
+.text-amber {
+  background: linear-gradient(to right, #ff6b35, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.framework-pills {
+.amber-description {
+  max-width: 580px;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.amber-tags {
   display: flex;
-  gap: var(--space-xs);
   flex-wrap: wrap;
-  margin: var(--space-md) 0;
+  gap: 0.75rem;
+  margin: 1rem 0;
 }
 
-.framework-pills span {
-  padding: 4px 12px;
+.amber-tag {
+  padding: 0.5rem 1.25rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  font-size: 0.8rem;
   color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.amber-ctas {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* ================================

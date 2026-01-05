@@ -155,50 +155,8 @@ additionalStyles.textContent = `
     box-shadow: var(--shadow-md);
   }
   
-  /* Amber section specific styles */
-  .amber {
-    background: var(--bg-secondary);
-  }
-  
-  .amber-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-lg);
-  }
-  
-  .amber-logo {
-    margin-bottom: var(--space-sm);
-  }
-  
-  .amber-description {
-    max-width: 700px;
-    font-size: 1.125rem;
-  }
-  
-  .amber-stats {
-    display: flex;
-    gap: var(--space-2xl);
-    margin: var(--space-md) 0;
-  }
-  
-  .amber-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .amber-stat-number {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent-primary);
-  }
-  
-  .amber-stat-label {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+  .contact .card {
+    padding: var(--space-3xl);
   }
   
   /* Stats section */
