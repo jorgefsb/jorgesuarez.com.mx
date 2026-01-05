@@ -48,4 +48,6 @@
 - [x] **Content Hub** - Substack & Podcast subscription integration
 - [x] **Project Independence** - Separación en repositorio dedicado y documentación profesional (README.md)
 - [x] **Amber GM Section Reversion** - Restauración del diseño visual premium con grid de stats y sincronización i18n (ES/EN).
+- [x] **Portfolio Real Assets** - Integración de logos oficiales y capturas reales de juegos (Gotham Knights, 2XKO, Sky).
+- [x] **IP Highlight** - Nueva sección para Mexican Ninja y Squish'ems como propiedades intelectuales propias.
 - [x] Commit a GitHub (Sync activo con origin main)
