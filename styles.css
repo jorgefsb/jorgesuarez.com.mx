@@ -760,8 +760,8 @@ section {
 }
 
 .amber-card-logo {
-  width: 240px;
-  margin-bottom: 5rem;
+  width: 220px;
+  margin-bottom: 2.5rem;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
   display: flex;
   justify-content: center;
