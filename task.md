@@ -56,4 +56,5 @@
 - [x] **Brand & Content Partnership Optimization** - Mejora de propuesta de valor y CTA directo (mailto).
 - [x] **Spelling & Grammar Sweep** - Corrección exhaustiva en ES/EN (pioneros, mentoría, consultations, etc.).
 - [x] **Vibe Check & Signature** - Personalización de footer ("Hecho con amor ❤️ por el Yorch").
+- [x] **Asset Fix** - Corrección de imagen y enlaces de Squish'ems: Drop & Pop!.
 - [x] **Sync & Push** - Respaldo total en GitHub origin main (2026 Ready).
