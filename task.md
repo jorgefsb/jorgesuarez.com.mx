@@ -56,5 +56,6 @@
 - [x] **Brand & Content Partnership Optimization** - Mejora de propuesta de valor y CTA directo (mailto).
 - [x] **Spelling & Grammar Sweep** - Corrección exhaustiva en ES/EN (pioneros, mentoría, consultations, etc.).
 - [x] **Vibe Check & Signature** - Personalización de footer ("Hecho con amor ❤️ por el Yorch").
-- [x] **Asset Fix** - Corrección de imagen y enlaces de Squish'ems: Drop & Pop!.
+- [x] **Asset Fix & Branding Hub** - Corrección de imagen/enlaces Squish'ems, logo oficial Amber y Product Reel 2025.
+- [x] **Narrative Pivot** - Ajuste de copy en Shark Tank (Canal de Distribución) y Media Contact mailto.
 - [x] **Sync & Push** - Respaldo total en GitHub origin main (2026 Ready).
