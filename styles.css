@@ -1522,21 +1522,32 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-2xl);
-  opacity: 0.5;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 3rem;
 }
 
 .partner-item {
-  font-family: var(--font-heading);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: white;
-  transition: opacity var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: all var(--transition-base);
+  filter: grayscale(1) brightness(2);
 }
 
 .partner-item:hover {
   opacity: 1;
-  color: var(--accent-primary);
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.05);
+}
+
+.partner-item img {
+  max-width: 140px;
+  max-height: 45px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 992px) {
