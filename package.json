@@ -1,0 +1,17 @@
+{
+  "name": "jorgesuarez-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page oficial de Jorge Suárez (jorgesuarez.com.mx)",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "keywords": [
+    "landing-page",
+    "portfolio",
+    "amber",
+    "gaming"
+  ],
+  "author": "Jorge Suárez",
+  "license": "UNLICENSED"
+}

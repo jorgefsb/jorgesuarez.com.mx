@@ -59,3 +59,10 @@
 - [x] **Asset Fix & Branding Hub** - Corrección de imagen/enlaces Squish'ems, logo oficial Amber y Product Reel 2025.
 - [x] **Narrative Pivot** - Ajuste de copy en Shark Tank (Canal de Distribución) y Media Contact mailto.
 - [x] **Sync & Push** - Respaldo total en GitHub origin main (2026 Ready).
+
+## 📋 Phase 7: Production Deployment
+- [x] **Hosting Selection** - Confirmar Vercel como proveedor.
+- [ ] **Deploy Initial** - Conectar repositorio GitHub con Vercel.
+- [ ] **Domain Setup** - Configurar DNS para `jorgesuarez.com.mx`.
+- [ ] **SSL & Https** - Verificar certificado de seguridad automático.
+- [ ] **Post-Deploy verification** - Test final en producción.
