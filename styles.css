@@ -1531,15 +1531,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: all var(--transition-base);
-  filter: grayscale(1) brightness(2);
+  filter: brightness(0) invert(1);
 }
 
 .partner-item:hover {
   opacity: 1;
-  filter: grayscale(0) brightness(1);
-  transform: scale(1.05);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 107, 53, 0.4));
+  transform: translateY(-5px);
 }
 
 .partner-item img {
