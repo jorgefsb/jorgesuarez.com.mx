@@ -1533,21 +1533,21 @@ section {
   justify-content: center;
   opacity: 0.5;
   transition: all var(--transition-base);
-  filter: brightness(0) invert(1);
 }
 
 .partner-item:hover {
   opacity: 1;
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 107, 53, 0.4));
   transform: translateY(-5px);
 }
 
 .partner-item img {
   max-width: 140px;
-  max-height: 45px;
+  max-height: 40px;
   width: auto;
-  height: auto;
+  height: 40px;
+  /* Force height to prevent 0x0 collapse */
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 992px) {
