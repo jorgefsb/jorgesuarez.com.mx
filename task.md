@@ -73,4 +73,4 @@
 - [x] **Schema.org Integration** - Datos estructurados (JSON-LD) para Person y WebSite.
 - [x] **Performance Preloading** - Preconnect y DNS-prefetch para assets críticos.
 - [x] **Google Search Console** - Verificación de propiedad via meta-tag e integración de sitemap.
-- [ ] **Sitemap Submission** - Envío manual de sitemap.xml en el panel de Search Console (Pendiente Usuario).
+- [x] **Sitemap Submission** - Envío manual de sitemap.xml en el panel de Search Console (Pendiente Usuario).
