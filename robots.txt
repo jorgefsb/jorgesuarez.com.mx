@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /.agent/
+
+Sitemap: https://www.jorgesuarez.com.mx/sitemap.xml
