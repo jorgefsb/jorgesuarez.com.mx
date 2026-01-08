@@ -1503,15 +1503,25 @@ section {
   transform: translateY(0);
 }
 
-.partner-ticker {
-  padding: var(--space-xl) 0;
+.partner-ticker-container {
+  padding: var(--space-2xl) 0;
   border-top: 1px solid var(--border-color);
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--bg-secondary);
+  text-align: center;
 }
 
-.partner-ticker .marquee-content {
+.partner-ticker-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+.partner-marquee .marquee-content {
   gap: 6rem;
-  animation-duration: 40s;
+  animation-duration: 50s;
+  /* Slightly slower for readability */
 }
 
 .partner-item {
@@ -1530,12 +1540,15 @@ section {
 
 .partner-item img {
   max-width: 160px;
-  /* Slightly larger for the ticker */
   max-height: 40px;
   width: auto;
   height: 40px;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  /* Fallback styling for broken images */
+  font-size: 1rem;
+  color: white;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
