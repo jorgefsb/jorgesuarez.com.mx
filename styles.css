@@ -1503,28 +1503,15 @@ section {
   transform: translateY(0);
 }
 
-.partner-strip {
-  text-align: center;
-  padding: var(--space-2xl) 0;
+.partner-ticker {
+  padding: var(--space-xl) 0;
   border-top: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.partner-strip span {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
-  margin-bottom: var(--space-xl);
-}
-
-.partner-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 3.5rem;
-  margin-top: 3rem;
+.partner-ticker .marquee-content {
+  gap: 6rem;
+  animation-duration: 40s;
 }
 
 .partner-item {
@@ -1533,6 +1520,7 @@ section {
   justify-content: center;
   opacity: 0.5;
   transition: all var(--transition-base);
+  flex-shrink: 0;
 }
 
 .partner-item:hover {
@@ -1541,11 +1529,11 @@ section {
 }
 
 .partner-item img {
-  max-width: 140px;
+  max-width: 160px;
+  /* Slightly larger for the ticker */
   max-height: 40px;
   width: auto;
   height: 40px;
-  /* Force height to prevent 0x0 collapse */
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
