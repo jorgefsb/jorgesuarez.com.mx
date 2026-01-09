@@ -1538,17 +1538,20 @@ section {
   transform: translateY(-5px);
 }
 
-.partner-item img {
-  max-width: 160px;
-  max-height: 40px;
-  width: auto;
+.partner-item svg {
   height: 40px;
+  width: auto;
+  max-width: 160px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  /* Fallback styling for broken images */
-  font-size: 1rem;
   color: white;
-  text-align: center;
+  /* Applies to fill="currentColor" */
+  transition: all var(--transition-base);
+}
+
+.partner-item:hover svg {
+  color: var(--color-accent);
+  /* Optional: slight highlight on hover */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
 }
 
 @media (max-width: 992px) {
