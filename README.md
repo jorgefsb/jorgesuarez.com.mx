@@ -23,7 +23,7 @@ La experiencia de usuario está diseñada bajo un enfoque **"High-End / AAA Expe
   - **Logic**: Vanilla Javascript para optimización máxima de carga.
   - **Hosting**: Vercel Edge Network para latencia ultra-baja global.
 
-La guía reutilizable de voz, color, tipografía y aplicación para GitHub/social vive en [`brand-guidelines.md`](./brand-guidelines.md).
+La guía reutilizable de voz, color, tipografía y aplicación para GitHub/social vive en [`brand-guidelines.md`](./brand-guidelines.md). La implementación y sus exclusiones están registradas en [`BRAND-ROLLOUT-AUDIT.md`](./BRAND-ROLLOUT-AUDIT.md).
 
 ## 🗺️ Estructura del Proyecto
 
