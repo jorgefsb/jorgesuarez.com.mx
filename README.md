@@ -1,15 +1,14 @@
-# JorgeSuarez.com.mx | Professional Nexus 🚀
+<div align="center">
 
-[![Status](https://img.shields.io/badge/Status-Live-success)](https://jorgesuarez.com.mx)
-[![Industry](https://img.shields.io/badge/Industry-Gaming%20%26%20Tech-blue)](https://amberstudio.com)
-[![Role](https://img.shields.io/badge/Role-GM%20%40%20Amber%20Mexico-red)](https://linkedin.com/in/yorgenmeister)
-[![Favicon](https://img.shields.io/badge/Branding-JS%20Monogram-amber)](https://jorgesuarez.com.mx/favicon.png)
+<img src="./assets/readme-banner.svg" width="1000" alt="Jorge Suárez — construyendo juegos, escalando estudios y documentando el viaje." />
 
-[![Deploy with Vercel](https://vercel.com/button)](https://jorgesuarez.com.mx)
+[🎮 Visitar sitio](https://jorgesuarez.com.mx) · [🎨 Sistema de marca](./brand-guidelines.md) · [👾 GitHub](https://github.com/jorgefsb)
 
-> **Documentando el camino: Dos décadas de lecciones en la trinchera del emprendimiento tecnológico y el gaming global.**
+</div>
 
-Este es el repositorio oficial de la landing page de **Jorge Suárez**, un espacio diseñado para proyectar la intersección entre el liderazgo empresarial AAA, el escalado de estudios de videojuegos y la experimentación tecnológica con Inteligencia Artificial. **Ready for 2026.**
+> **Dos décadas de lecciones en la trinchera del emprendimiento tecnológico y el gaming global. No somos gurús: estamos documentando el viaje.**
+
+Este es el repositorio oficial de **JorgeSuarez.com.mx**: el hub donde se cruzan videojuegos, construcción de estudios, comunidad, emprendimiento e IA desde Guadalajara.
 
 ## 🧬 Visual & Tech DNA
 
@@ -24,6 +23,8 @@ La experiencia de usuario está diseñada bajo un enfoque **"High-End / AAA Expe
   - **Logic**: Vanilla Javascript para optimización máxima de carga.
   - **Hosting**: Vercel Edge Network para latencia ultra-baja global.
 
+La guía reutilizable de voz, color, tipografía y aplicación para GitHub/social vive en [`brand-guidelines.md`](./brand-guidelines.md).
+
 ## 🗺️ Estructura del Proyecto
 
 - `index.html`: Arquitectura de navegación y contenido narrativo (5W+1H).
@@ -36,7 +37,7 @@ La experiencia de usuario está diseñada bajo un enfoque **"High-End / AAA Expe
 
 Esta landing page centraliza el acceso a mis diversas iniciativas:
 
-- **[Master Prompt Builder](https://master-prompt-builder.vercel.app/)**: Herramienta de IA para profesionales.
+- **[Master Prompt Builder](https://mpb.jorgesuarez.com.mx/)**: Herramienta de IA para profesionales.
 - **[PlayPitch](https://playpitch.com)**: Conexión entre juegos Indie y creadores.
 - **[UETC.mx](https://uetc.mx)**: Profesionalización del talento Unreal Engine en México.
 - **[The Builder Lab](https://github.com/jorgefsb)**: Repositorio de experimentos y frameworks.
