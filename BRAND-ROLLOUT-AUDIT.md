@@ -41,9 +41,18 @@ No se usó material de TecniMoto ni de otras marcas para definir la identidad pe
 
 Los Workers deshabilitan `workers.dev` y preview URLs. Los despliegues usan artefactos limpios, sin `.git` ni configuración local.
 
+## Gauntlet editorial
+
+| Mirada | Fricción de alto impacto | Resolución aplicada |
+|---|---|---|
+| Reclutador / socio de industria | La propuesta de valor y los canales se perdían en tarjetas genéricas. | Hero identitario y player-select visible para entender a Jorge y contactarlo en segundos. |
+| Founder / inversionista | Los proyectos no distinguían producto activo, comunidad, landing o template. | Cada README declara su función y estado sin métricas, tracción ni resultados inventados. |
+| Colaborador técnico | Había enlaces rotos, claims difíciles de comprobar y poca orientación para participar. | Quick starts, estructura preservada, enlaces saneados y llamadas a colaborar específicas. |
+| Visitante casual | El perfil era frío, poco memorable y no reflejaba su energía gamer. | Español primero, naranja/ámbar, controles, menús y pixel accents con una jerarquía breve. |
+
 ## QA final
 
-- 24 URLs únicas retenidas en los READMEs respondieron HTTP 200.
+- 23 destinos públicos únicos retenidos en los READMEs respondieron HTTP 200. El ejemplo `localhost:3000` se comprobó como instrucción local y no se contabilizó como destino público.
 - Todos los SVG pasan validación XML.
 - Todos los READMEs pasan el renderer de Markdown de GitHub.
 - Se verificó públicamente en GitHub que los seis banners cargan desde cada repositorio con su tamaño natural.
