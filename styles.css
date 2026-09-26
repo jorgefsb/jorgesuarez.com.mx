@@ -1681,3 +1681,9 @@ section {
   .hero-stats { justify-content: center; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
   .hero-stats li { align-items: center; text-align: center; }
 }
+
+/* CTA final: botón del tamaño de su texto, no de toda la tarjeta */
+#contact-cta .btn { display: inline-flex; width: auto; min-width: 220px; justify-content: center; align-self: center; }
+@media (max-width: 640px) {
+  #contact-cta .card { padding: var(--space-xl) var(--space-md); }
+}
