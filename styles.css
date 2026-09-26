@@ -1687,3 +1687,11 @@ section {
 @media (max-width: 640px) {
   #contact-cta .card { padding: var(--space-xl) var(--space-md); }
 }
+
+/* Toques más grandes en celular (idioma y etiquetas de cliente) */
+.lang-switcher a { display: inline-block; padding: 8px 6px; }
+@media (max-width: 768px) {
+  a.client-tag { display: inline-block; padding-top: 7px; padding-bottom: 7px; }
+}
+/* <picture> del hero se comporta como la imagen */
+.hero-image picture { display: contents; }

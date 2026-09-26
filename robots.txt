@@ -3,4 +3,4 @@ Allow: /
 Disallow: /.git/
 Disallow: /.agent/
 
-Sitemap: https://www.jorgesuarez.com.mx/sitemap.xml
+Sitemap: https://jorgesuarez.com.mx/sitemap.xml
