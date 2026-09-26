@@ -7,8 +7,6 @@
   <!-- DNS Prefetch & Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.simpleicons.org">
-  <link rel="preconnect" href="https://amberstudio.com">
   <link rel="dns-prefetch" href="https://www.youtube.com">
   <link rel="dns-prefetch" href="https://play.google.com">
 
@@ -21,25 +19,32 @@
   <meta name="google-site-verification" content="JSZNgetWM95IaonUQTPyxw9ySD3LYH6bHZB1whQA_Kk" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.jorgesuarez.com.mx/">
+  <link rel="canonical" href="https://jorgesuarez.com.mx/">
+  <link rel="alternate" hreflang="es" href="https://jorgesuarez.com.mx/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://jorgesuarez.com.mx/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://jorgesuarez.com.mx/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.jorgesuarez.com.mx/">
+  <meta property="og:url" content="https://jorgesuarez.com.mx/">
   <meta property="og:title" content="Jorge Suárez | GM de Amber México | Veterano de Videojuegos">
   <meta property="og:description"
     content="20+ años construyendo videojuegos y escalando compañías. De KaraOkulta a GM de Amber México. Documentando el viaje colectivo de la industria.">
-  <meta property="og:image" content="https://www.jorgesuarez.com.mx/jorge-suarez.png">
+  <meta property="og:image" content="https://jorgesuarez.com.mx/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jorge Suárez, GM de Amber México">
   <meta property="og:locale" content="es_MX">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Jorge Suárez">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.jorgesuarez.com.mx/">
+  <meta name="twitter:url" content="https://jorgesuarez.com.mx/">
   <meta name="twitter:title" content="Jorge Suárez | GM de Amber México">
   <meta name="twitter:description"
     content="Veterano de videojuegos con 20+ años. Fundador de KaraOkulta, ahora GM de Amber México.">
-  <meta name="twitter:image" content="https://www.jorgesuarez.com.mx/jorge-suarez.png">
+  <meta name="twitter:image" content="https://jorgesuarez.com.mx/og-image.jpg">
   <meta name="twitter:creator" content="@yorgenmeister">
 
   <!-- Additional SEO Meta -->
@@ -50,10 +55,10 @@
     data-en="Jorge Suárez | Building Games, Scaling Studios, Documenting the Journey">Jorge Suárez | Construyendo
     Juegos, Escalando Estudios, Documentando el Viaje</title>
   <!-- Preload Critical Assets -->
-  <link rel="preload" href="jorge-suarez.png" as="image">
-  <link rel="preload" href="styles.css?v=20260926b" as="style">
+  <link rel="preload" href="jorge-suarez.webp" as="image" type="image/webp">
+  <link rel="preload" href="styles.css?v=20260926c" as="style">
 
-  <link rel="stylesheet" href="styles.css?v=20260926b">
+  <link rel="stylesheet" href="styles.css?v=20260926c">
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Schema.org Person Structured Data -->
@@ -69,8 +74,8 @@
       "name": "Amber Studio",
       "url": "https://www.amberstudio.com"
     },
-    "url": "https://www.jorgesuarez.com.mx",
-    "image": "https://www.jorgesuarez.com.mx/jorge-suarez.png",
+    "url": "https://jorgesuarez.com.mx",
+    "image": "https://jorgesuarez.com.mx/jorge-suarez.png",
     "description": "Veterano de videojuegos con 20+ años de experiencia. Fundador de KaraOkulta, GM de Amber México.",
     "sameAs": [
       "https://www.linkedin.com/in/yorgenmeister/",
@@ -78,8 +83,11 @@
       "https://www.facebook.com/jorgesuarez.com.mx/",
       "https://www.youtube.com/@jorgefsb",
       "https://github.com/jorgefsb",
-      "https://jorgesuarez.substack.com/"
+      "https://jorgesuarez.substack.com/",
+      "https://www.instagram.com/jorgefsb/",
+      "https://www.tiktok.com/@jorgesuarez.com.mx"
     ],
+    "knowsLanguage": ["es", "en"],
     "knowsAbout": [
       "Video Game Development",
       "Game Studio Management",
@@ -106,10 +114,10 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Jorge Suárez",
-    "url": "https://www.jorgesuarez.com.mx",
+    "url": "https://jorgesuarez.com.mx",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.jorgesuarez.com.mx/?s={search_term_string}",
+      "target": "https://jorgesuarez.com.mx/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -173,7 +181,7 @@
         </div>
       </div>
       <div class="hero-image reveal">
-        <img src="jorge-suarez.png" alt="Jorge Suárez - GM Amber México">
+        <picture><source srcset="jorge-suarez.webp" type="image/webp"><img src="jorge-suarez.png" alt="Jorge Suárez - GM Amber México" width="754" height="1024" fetchpriority="high"></picture>
       </div>
     </div>
   </section>
@@ -1410,8 +1418,8 @@
     </div>
   </footer>
 
-  <script src="vfx/fluid-v2.js?v=20260926b"></script>
-  <script src="scripts.js?v=20260926b"></script>
+  <script src="vfx/fluid-v2.js?v=20260926c"></script>
+  <script src="scripts.js?v=20260926c"></script>
 </body>
 
 </html>
