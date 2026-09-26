@@ -309,6 +309,7 @@ const FluidSimulation = (() => {
     };
 
     function update() {
+        if (document.hidden || matchMedia('(prefers-reduced-motion: reduce)').matches) { requestAnimationFrame(update); return; }
         const dt = 0.016;
 
         // 1. Advection
@@ -348,8 +349,8 @@ const FluidSimulation = (() => {
         }
 
         gradSubProg.bind();
-        gl.uniform1i(gradSubProgram.uniforms.uPressure, pressure.read.attach(0));
-        gl.uniform1i(gradSubProgram.uniforms.uVelocity, velocity.read.attach(1));
+        gl.uniform1i(gradSubProg.uniforms.uPressure, pressure.read.attach(0));
+        gl.uniform1i(gradSubProg.uniforms.uVelocity, velocity.read.attach(1));
         blit(velocity.write.fbo); velocity.swap();
 
         // 4. Draw

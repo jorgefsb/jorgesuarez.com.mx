@@ -20,7 +20,9 @@ function initSmoothScroll() {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
-      const target = document.querySelector(targetId);
+      if (!targetId || targetId.length < 2) return;
+      let target = null;
+      try { target = document.querySelector(targetId); } catch (_) { return; }
 
       if (target) {
         const navHeight = document.querySelector('.navbar').offsetHeight;
@@ -214,7 +216,7 @@ function initLanguage() {
     }
 
     // Save preference
-    localStorage.setItem('preferred-lang', lang);
+    try { localStorage.setItem('preferred-lang', lang); } catch (_) {}
   };
 
   esLink.addEventListener('click', (e) => {
@@ -227,7 +229,58 @@ function initLanguage() {
     updateUI('en');
   });
 
-  // Load saved or default
-  const savedLang = localStorage.getItem('preferred-lang') || 'es';
-  updateUI(savedLang);
+  // URL param (?lang=en) wins, then saved preference, then browser language
+  let savedLang = null;
+  try { savedLang = localStorage.getItem('preferred-lang'); } catch (_) {}
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  const browserLang = (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
+  const lang = ['es', 'en'].includes(urlLang) ? urlLang : (savedLang || browserLang);
+  updateUI(lang);
 }
+
+
+/**
+ * "Lo último": trae 6 publicaciones con imagen desde el muro en vivo.
+ * Si el muro no responde, la sección se queda oculta.
+ */
+(function initLatest() {
+  const section = document.getElementById('lo-ultimo');
+  const grid = document.getElementById('latest-grid');
+  if (!section || !grid || !window.fetch) return;
+  const API = 'https://muro.jorgesuarez.com.mx';
+  const NAMES = { youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram', linkedin: 'LinkedIn', x: 'X', facebook: 'Facebook', threads: 'Threads', bluesky: 'Bluesky' };
+  let items = [];
+  const esc = (s) => String(s || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const ago = (iso, lang) => {
+    const m = Math.max(0, Math.round((Date.now() - Date.parse(iso)) / 60000));
+    const es = lang !== 'en';
+    if (m < 60) return es ? `hace ${Math.max(m, 1)} min` : `${Math.max(m, 1)} min ago`;
+    const h = Math.round(m / 60);
+    if (h < 24) return es ? `hace ${h} h` : `${h} h ago`;
+    const d = Math.round(h / 24);
+    return es ? (d === 1 ? 'ayer' : `hace ${d} días`) : (d === 1 ? 'yesterday' : `${d} days ago`);
+  };
+  const render = () => {
+    const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+    grid.innerHTML = items.map((p) => `
+      <a class="latest-card" href="${esc(p.url)}" target="_blank" rel="noopener">
+        <img src="${API}/img?u=${encodeURIComponent(p.image)}" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+        <div class="latest-body">
+          <div class="latest-meta"><b>${NAMES[p.network] || esc(p.network)}</b> · ${ago(p.date, lang)}</div>
+          <p class="latest-text">${esc((p.text || '').replace(/\s*https?:\/\/\S+/g, ''))}</p>
+        </div>
+      </a>`).join('');
+  };
+  fetch(API + '/api/posts?limit=60')
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((d) => {
+      const seen = new Set();
+      items = (d.posts || []).filter((p) => p.image && p.source === 'own' && !seen.has(p.network) && seen.add(p.network)).slice(0, 6);
+      if (items.length < 6) items = items.concat((d.posts || []).filter((p) => p.image && p.source === 'own' && !items.includes(p)).slice(0, 6 - items.length));
+      if (!items.length) return;
+      render();
+      section.hidden = false;
+      new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    })
+    .catch(() => {});
+})();
