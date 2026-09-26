@@ -1634,3 +1634,50 @@ section {
   min-width: 0;
   padding: var(--space-md) var(--space-sm);
 }
+
+/* Lo último (feed del muro) */
+.latest { padding: var(--space-3xl) 0 0; }
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+.latest-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+.latest-card:hover { transform: translateY(-4px); border-color: var(--accent-primary); }
+.latest-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--bg-hover); }
+.latest-card .latest-body { padding: var(--space-sm) var(--space-md) var(--space-md); }
+.latest-meta { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.latest-meta b { color: var(--accent-primary); font-weight: 600; }
+.latest-text {
+  font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere;
+}
+.latest-cta { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg); }
+@media (max-width: 900px) { .latest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .latest-grid { grid-template-columns: 1fr; } }
+
+/* Hero: prueba social arriba del fold */
+.hero-stats {
+  list-style: none; margin: 0 0 var(--space-md); padding: 0;
+  display: flex; flex-wrap: nowrap; gap: var(--space-sm) var(--space-lg);
+}
+.hero-stats li { white-space: nowrap; }
+.hero-stats li { display: flex; flex-direction: column; gap: 0.15rem; }
+.hero-stats strong {
+  font-family: var(--font-heading); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; line-height: 1.1;
+  color: var(--text-primary);
+}
+.hero-stats span { font-size: 0.75rem; color: var(--text-muted); }
+.hero-description { margin-bottom: var(--space-lg); }
+@media (max-width: 768px) {
+  .hero-stats { justify-content: center; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); }
+  .hero-stats li { align-items: center; text-align: center; }
+}
