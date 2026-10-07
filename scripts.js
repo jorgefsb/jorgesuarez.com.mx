@@ -35,6 +35,8 @@ function initSmoothScroll() {
 
         // Close mobile nav if open
         closeMobileNav();
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
       }
     });
   });
@@ -79,6 +81,13 @@ function initMobileNav() {
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMobileNav();
+        navToggle.focus();
+      }
     });
   }
 }
@@ -90,6 +99,7 @@ function closeMobileNav() {
   if (navToggle && navLinks) {
     navLinks.classList.remove('active');
     navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -114,7 +124,7 @@ function initNavbarScroll() {
 const additionalStyles = document.createElement('style');
 additionalStyles.textContent = `
   /* Mobile nav styles */
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     .nav-links {
       position: fixed;
       top: var(--nav-height);

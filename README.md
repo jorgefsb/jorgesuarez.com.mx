@@ -33,12 +33,16 @@ La guía reutilizable de voz, color, tipografía y aplicación para GitHub/socia
 - `SESSION_LOG.md`: Historial operativo de lanzamientos y cambios estratégicos.
 - `REPO_HISTORY.md`: Log detallado de la evolución técnica del repositorio.
 
+## Productos y experimentos
+
+El catálogo vive en `index.html#products`: fichas con estado, alcance y enlaces públicos, separadas de las empresas y el portafolio de Amber. Consulta [PRODUCT-CATALOG.md](./PRODUCT-CATALOG.md) para evidencia, estados y cómo agregar productos sin cambiar el stack. La publicación de esta actualización está pendiente de revisión.
+
 ## 🚀 Ecosistema & Hubs
 
 Esta landing page centraliza el acceso a mis diversas iniciativas:
 
 - **[Master Prompt Builder](https://mpb.jorgesuarez.com.mx/)**: Herramienta de IA para profesionales.
-- **[PlayPitch](https://playpitch.com)**: Conexión entre juegos Indie y creadores.
+- **PlayPitch**: Proyecto en pausa; conectaba juegos indie con creadores.
 - **[UETC.mx](https://uetc.mx)**: Profesionalización del talento Unreal Engine en México.
 - **[The Builder Lab](https://github.com/jorgefsb)**: Repositorio de experimentos y frameworks.
 

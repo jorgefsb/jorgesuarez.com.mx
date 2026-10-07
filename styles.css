@@ -1695,3 +1695,23 @@ section {
 }
 /* <picture> del hero se comporta como la imagen */
 .hero-image picture { display: contents; }
+
+/* Product catalog: semantic cards, no build step or runtime dependency. */
+.products { position: relative; z-index: 10000; padding: var(--space-3xl) 0; background: var(--bg-secondary); }
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg); }
+.product-card { display: flex; flex-direction: column; align-items: flex-start; border-top: 2px solid var(--accent-secondary); scroll-margin-top: 110px; }
+.product-status { color: var(--accent-secondary); font-size: .85rem; font-weight: 600; margin-bottom: 16px; }
+.product-card .product-note { font-size: .9rem; color: var(--text-secondary); }
+.product-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 16px; }
+.product-links a { color: var(--accent-secondary); text-underline-offset: 4px; }
+.product-links a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-secondary); outline-offset: 5px; }
+.nav-toggle { background: transparent; border: 0; padding: 8px; cursor: pointer; }
+@media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .product-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* The existing fluid engine overlays the page at z-index 9999.
+   Keep catalog text and keyboard navigation above that decorative layer. */
+.navbar { z-index: 10001; }
+@media (max-width: 1100px) { .nav-links { display: none; } .nav-toggle { display: flex; } }
+@media (prefers-reduced-motion: reduce) { .product-card { transition: none; } .product-card:hover { transform: none; } }
