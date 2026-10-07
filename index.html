@@ -133,9 +133,10 @@
     <div class="container">
       <a href="#" class="nav-logo">JorgeSuarez<span>.com.mx</span></a>
       <div class="nav-links-wrapper">
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="#journey" data-es="Trayectoria" data-en="Journey">Trayectoria</a></li>
           <li><a href="#amber" data-es="Amber México" data-en="Amber Mexico">Amber México</a></li>
+          <li><a href="#products" data-es="Productos" data-en="Products">Productos</a></li>
           <li><a href="#ecosystem" data-es="Ecosistema" data-en="Ecosystem">Ecosistema</a></li>
           <li><a href="#frameworks" data-es="Frameworks" data-en="Frameworks">Frameworks</a></li>
           <li><a href="#contact" data-es="Conecta" data-en="Connect">Conecta</a></li>
@@ -144,9 +145,9 @@
           <a href="#" class="es-btn active">ES</a> | <a href="#" class="en-btn">EN</a>
         </div>
       </div>
-      <div class="nav-toggle" aria-label="Toggle menu">
+      <button type="button" class="nav-toggle" aria-label="Menú / Menu" aria-controls="primary-navigation" aria-expanded="false">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -796,6 +797,77 @@
     </div>
   </section>
 
+  <!-- Personal products; company portfolio remains in its own sections. -->
+  <section class="products" id="products" aria-labelledby="products-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="hero-tagline" data-es="Builder Lab" data-en="Builder Lab">Builder Lab</span>
+        <h2 id="products-title" data-es="Productos y &lt;span class='text-gradient'&gt;experimentos&lt;/span&gt;" data-en="Products and &lt;span class='text-gradient'&gt;experiments&lt;/span&gt;">Productos y <span class="text-gradient">experimentos</span></h2>
+        <p data-es="Lo que estoy construyendo, por mi cuenta y en colaboración. Cada ficha indica qué existe hoy y cómo explorarlo." data-en="What I am building, independently and with collaborators. Each card shows what exists today and how to explore it.">Lo que estoy construyendo, por mi cuenta y en colaboración. Cada ficha indica qué existe hoy y cómo explorarlo.</p>
+      </div>
+      <div class="product-grid">
+        <article class="card product-card" id="product-mpb" aria-labelledby="product-mpb-title">
+          <span class="product-status" data-es="Disponible" data-en="Available">Disponible</span>
+          <h3 id="product-mpb-title">Master Prompt Builder</h3>
+          <p data-es="Crea, mantiene y exporta tu contexto personal para ChatGPT, Claude y otras IAs." data-en="Create, maintain and export your personal context for ChatGPT, Claude and other AIs.">Crea, mantiene y exporta tu contexto personal para ChatGPT, Claude y otras IAs.</p>
+          <p class="product-note" data-es="Herramienta pública · código público" data-en="Public tool · public source">Herramienta pública · código público</p>
+          <div class="product-links">
+            <a href="https://mpb.jorgesuarez.com.mx" target="_blank" rel="noopener" data-es="Probar MPB →" data-en="Try MPB →">Probar MPB →</a>
+            <a href="https://github.com/jorgefsb/master-prompt-builder" target="_blank" rel="noopener" data-es="Código público →" data-en="Public source →">Código público →</a>
+          </div>
+        </article>
+        <article class="card product-card" id="product-echomentor" aria-labelledby="product-echomentor-title">
+          <span class="product-status" data-es="Beta · Club UETC" data-en="Beta · Club UETC">Beta · Club UETC</span>
+          <h3 id="product-echomentor-title">EchoMentor AI</h3>
+          <p data-es="Aprendizaje adaptativo con IA, construido en UETC / Arden. Un tema o un PDF como punto de partida para una clase." data-en="Adaptive AI learning, built at UETC / Arden. A topic or PDF as the starting point for a class.">Aprendizaje adaptativo con IA, construido en UETC / Arden. Un tema o un PDF como punto de partida para una clase.</p>
+          <p class="product-note" data-es="Landing con demo · plataforma privada para miembros" data-en="Demo landing · private platform for members">Landing con demo · plataforma privada para miembros</p>
+          <div class="product-links">
+            <a href="https://echomentor.jorgesuarez.com.mx" target="_blank" rel="noopener" data-es="Conocer la demo →" data-en="Explore the demo →">Conocer la demo →</a>
+            <a href="https://github.com/jorgefsb/echomentor-ai" target="_blank" rel="noopener" data-es="Código de la landing →" data-en="Landing source →">Código de la landing →</a>
+          </div>
+        </article>
+        <article class="card product-card" id="product-sparkcrew" aria-labelledby="product-sparkcrew-title">
+          <span class="product-status" data-es="Idea · lista de espera" data-en="Idea · waitlist">Idea · lista de espera</span>
+          <h3 id="product-sparkcrew-title">SparkCrew</h3>
+          <p data-es="Una propuesta de partners de IA para PyMEs en Bitrix24. Experimento de producto de Sparkplug Technologies." data-en="A proposal for AI partners for small businesses in Bitrix24. A product experiment by Sparkplug Technologies.">Una propuesta de partners de IA para PyMEs en Bitrix24. Experimento de producto de Sparkplug Technologies.</p>
+          <p class="product-note" data-es="Landing pública · producto completo en desarrollo" data-en="Public landing · full product in development">Landing pública · producto completo en desarrollo</p>
+          <div class="product-links">
+            <a href="https://sparkcrew.jorgesuarez.com.mx" target="_blank" rel="noopener" data-es="Conocer la propuesta →" data-en="Explore the proposal →">Conocer la propuesta →</a>
+            <a href="https://github.com/jorgefsb/sparkcrew-landing" target="_blank" rel="noopener" data-es="Código de la landing →" data-en="Landing source →">Código de la landing →</a>
+          </div>
+        </article>
+        <article class="card product-card" id="product-resources" aria-labelledby="product-resources-title">
+          <span class="product-status" data-es="Disponible · en desarrollo" data-en="Available · in progress">Disponible · en desarrollo</span>
+          <h3 id="product-resources-title">Game Industry Resources</h3>
+          <p data-es="Un hub de recursos para construir una carrera haciendo videojuegos en LATAM." data-en="A resource hub for building a career making games in LATAM.">Un hub de recursos para construir una carrera haciendo videojuegos en LATAM.</p>
+          <p class="product-note" data-es="Landing y recursos principales · nuevas herramientas en desarrollo" data-en="Landing and core resources · new tools in development">Landing y recursos principales · nuevas herramientas en desarrollo</p>
+          <div class="product-links">
+            <a href="https://gamedev.jorgesuarez.com.mx" target="_blank" rel="noopener" data-es="Explorar recursos →" data-en="Explore resources →">Explorar recursos →</a>
+            <a href="https://github.com/jorgefsb/game-industry-resources" target="_blank" rel="noopener" data-es="Código público →" data-en="Public source →">Código público →</a>
+          </div>
+        </article>
+        <article class="card product-card" id="product-papacito" aria-labelledby="product-papacito-title">
+          <span class="product-status" data-es="En construcción" data-en="In development">En construcción</span>
+          <h3 id="product-papacito-title">PapacitoOS</h3>
+          <p data-es="Mi ecosistema personal de IA y herramientas para organizar proyectos y darles seguimiento." data-en="My personal ecosystem of AI and tools for organizing projects and following up.">Mi ecosistema personal de IA y herramientas para organizar proyectos y darles seguimiento.</p>
+          <p class="product-note" data-es="Implementación parcial · código privado" data-en="Partial implementation · private source">Implementación parcial · código privado</p>
+        </article>
+        <article class="card product-card" id="product-richlife" aria-labelledby="product-richlife-title">
+          <span class="product-status" data-es="En construcción" data-en="In development">En construcción</span>
+          <h3 id="product-richlife-title">RichLife</h3>
+          <p data-es="Próximo producto con nombre de trabajo provisional. La landing aún no está publicada." data-en="An upcoming product with a provisional working name. The landing has not been published yet.">Próximo producto con nombre de trabajo provisional. La landing aún no está publicada.</p>
+          <p class="product-note" data-es="Lista de espera cerrada · sin acceso público por ahora" data-en="Waitlist closed · no public access yet">Lista de espera cerrada · sin acceso público por ahora</p>
+        </article>
+        <article class="card product-card" id="product-playpitch" aria-labelledby="product-playpitch-title">
+          <span class="product-status" data-es="En pausa" data-en="On hold">En pausa</span>
+          <h3 id="product-playpitch-title">PlayPitch</h3>
+          <p data-es="Un proyecto para conectar juegos indie con creadores de contenido." data-en="A project connecting indie games with content creators.">Un proyecto para conectar juegos indie con creadores de contenido.</p>
+          <p class="product-note" data-es="Proyecto en pausa" data-en="Project on hold">Proyecto en pausa</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Community & Ecosystem (Everything from jorgesuarez.com.mx) -->
   <section class="ecosystem" id="ecosystem">
     <div class="container">
@@ -810,28 +882,6 @@
       </div>
 
       <div class="grid-3 reveal">
-        <!-- PlayPitch -->
-        <div class="card card-highlight">
-          <h3 data-es="🚀 PlayPitch" data-en="🚀 PlayPitch">🚀 PlayPitch</h3>
-          <p data-es="Conectando juegos Indie con creadores de contenido. La plataforma definitiva para amplificar el alcance de nuevos títulos."
-            data-en="Connecting Indie games with content creators. The ultimate platform to amplify the reach of new titles.">
-            Conectando juegos Indie con creadores de contenido. La plataforma definitiva para amplificar el alcance de
-            nuevos títulos.</p>
-          <span style="color: var(--text-muted); font-size: 0.85rem;" data-es="Proyecto en pausa"
-            data-en="Project on hold">Proyecto en pausa</span>
-        </div>
-
-        <!-- Master Prompt Builder -->
-        <div class="card card-highlight">
-          <h3 data-es="🧠 Master Prompt Builder" data-en="🧠 Master Prompt Builder">🧠 Master Prompt Builder</h3>
-          <p data-es="Inyecta tu DNA profesional en la IA. Una herramienta para profesionales que dominan la colaboración con modelos generativos."
-            data-en="Inject your professional DNA into AI. A tool for professionals who master collaboration with generative models.">
-            Inyecta tu DNA profesional en la IA. Una herramienta para profesionales que dominan la colaboración con
-            modelos generativos.</p>
-          <a href="https://mpb.jorgesuarez.com.mx" target="_blank" rel="noopener" class="text-accent"
-            data-es="Crear mi Prompt →" data-en="Create my Prompt →">Crear mi Prompt →</a>
-        </div>
-
         <!-- YouTube Shorts -->
         <div class="card">
           <h3 data-es="📹 Shorts Diarios" data-en="📹 Daily Shorts">📹 Shorts Diarios</h3>
@@ -840,17 +890,6 @@
             Suscríbete GRATIS para recibir lecciones cortas sobre gaming, tech y emprendimiento cada día.</p>
           <a href="https://www.youtube.com/@jorgefsb/shorts?sub_confirmation=1" target="_blank" class="text-accent"
             data-es="Suscribirse en YouTube →" data-en="Subscribe on YouTube →">Suscribirse en YouTube →</a>
-        </div>
-
-        <!-- EchoMentor AI (Arden / UETC) -->
-        <div class="card card-highlight">
-          <h3 data-es="🎓 EchoMentor AI" data-en="🎓 EchoMentor AI">🎓 EchoMentor AI</h3>
-          <p data-es="Lo estamos construyendo en UETC (Arden): una plataforma de aprendizaje adaptativo con IA. Le das un tema o un PDF y arma una clase con maestros IA, pizarrón, quizzes y proyectos a tu nivel. Beta para miembros del Club UETC."
-            data-en="We're building it at UETC (Arden): an adaptive AI learning platform. Give it a topic or a PDF and it builds a class with AI teachers, a whiteboard, quizzes and projects at your level. Beta for Club UETC members.">
-            Lo estamos construyendo en UETC (Arden): una plataforma de aprendizaje adaptativo con IA. Le das un tema o un
-            PDF y arma una clase con maestros IA, pizarrón, quizzes y proyectos a tu nivel. Beta para miembros del Club UETC.</p>
-          <a href="https://echomentor.jorgesuarez.com.mx" target="_blank" rel="noopener" class="text-accent"
-            data-es="Conoce EchoMentor AI →" data-en="Meet EchoMentor AI →">Conoce EchoMentor AI →</a>
         </div>
 
         <!-- Pet City Mania -->
