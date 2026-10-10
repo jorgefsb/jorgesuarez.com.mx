@@ -666,6 +666,36 @@ section {
   background: var(--bg-primary);
 }
 
+.ecosystem-group-header h3,
+#richlife {
+  scroll-margin-top: 100px;
+}
+
+.ecosystem-group + .ecosystem-group {
+  margin-top: var(--space-3xl);
+}
+
+.ecosystem-group-header {
+  margin-bottom: var(--space-lg);
+}
+
+.ecosystem-group-header h3 {
+  color: var(--accent-primary);
+}
+
+.ecosystem-group-header p {
+  margin-top: var(--space-sm);
+  color: var(--text-secondary);
+  max-width: 65ch;
+}
+
+.product-status {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-md);
+}
+
 .flex-card {
   display: flex;
   flex-direction: column;
