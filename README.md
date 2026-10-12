@@ -1,3 +1,8 @@
+> **v2.0 en producción (12 oct 2026).** El código fuente del v2 vive en el repo privado `jorgefsb/jorgesuarez.com.mx-v2`
+> (Design System v2.0 + scroll-craft). Este repo recibe el build (`site/`) y lo sirve con GitHub Pages.
+> **Rollback al v1:** el deploy del v2 es un solo commit: `git revert <commit del v2>` y push a `main`.
+> Respaldo intacto en el tag/release `v1-final-2026-10-12` y la rama `v1-legacy`.
+
 <div align="center">
 
 <img src="./assets/readme-banner.svg" width="1000" alt="Jorge Suárez — construyendo juegos, escalando estudios y documentando el viaje." />
@@ -21,7 +26,7 @@ La experiencia de usuario está diseñada bajo un enfoque **"High-End / AAA Expe
   - **Core**: HTML5 semántico & CSS3 (BEM-ish methodology).
   - **Motion**: WebGL + GSAP logic para revelaciones y scroll.
   - **Logic**: Vanilla Javascript para optimización máxima de carga.
-  - **Hosting**: Vercel Edge Network para latencia ultra-baja global.
+  - **Hosting**: GitHub Pages detrás de Cloudflare (desde el v2, oct 2026).
 
 La guía reutilizable de voz, color, tipografía y aplicación para GitHub/social vive en [`brand-guidelines.md`](./brand-guidelines.md). La implementación y sus exclusiones están registradas en [`BRAND-ROLLOUT-AUDIT.md`](./BRAND-ROLLOUT-AUDIT.md).
 
