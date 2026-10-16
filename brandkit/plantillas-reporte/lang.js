@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const sw = document.querySelector('.lang-switcher');
+  const sw = document.querySelector('.pr-lang');
   if (!sw) return;
 
   function setLang(lang) {
@@ -13,10 +13,8 @@
       else el.innerHTML = v;
     });
     sw.querySelectorAll('a[lang]').forEach((a) => {
-      a.classList.toggle('active', a.lang === lang);
+      a.classList.toggle('pr-lang-on', a.lang === lang);
     });
-    const nav = document.querySelector('.rail nav');
-    if (nav) nav.setAttribute('aria-label', lang === 'en' ? 'Sections' : 'Secciones');
     try { localStorage.setItem('preferred-lang', lang); } catch (_) {}
   }
 
