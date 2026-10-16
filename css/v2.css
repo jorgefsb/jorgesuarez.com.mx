@@ -42,6 +42,9 @@
   --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
   --r-control: 6px; --r-card: 12px; --r-panel: 18px; --r-editorial: 24px; --r-chip: 999px;
   --nav-h: 72px; --tap: 44px;
+  --quest-h: 56px;
+  --quest-offset: 14px;
+  --cta-clearance: calc(var(--quest-h) + var(--quest-offset) + 20px + env(safe-area-inset-bottom, 0px));
   --gutter: clamp(20px, 5vw, 72px);
   --container: 1200px;
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
@@ -153,8 +156,8 @@ strong, b { font-weight: inherit; color: var(--text); }
 
 /* --------------------------------------------- firma: Moki en el riel -- */
 .quest {
-  position: fixed; z-index: 39; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom));
-  width: min(760px, calc(100% - 2 * var(--gutter))); height: 56px;
+  position: fixed; z-index: 39; left: 50%; bottom: calc(var(--quest-offset) + env(safe-area-inset-bottom));
+  width: min(760px, calc(100% - 2 * var(--gutter))); height: var(--quest-h);
   transform: translateX(-50%);
   border-radius: var(--r-chip); background: rgba(10,10,10,.92);
   border: 1px solid var(--border-strong);
@@ -195,6 +198,8 @@ strong, b { font-weight: inherit; color: var(--text); }
   opacity: 0; transition: opacity 260ms var(--ease); pointer-events: none;
 }
 .quest.is-announcing .quest__label { opacity: 1; }
+.quest.is-done .quest__label,
+.quest.is-done .quest__hint { opacity: 0; }
 .quest__hint {
   position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%);
   display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
@@ -509,7 +514,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 /* ----------------------------------------------------------------- FINALE -- */
 .finale__stage {
   display: grid; justify-items: center; align-content: center; text-align: center;
-  padding: calc(var(--nav-h) + 2vh) var(--gutter) 0;
+  padding: calc(var(--nav-h) + 2vh) var(--gutter) var(--cta-clearance);
   background: radial-gradient(60% 55% at 50% 100%, rgba(255,107,53,.2), transparent 70%), #0A0A0A;
 }
 .finale__flag {
@@ -530,7 +535,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 @keyframes finale-glow { 50% { opacity: 1; } }
 .finale__copy .lead { margin-inline: auto; }
 .finale__copy .btn { margin-top: var(--sp-3); }
-.foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 calc(96px + env(safe-area-inset-bottom)); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
+.foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
 .foot__love { color: var(--text); font-size: 14px; }
 .foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
 .foot__link {
@@ -587,7 +592,9 @@ strong, b { font-weight: inherit; color: var(--text); }
   .hero__front { bottom: -12vh; }
   .hero__copy .kicker { color: var(--paper); }
   .proof-logos { font-size: 12px; }
-  .quest { height: 48px; width: calc(100% - 24px); bottom: calc(10px + env(safe-area-inset-bottom)); }
+  :root { --quest-h: 48px; --quest-offset: 10px; }
+  .quest { height: var(--quest-h); width: calc(100% - 24px); bottom: calc(var(--quest-offset) + env(safe-area-inset-bottom)); }
+  .foot { padding-top: var(--sp-4); }
   .quest__flag button { pointer-events: none; width: 16px; }
   .quest__flag button::before { left: 7px; }
   .quest__flag button::after { left: 9px; }

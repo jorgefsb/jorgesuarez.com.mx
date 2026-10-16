@@ -12,7 +12,7 @@ El BrandKit vivo no vive en este repositorio: se publica desde un sitio de ChatG
 
 1. Los wordmarks del header y del footer apuntan a https://jorgesuarez.com.mx.
 2. Versión en inglés completa: conmutador ES | EN con `data-es` / `data-en` (y `lang.js`).
-3. Regla de marca **Ida y vuelta / Round trip**: toda página o micronegocio de la marca personal liga a jorgesuarez.com.mx con una forma clara de regresar; la principal siempre liga a ellos. No aplica a Amber, Arden, Sparkplug ni Tecni Moto.
+3. Regla de marca **Ida y vuelta / Round trip**: toda página o micronegocio de la marca personal liga a jorgesuarez.com.mx con una forma clara de regresar; la principal siempre liga a ellos.
 4. Liga a Plantillas de reporte: https://jorgesuarez.com.mx/brandkit/plantillas-reporte/
 
 Archivos nuevos en `propuesta/`: `lang.js` y `ida-vuelta.css`.
@@ -27,6 +27,7 @@ Archivos nuevos en `propuesta/`: `lang.js` y `ida-vuelta.css`.
    - wordmarks del header y del footer, y la barra «← JorgeSuarez.com.mx», llevan a https://jorgesuarez.com.mx
    - ES | EN cambia el contenido
    - la sección Ida y vuelta: al llegar por ancla, la etiqueta de fecha y el título quedan completos debajo del header
+   - a 375 px, «In progress» / «En desarrollo» no tapa la línea de fecha del header
    - la tarjeta Plantillas de reporte
 6. No tocar DNS, CNAME ni la configuración del dominio.
 
