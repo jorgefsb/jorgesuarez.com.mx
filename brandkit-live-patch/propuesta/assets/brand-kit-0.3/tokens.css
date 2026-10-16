@@ -1,0 +1,36 @@
+/* Brand Kit 0.3: candidate tokens, not final approval. Fonts: Outfit 700 / Inter 400. */
+:root{
+  --brand-background: #0A0A0A;
+  --brand-surface: #161616;
+  --brand-accent: #FF6B35;
+  --brand-accent-warm: #FFA500;
+  --brand-text-on-dark: #FFFFFF;
+  --brand-paper: #F4E8D5;
+  --brand-kraft: #B99168;
+  --brand-ink: #22211F;
+  --brand-text-muted: #B7B3AD;
+  --brand-border: #8A7E70;
+  --brand-font-heading: Outfit, sans-serif;
+  --brand-font-body: Inter, sans-serif;
+  --brand-h1-size:56px; --brand-h1-line:60px;
+  --brand-h2-size:40px; --brand-h2-line:46px;
+  --brand-body-size:18px; --brand-body-line:28px;
+  --brand-ui-size:16px; --brand-ui-line:24px;
+  --brand-note-size:14px; --brand-note-line:20px;
+  --brand-space-1:4px;
+  --brand-space-2:8px;
+  --brand-space-3:12px;
+  --brand-space-4:16px;
+  --brand-space-5:24px;
+  --brand-space-6:32px;
+  --brand-space-7:48px;
+  --brand-space-8:64px;
+  --brand-space-9:96px;
+  --brand-space-10:128px;
+  --brand-radius-control:6px;
+  --brand-radius-card:12px;
+  --brand-radius-panel:18px;
+  --brand-radius-editorial:24px;
+  --brand-radius-pill:999px;
+}
+@media(max-width:580px){:root{--brand-h1-size:36px;--brand-h1-line:40px;--brand-h2-size:28px;--brand-h2-line:34px}}
