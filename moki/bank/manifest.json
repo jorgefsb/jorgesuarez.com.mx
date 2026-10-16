@@ -19,6 +19,68 @@
       "bytes": 1247681,
       "sha256": "4980c46331c1fef308ab9505c7cf311466584af16adc741e7f8717e8dcf2e171",
       "status": "approved"
+    },
+    {
+      "name": "moki_chr_escribe_bitacora_v001_approved.png",
+      "pose": "escribe_bitacora",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1944434,
+      "sha256": "bc6ac1db045a0e05bd66e0ff2282d6da5c8f546c1cb961282c88dfdd05527775",
+      "status": "approved"
+    },
+    {
+      "name": "moki_chr_bandera_cuadernos_v001_approved.png",
+      "pose": "bandera_cuadernos",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1877995,
+      "sha256": "5407e0a31d0d1c5e61ced88111c4c7bbb3e7032f192fef4cc72058c47751c372",
+      "status": "approved"
+    },
+    {
+      "name": "moki_chr_mapa_siguiente_paso_v001_approved.png",
+      "pose": "mapa_siguiente_paso",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1932383,
+      "sha256": "532adb96325b1337a723135ec59c62092dd5aaf5ce90c5031461dc11ce25ad7e",
+      "status": "approved"
+    },
+    {
+      "name": "moki_chr_telescopio_grafica_v001_approved.png",
+      "pose": "telescopio_grafica",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1767920,
+      "sha256": "881ea8c2c1828c7ef5a017496a429b40ab027f788deb75de0121cbd3dcea38d3",
+      "status": "approved"
+    },
+    {
+      "name": "moki_chr_saluda_v001_approved.png",
+      "pose": "saluda",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1636310,
+      "sha256": "9ce6a2bb6bf734a55e5de7e8c754ab7adf9b48f3330c39244692718837dcb033",
+      "status": "approved"
+    },
+    {
+      "name": "moki_chr_asoma_v001_approved.png",
+      "pose": "asoma",
+      "source": "gpt-image identity-preserve, ref S02, 2026-10-16",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1533017,
+      "sha256": "8fc8d6cbe68a662951a96917334386a684de911ff9254a9d29fade4a70a45f08",
+      "status": "approved"
     }
-  ]
+  ],
+  "version": "1.1",
+  "updated": "2026-10-16"
 }
