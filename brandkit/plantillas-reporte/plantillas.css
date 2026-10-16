@@ -1,7 +1,23 @@
 /* Clases nuevas de esta sección. No sobrescribe tokens ni reglas del BrandKit. */
+.pr-bar{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;
+  max-width:1680px;margin:0 auto;padding:8px 36px 0;
+}
+.pr-bar-start{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.pr-home{
+  display:inline-flex;align-items:center;
+  min-width:44px;min-height:44px;padding:0 8px 0 0;
+  text-decoration:none;color:var(--cream);font-size:14px;
+  font-family:var(--font-head);font-weight:700;
+}
+.pr-home:hover{color:var(--orange)}
+.pr-updated{
+  margin:0;color:var(--muted);font-size:12px;line-height:1.4;
+  display:inline-flex;align-items:center;min-height:44px;
+}
 .pr-lang{
   display:flex;align-items:center;justify-content:flex-end;gap:4px;
-  max-width:1680px;margin:0 auto;padding:8px 36px 0;
+  margin-left:auto;
 }
 .pr-lang a{
   display:inline-flex;align-items:center;justify-content:center;
@@ -36,6 +52,7 @@
 .pr-shot{
   display:block;width:100%;height:auto;border-radius:8px;
   background:#fcf7ee;margin-bottom:16px;
+  content-visibility:visible;opacity:1;visibility:visible;
 }
 .pr-card figcaption{font-size:13px;color:var(--muted);margin:0 0 16px}
 .pr-card code{overflow-wrap:anywhere}
@@ -71,9 +88,9 @@
 }
 
 @media(max-width:850px){
-  .pr-lang{padding:8px 24px 0}
+  .pr-bar{padding:8px 24px 0}
   .pr-grid{grid-template-columns:1fr}
 }
 @media(max-width:580px){
-  .pr-lang{padding:8px 18px 0}
+  .pr-bar{padding:8px 18px 0}
 }
