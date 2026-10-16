@@ -412,6 +412,10 @@ strong, b { font-weight: inherit; color: var(--text); }
   transition: transform 260ms var(--ease);
 }
 .row__emoji img { width: 34px; height: 36px; object-fit: contain; display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  .row__emoji img[src*="moki"] { animation: moki-float 3.2s ease-in-out infinite; }
+}
+@keyframes moki-float { 50% { translate: 0 -3px; } }
 @media (hover: hover) and (pointer: fine) {
   .row:hover .row__emoji { transform: translateY(-3px) rotate(-8deg) scale(1.08); }
 }
