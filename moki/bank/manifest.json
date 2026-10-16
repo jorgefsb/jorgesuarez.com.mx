@@ -1,8 +1,17 @@
 {
   "brandkit": "https://brandkit.jorgesuarez.com.mx/",
   "brandkit_version": "0.6",
+  "bible": "reference/moki-biblia-personaje-v0-1",
   "crawled": "2026-10-16",
   "naming": "moki_chr_<pose>_v001_approved.png",
+  "model": {
+    "appearance": "https://brandkit.jorgesuarez.com.mx/assets/moki-parche-derecho.png",
+    "source_id": "S02",
+    "rules": [
+      "Visor oscuro opaco, sin facciones y sin borde gris o bisel alrededor.",
+      "Cartón con fibra y capas; se rechaza cartón liso o plástico."
+    ]
+  },
   "assets": [
     {
       "name": "moki_chr_three_quarter_v001_approved.png",
@@ -11,27 +20,68 @@
       "width": 1215,
       "height": 1295,
       "bytes": 1247681,
-      "sha256": "4980c46331c1fef308ab9505c7cf311466584af16adc741e7f8717e8dcf2e171"
+      "sha256": "4980c46331c1fef308ab9505c7cf311466584af16adc741e7f8717e8dcf2e171",
+      "status": "approved"
+    }
+  ],
+  "sin_dato": [
+    {
+      "pose": "profile_right",
+      "status": "SIN DATO",
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-referencia-parche.png",
+      "reason": "La lámina marca el lateral como ubicación de parche, no como PNG de apariencia. Sus figuras llevan visor con borde/bisel gris y un modelo distinto a S02. Sin referencia fiel en el modelo aprobado."
     },
     {
-      "name": "moki_chr_profile_right_v001_approved.png",
-      "pose": "profile_right",
+      "pose": "profile_left",
+      "status": "SIN DATO",
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/moki-turnaround-five-view-proposal-v2.png",
+      "reason": "La biblia deja el perfil opuesto como propuesta. La hoja de cinco vistas usa visor con borde gris y cartón más liso. Sin PNG fiel a S02."
+    },
+    {
+      "pose": "front",
+      "status": "SIN DATO",
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-referencia-parche.png",
-      "width": 570,
-      "height": 485,
-      "note": "Figura 02 PERFIL de la lámina oficial. El brandkit marca el lateral como aprobado; el fondo crema se retiró en local con umbral de color (PIL), sin redibujar.",
-      "bytes": 435411,
-      "sha256": "810b5bb7bf71140de7cface61212a7ed04accf0de4e653bdb850b969b30f0cc5"
+      "reason": "Frente/T-pose de la lámina: visor con aro gris. No hay frente aislado de S02."
+    },
+    {
+      "pose": "back",
+      "status": "SIN DATO",
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/moki-turnaround-five-view-proposal-v2.png",
+      "reason": "Espalda pendiente o propuesta en la biblia. La hoja de cinco vistas está fuera de modelo."
+    },
+    {
+      "pose": "t_pose",
+      "status": "SIN DATO",
+      "reason": "La biblia marca T como diagrama de articulación, no arte final. No hay T fiel a S02."
+    },
+    {
+      "pose": "a_pose",
+      "status": "SIN DATO",
+      "reason": "La biblia marca A como diagrama de articulación, no arte final."
+    },
+    {
+      "pose": "pointing",
+      "status": "SIN DATO",
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-referencia-parche.png",
+      "reason": "Figura 04 de la lámina: en exploración y fuera de modelo (visor con borde)."
     }
   ],
   "excluded": [
     {
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-referencia-parche.png",
+      "reason": "Lámina fuera de modelo: visor con borde/bisel gris y figuras distintas a S02. El recorte 02 PERFIL se retiró del banco."
+    },
+    {
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/moki-turnaround-five-view-proposal-v2.png",
+      "reason": "Hoja de cinco vistas fuera de modelo: visor con aro gris y cartón más liso. Brief 0.1 la deja como propuesta."
+    },
+    {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-conceptos/05-moki-gamer-negro.png",
-      "reason": "Escena 05. El kit la marca bloqueada: parche MOKI sobre la oreja izquierda anatómica (a la derecha de quien mira)."
+      "reason": "Escena 05. El kit la marca bloqueada: parche MOKI sobre la oreja izquierda anatómica."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-conceptos/01-puente-idea-resultado.png",
-      "reason": "Escena 01. Concepto propuesto; el kit dice que no es biblioteca de producción. Escena completa, no pose aislada."
+      "reason": "Escena 01. Concepto propuesto; no es biblioteca de producción ni S02."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-conceptos/02-taller-sistema-util-final.png",
@@ -47,47 +97,39 @@
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-conceptos/06-moki-gamedev-claro.png",
-      "reason": "Escena 06. Concepto revisado sin aprobación final; no es pose aislada."
+      "reason": "Escena 06. Concepto revisado sin aprobación final."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/07-moki-gamer-claro.png",
-      "reason": "Escena 07. Aplicación seleccionada, pero el kit aclara que no forma biblioteca final de personaje. Escena, no PNG de pose."
+      "reason": "Escena 07. Aplicación, no pose aislada de S02."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/08-moki-gamedev-negro.png",
-      "reason": "Escena 08. Igual que 07: aplicación, no pose aislada."
+      "reason": "Escena 08. Aplicación, no pose aislada de S02."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/09-moki-pelea-leccion.png",
-      "reason": "Escena 09. Aplicación social, no pose aislada."
+      "reason": "Escena 09. Aplicación social."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/10-moki-empresario-leccion.png",
-      "reason": "Escena 10. Aplicación social, no pose aislada."
+      "reason": "Escena 10. Aplicación social."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/11-moki-equipo-leccion.png",
-      "reason": "Escena 11. Aplicación social, no pose aislada."
+      "reason": "Escena 11. Aplicación social."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/12-moki-ia-verificar-leccion.png",
-      "reason": "Escena 12. Aplicación social, no pose aislada."
-    },
-    {
-      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/moki-turnaround-five-view-proposal-v2.png",
-      "reason": "Hoja de cinco vistas. El sitio la marca 'diseño aprobado'; el brief 0.1 y la biblia la dejan como propuesta (espalda y perfil opuesto). No se recortó para no inventar poses sueltas."
-    },
-    {
-      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-referencia-parche.png",
-      "reason": "Lámina completa. El kit aprueba el lateral (figura 02, incluida en el banco) y deja 01 T-pose, 03 tres cuartos y 04 señalando 'en exploración'. No se publican esas tres."
+      "reason": "Escena 12. Aplicación social."
     },
     {
       "source_url": "https://brandkit.jorgesuarez.com.mx/assets/release-0.6/jorge-moki-seleccionado.png",
-      "reason": "Retrato Jorge + Moki. No es un PNG de pose de personaje."
+      "reason": "Retrato Jorge + Moki. No es un PNG de pose."
     },
     {
       "source_url": "repo:assets/v2/moki-token.webp",
-      "reason": "Mismo tres cuartos del PNG oficial, recorte chico. No es pose nueva."
+      "reason": "Mismo tres cuartos de S02, recorte chico. No es pose nueva."
     }
   ]
 }
