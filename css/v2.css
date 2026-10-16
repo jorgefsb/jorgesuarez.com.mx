@@ -82,6 +82,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 [data-theme="papel"] .kicker { color: var(--accent-ink); }
 .subhead { font-size: 22px; margin: var(--sp-8) 0 var(--sp-5); color: var(--text); }
 .sec-head { display: grid; gap: var(--sp-4); margin-bottom: var(--sp-7); max-width: 760px; }
+.sec-head .btn { justify-self: start; }
 
 /* icons */
 .ico { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -415,6 +416,7 @@ strong, b { font-weight: inherit; color: var(--text); }
   .row:hover .row__emoji { transform: translateY(-3px) rotate(-8deg) scale(1.08); }
 }
 .row__body { font-size: 15px; line-height: 1.55; }
+.row__ctas { display: flex; flex-wrap: wrap; align-items: center; column-gap: 16px; }
 .row__cta { display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; font-size: 15px; }
 [data-theme="oscuro"] .row__cta { color: var(--accent); }
 @media (hover: hover) and (pointer: fine) { .row__cta:hover { text-decoration-thickness: 2px; } }
@@ -550,7 +552,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .finale__copy .btn { margin-top: var(--sp-3); }
 .foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 calc(96px + env(safe-area-inset-bottom)); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
 .foot__love { color: var(--text); font-size: 14px; }
-.foot__links { display: flex; justify-content: center; }
+.foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
 .foot__link {
   display: inline-flex; align-items: center; min-height: var(--tap);
   color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;
