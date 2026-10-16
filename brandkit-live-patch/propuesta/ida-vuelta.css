@@ -1,10 +1,35 @@
 /* Additive overlay for round-trip, language, and report-template links.
    Does not rewrite existing BrandKit chrome. */
 
-.topbar .wordmark {
+.topbar .wordmark,
+.papacito-footer .wordmark {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+}
+
+/* Sticky topbar is taller with the ES/EN switcher (wraps at 375).
+   html scroll-padding covers hash navigation; scroll-margin on
+   anchored blocks adds a small extra gap (they stack, so keep it short). */
+:root {
+  --iv-header-h: 85px;
+}
+@media (max-width: 850px) {
+  :root { --iv-header-h: 100px; }
+}
+@media (max-width: 580px) {
+  :root { --iv-header-h: 131px; }
+}
+html {
+  scroll-padding-top: calc(var(--iv-header-h) + 4px);
+}
+section[id],
+.brand-extension[id],
+.story-gallery[id],
+.pendinglist[id],
+details[id],
+#contenido {
+  scroll-margin-top: 12px;
 }
 
 .iv-lang {
