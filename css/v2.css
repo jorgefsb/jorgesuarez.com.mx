@@ -188,7 +188,9 @@ strong, b { font-weight: inherit; color: var(--text); }
   transform-origin: 50% 100%;
   filter: drop-shadow(0 3px 4px rgba(0,0,0,.5));
   pointer-events: none;
+  transition: opacity 220ms var(--ease);
 }
+.quest.is-foot-in .quest__moki { opacity: 0; }
 .quest.is-walking .quest__moki { animation: moki-step 360ms var(--ease) infinite alternate; }
 @keyframes moki-step { from { translate: 0 0; } to { translate: 0 -4px; } }
 .quest__label {

@@ -191,6 +191,13 @@
   relabel();
   measure();
 
+  var foot = document.querySelector('.foot');
+  if (foot && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      quest.classList.toggle('is-foot-in', entries[0].isIntersecting);
+    }).observe(foot);
+  }
+
   /* 7. Lo último: 6 publicaciones con imagen desde el muro en vivo (lógica del v1).
         Si el muro no responde, la sección se queda oculta. */
   (function initLatest() {
