@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Sonidos y animaciones chiquitas que hacen que cada clic se sienta vivo, como en un videojuego" data-es="Sonidos y animaciones chiquitas que hacen que cada clic se sienta vivo, como en un videojuego" data-en="Small sounds and animations that make every click feel alive, like in a game">
+  <title data-es="Juice" data-en="Juice">Juice</title>
+  <link rel="stylesheet" href="assets/brand-kit-0.3/tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="papacito-footer.css">
+  <link rel="stylesheet" href="1.0.0/juice.css">
+  <link rel="stylesheet" href="1.0.0/juice-menu.css">
+  <link rel="stylesheet" href="juice-page.css">
+</head>
+<body>
+<a class="skip" href="#contenido" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
+<header class="topbar">
+  <a class="wordmark" href="https://jorgesuarez.com.mx">JorgeSuarez<span>.com.mx</span></a>
+  <div class="topmeta">
+    <span class="status proposed" data-es="En desarrollo" data-en="In progress">En desarrollo</span>
+    <span class="desktop" data-es="Actualizado 18 oct 2026" data-en="Updated 18 Oct 2026">Actualizado 18 oct 2026</span>
+  </div>
+</header>
+<div class="jz-bar">
+  <nav class="jz-lang" role="group" aria-label="ES / EN">
+    <a href="?lang=es" lang="es">ES</a>
+    <span aria-hidden="true">|</span>
+    <a href="?lang=en" lang="en">EN</a>
+  </nav>
+  <div class="jz-tools">
+    <button type="button" class="juice-sfx" aria-pressed="false" aria-label="Activar sonido">🔇</button>
+  </div>
+</div>
+<div class="layout">
+  <aside class="rail">
+    <p class="eyebrow" data-es="BrandKit de trabajo" data-en="Working BrandKit">BrandKit de trabajo</p>
+    <nav aria-label="Secciones del BrandKit">
+      <a href="#inicio">Juice</a>
+      <a href="#tokens" data-es="Tokens" data-en="Tokens">Tokens</a>
+      <a href="#niveles" data-es="Niveles" data-en="Levels">Niveles</a>
+      <a href="#presets">Presets</a>
+      <a href="#sonido" data-es="Sonido" data-en="Sound">Sonido</a>
+      <a href="#moki">Moki</a>
+      <a href="#reglas" data-es="Reglas" data-en="Rules">Reglas</a>
+      <a href="#importar" data-es="Importar" data-en="Import">Importar</a>
+      <a href="#demo">Demo</a>
+    </nav>
+    <div class="railnote" data-es="Una base común.<br>Decisiones visibles.<br>Trabajo en construcción." data-en="A shared base.<br>Visible decisions.<br>Work in progress.">Una base común.<br>Decisiones visibles.<br>Trabajo en construcción.</div>
+  </aside>
+  <main id="contenido">
+    <nav class="jz-subnav" aria-label="Juice">
+      <a href="#tokens">Tokens</a>
+      <a href="#niveles" data-es="Niveles" data-en="Levels">Niveles</a>
+      <a href="#presets">Presets</a>
+      <a href="#sonido" data-es="Sonido" data-en="Sound">Sonido</a>
+      <a href="#moki">Moki</a>
+      <a href="#reglas" data-es="Reglas" data-en="Rules">Reglas</a>
+      <a href="#importar" data-es="Importar" data-en="Import">Importar</a>
+      <a href="#demo">Demo</a>
+    </nav>
+
+    <section id="inicio" class="hero">
+      <div class="herocopy">
+        <p class="eyebrow">juice.js 1.0.0</p>
+        <h1>Juice</h1>
+        <p class="lead" data-es="Sonidos y animaciones chiquitas que hacen que cada clic se sienta vivo, como en un videojuego" data-en="Small sounds and animations that make every click feel alive, like in a game">Sonidos y animaciones chiquitas que hacen que cada clic se sienta vivo, como en un videojuego</p>
+        <p class="muted" data-es="El juice es feedback extra. Primero va la acción, que funciona sola. Encima se agregan capas. Nunca arregla una acción rota y nunca es la única señal de que algo pasó." data-en="Juice is extra feedback. The base action comes first and works on its own. Layers go on top. It never fixes a broken action and is never the only signal that something happened.">El juice es feedback extra. Primero va la acción, que funciona sola. Encima se agregan capas. Nunca arregla una acción rota y nunca es la única señal de que algo pasó.</p>
+        <div class="actions">
+          <a class="button primary" href="#demo" data-es="Probar la demo <span aria-hidden=&quot;true&quot;>↓</span>" data-en="Try the demo <span aria-hidden=&quot;true&quot;>↓</span>">Probar la demo <span aria-hidden="true">↓</span></a>
+          <a class="textlink" href="#importar" data-es="Cómo importar <span aria-hidden=&quot;true&quot;>↓</span>" data-en="How to import <span aria-hidden=&quot;true&quot;>↓</span>">Cómo importar <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <figure class="portrait jz-hero-moki">
+        <span class="jz-moki" data-jz-moki>
+          <img src="assets/moki-parche-derecho.png" width="1215" height="1295" alt="Moki, astronauta de cartón naranja con el parche en su oreja derecha" data-es="Moki, astronauta de cartón naranja con el parche en su oreja derecha" data-en="Moki, orange cardboard astronaut with the patch on his right ear">
+        </span>
+        <figcaption data-es="Moki · asset aprobado · sin espejo" data-en="Moki · approved asset · no mirror">Moki · asset aprobado · sin espejo</figcaption>
+      </figure>
+    </section>
+
+    <section id="tokens" class="section" aria-labelledby="tokens-title">
+      <div class="sectionhead"><span class="status inherited">--jz</span></div>
+      <h2 id="tokens-title">Tokens</h2>
+      <p class="sectionlead" data-es="Variables CSS con prefijo --jz. El paquete las trae. El sitio no las reescribe." data-en="CSS variables with the --jz prefix. The package ships them. The site does not rewrite them.">Variables CSS con prefijo --jz. El paquete las trae. El sitio no las reescribe.</p>
+      <ul class="jz-list">
+        <li><strong>--jz-dur-fast:</strong> 120ms (hover, press) · <strong>--jz-dur-base:</strong> 200ms · <strong>--jz-dur-slow:</strong> 320ms (Moki, paneles)</li>
+        <li><strong>--jz-ease-out:</strong> cubic-bezier(.2,.8,.2,1) · <strong>--jz-ease-pop:</strong> cubic-bezier(.34,1.56,.64,1)</li>
+        <li data-es="<strong>Squash:</strong> scale(.94,1.04) al presionar y vuelta con ease-pop." data-en="<strong>Squash:</strong> scale(.94,1.04) on press, then back with ease-pop."><strong>Squash:</strong> scale(.94,1.04) al presionar y vuelta con ease-pop.</li>
+        <li data-es="<strong>Shake:</strong> 280 ms, 3 ciclos, ±4 px en X." data-en="<strong>Shake:</strong> 280 ms, 3 cycles, ±4 px on X."><strong>Shake:</strong> 280 ms, 3 ciclos, ±4 px en X.</li>
+        <li data-es="<strong>Tilt:</strong> 6deg como máximo, solo con pointer fino." data-en="<strong>Tilt:</strong> 6deg max, fine pointer only."><strong>Tilt:</strong> 6deg como máximo, solo con pointer fino.</li>
+        <li data-es="<strong>Partículas:</strong> solo #FF6B35, #FFA500 y #F4E8D5. Máximo 12 por evento (24 en pantalla), salvo la fiesta de pago. Detrás del texto." data-en="<strong>Particles:</strong> only #FF6B35, #FFA500, and #F4E8D5. Max 12 per event (24 on screen), except the pay party. Behind the text."><strong>Partículas:</strong> solo #FF6B35, #FFA500 y #F4E8D5. Máximo 12 por evento (24 en pantalla), salvo la fiesta de pago. Detrás del texto.</li>
+      </ul>
+      <div class="jz-swatch-row" aria-hidden="true">
+        <span class="jz-swatch jz-swatch--orange"></span>
+        <span class="jz-swatch jz-swatch--warm"></span>
+        <span class="jz-swatch jz-swatch--paper"></span>
+      </div>
+    </section>
+
+    <section id="niveles" class="section" aria-labelledby="niveles-title">
+      <div class="sectionhead"><span class="status approved" data-es="Visitante y sitio" data-en="Visitor and site">Visitante y sitio</span></div>
+      <h2 id="niveles-title" data-es="Niveles" data-en="Levels">Niveles</h2>
+      <p class="sectionlead" data-es="El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. La elección se guarda en localStorage (jz-level) y en html data-jz-level." data-en="The Juice menu sits next to the sound button. Three levels: Off, Subtle (default), and Full. The choice is stored in localStorage (jz-level) and on html data-jz-level.">El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. La elección se guarda en localStorage (jz-level) y en html data-jz-level.</p>
+      <div class="jz-levels">
+        <article class="jz-card">
+          <p class="eyebrow" data-es="Apagado" data-en="Off">Apagado</p>
+          <h3 data-es="Nada se mueve" data-en="Nothing moves">Nada se mueve</h3>
+          <p data-es="Quedan color, texto de estado, foco, palomita y sello fijos. La pausa de impacto es 0 ms. Moki se queda quieto." data-en="Color, status text, focus, a static check, and a static stamp stay. Impact pause is 0 ms. Moki stays still.">Quedan color, texto de estado, foco, palomita y sello fijos. La pausa de impacto es 0 ms. Moki se queda quieto.</p>
+        </article>
+        <article class="jz-card">
+          <p class="eyebrow" data-es="Discreto · por defecto" data-en="Subtle · default">Discreto · por defecto</p>
+          <h3 data-es="Lo que se siente" data-en="What you feel">Lo que se siente</h3>
+          <p data-es="Press, flash, ripple, shake, impact, check, stamp, hop, mirada, burst y fiesta de pago (una vez). Anticipación a la mitad. Stagger solo en menús." data-en="Press, flash, ripple, shake, impact, check, stamp, hop, look, burst, and the pay party (once). Anticipation at half strength. Stagger on menus only.">Press, flash, ripple, shake, impact, check, stamp, hop, mirada, burst y fiesta de pago (una vez). Anticipación a la mitad. Stagger solo en menús.</p>
+        </article>
+        <article class="jz-card">
+          <p class="eyebrow" data-es="Completo" data-en="Full">Completo</p>
+          <h3 data-es="Todas las capas" data-en="Every layer">Todas las capas</h3>
+          <p data-es="Suma around, foreshadow, tilt, haptics y stagger en listas. El sitio solo puede bajar el juice; nunca prende lo que el visitante apagó." data-en="Adds around, foreshadow, tilt, haptics, and list stagger. A site can only turn juice down; it never turns on what the visitor turned off.">Suma around, foreshadow, tilt, haptics y stagger en listas. El sitio solo puede bajar el juice; nunca prende lo que el visitante apagó.</p>
+        </article>
+      </div>
+      <p class="sectionlead" data-es="Con prefers-reduced-motion: reduce el nivel queda forzado en Apagado y el menú lo muestra así, con una nota corta. El sonido sigue su propio toggle." data-en="With prefers-reduced-motion: reduce, the level is forced to Off and the menu says so, with a short note. Sound keeps its own toggle.">Con prefers-reduced-motion: reduce el nivel queda forzado en Apagado y el menú lo muestra así, con una nota corta. El sonido sigue su propio toggle.</p>
+    </section>
+
+    <section id="presets" class="section" aria-labelledby="presets-title">
+      <div class="sectionhead"><span class="status approved">data-jz</span></div>
+      <h2 id="presets-title">Presets</h2>
+      <p class="sectionlead" data-es="Un feedback es una lista de efectos. Cada preset respeta el nivel del visitante y el interruptor del sitio, así que la pila se encoge sola." data-en="A feedback is a list of effects. Each preset respects the visitor level and the site switch, so the stack shrinks on its own.">Un feedback es una lista de efectos. Cada preset respeta el nivel del visitante y el interruptor del sitio, así que la pila se encoge sola.</p>
+      <div class="jz-grid">
+        <article class="jz-card">
+          <h3>jz-tap</h3>
+          <p data-es="press, flash, ripple y sonido tap. En todo botón." data-en="press, flash, ripple, and tap sound. On every button.">press, flash, ripple y sonido tap. En todo botón.</p>
+        </article>
+        <article class="jz-card">
+          <h3>jz-success</h3>
+          <p data-es="impact, check, burst, stamp, hop de Moki y sonido de éxito. Al terminar un form." data-en="impact, check, burst, stamp, Moki hop, and success sound. When a form finishes.">impact, check, burst, stamp, hop de Moki y sonido de éxito. Al terminar un form.</p>
+        </article>
+        <article class="jz-card">
+          <h3>jz-error</h3>
+          <p data-es="Shake, sonido de error y un texto que dice qué pasó." data-en="Shake, error sound, and text that says what happened.">Shake, sonido de error y un texto que dice qué pasó.</p>
+        </article>
+        <article class="jz-card">
+          <h3>jz-pay</h3>
+          <p data-es="impact, party, hop y éxito. La fiesta (30 a 40 partículas) solo cuando entra un pago, una vez, detrás del texto. Nunca en otro botón." data-en="impact, party, hop, and success. The party (30 to 40 particles) only when a payment lands, once, behind the text. Never on another button.">impact, party, hop y éxito. La fiesta (30 a 40 partículas) solo cuando entra un pago, una vez, detrás del texto. Nunca en otro botón.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sonido" class="section" aria-labelledby="sonido-title">
+      <div class="sectionhead"><span class="status inherited" data-es="Apagado por defecto" data-en="Off by default">Apagado por defecto</span></div>
+      <h2 id="sonido-title" data-es="Sonido" data-en="Sound">Sonido</h2>
+      <p class="sectionlead" data-es="El toggle 🔊/🔇 siempre es tocable a 44 px. El audio arranca solo después de un gesto. Web Audio, sin librerías: tap, éxito y error. Cada clip dura 150 ms o menos. Gain máximo 0.125." data-en="The 🔊/🔇 toggle is always a 44 px target. Audio starts only after a gesture. Web Audio, no libraries: tap, success, and error. Each clip is 150 ms or less. Max gain 0.125.">El toggle 🔊/🔇 siempre es tocable a 44 px. El audio arranca solo después de un gesto. Web Audio, sin librerías: tap, éxito y error. Cada clip dura 150 ms o menos. Gain máximo 0.125.</p>
+      <ul class="jz-list">
+        <li data-es="La preferencia vive en localStorage. El sonido no depende del nivel de juice." data-en="The preference lives in localStorage. Sound does not follow the juice level.">La preferencia vive en localStorage. El sonido no depende del nivel de juice.</li>
+        <li data-es="Pitch ±5% para que no canse. En rachas sube un semitono por paso, hasta 5." data-en="Pitch ±5% so it does not tire. Streaks rise one semitone per step, up to 5.">Pitch ±5% para que no canse. En rachas sube un semitono por paso, hasta 5.</li>
+      </ul>
+    </section>
+
+    <section id="moki" class="section" aria-labelledby="moki-title">
+      <div class="sectionhead"><span class="status approved" data-es="Banco aprobado" data-en="Approved bank">Banco aprobado</span></div>
+      <h2 id="moki-title">Moki</h2>
+      <p class="sectionlead" data-es="Solo PNG o WebP aprobados del banco. Nunca espejado: prohibido scaleX(-1), rotateY y flip. El visor es negro y sin cara." data-en="Only approved PNG or WebP from the bank. Never mirrored: no scaleX(-1), rotateY, or flip. The visor is black and has no face.">Solo PNG o WebP aprobados del banco. Nunca espejado: prohibido scaleX(-1), rotateY y flip. El visor es negro y sin cara.</p>
+      <ul class="jz-list">
+        <li data-es="Reacciona en éxito, error o pago. Nunca tapa una liga, un botón ni un texto." data-en="He reacts on success, error, or payment. He never covers a link, a button, or text.">Reacciona en éxito, error o pago. Nunca tapa una liga, un botón ni un texto.</li>
+        <li data-es="Hop vertical, asomarse, celebrar o verse preocupado (en la postura, nunca en la cara)." data-en="Vertical hop, peek, celebrate, or look worried (in posture, never on the face).">Hop vertical, asomarse, celebrar o verse preocupado (en la postura, nunca en la cara).</li>
+        <li data-es="En Apagado se queda quieto." data-en="On Off he stays still.">En Apagado se queda quieto.</li>
+      </ul>
+    </section>
+
+    <section id="reglas" class="section" aria-labelledby="reglas-title">
+      <div class="sectionhead"><span class="status pending" data-es="Sin excepciones" data-en="No exceptions">Sin excepciones</span></div>
+      <h2 id="reglas-title" data-es="Reglas duras" data-en="Hard rules">Reglas duras</h2>
+      <p class="sectionlead" data-es="Un solo sí en esta lista es un no." data-en="A single yes on this list is a no.">Un solo sí en esta lista es un no.</p>
+      <ul class="jz-list">
+        <li data-es="<strong>Solo transform y opacity.</strong> Cero layout shift. CLS igual al de antes." data-en="<strong>Only transform and opacity.</strong> Zero layout shift. CLS stays the same."><strong>Solo transform y opacity.</strong> Cero layout shift. CLS igual al de antes.</li>
+        <li data-es="<strong>Sin loops.</strong> Todo responde a una acción. Nada en idle ni burbujas que floten solas." data-en="<strong>No loops.</strong> Everything answers an action. Nothing on idle, no bubbles that float alone."><strong>Sin loops.</strong> Todo responde a una acción. Nada en idle ni burbujas que floten solas.</li>
+        <li data-es="<strong>Partículas</strong> solo #FF6B35, #FFA500 y #F4E8D5, detrás del texto, nunca encima de un CTA." data-en="<strong>Particles</strong> only #FF6B35, #FFA500, and #F4E8D5, behind the text, never over a CTA."><strong>Partículas</strong> solo #FF6B35, #FFA500 y #F4E8D5, detrás del texto, nunca encima de un CTA.</li>
+        <li data-es="<strong>Reduced-motion</strong> quita tilt, shake, partículas, hop y hit stop. Quedan color y foco." data-en="<strong>Reduced motion</strong> removes tilt, shake, particles, hop, and hit stop. Color and focus stay."><strong>Reduced-motion</strong> quita tilt, shake, partículas, hop y hit stop. Quedan color y foco.</li>
+        <li data-es="Nada parpadea más de 3 veces por segundo. El juice nunca es la única señal." data-en="Nothing flashes more than 3 times per second. Juice is never the only signal.">Nada parpadea más de 3 veces por segundo. El juice nunca es la única señal.</li>
+        <li data-es="En celular no hay tilt. A 375 px los íconos del header no se enciman." data-en="No tilt on phones. At 375 px header icons do not overlap.">En celular no hay tilt. A 375 px los íconos del header no se enciman.</li>
+      </ul>
+    </section>
+
+    <section id="importar" class="section" aria-labelledby="importar-title">
+      <div class="sectionhead"><span class="status approved">/juice/1.0.0/</span></div>
+      <h2 id="importar-title" data-es="Cómo importar" data-en="How to import">Cómo importar</h2>
+      <p class="sectionlead" data-es="La fuente oficial es brandkit.jorgesuarez.com.mx/juice/1.0.0/, pero cada sitio sirve una copia fija y versionada desde su propio host, en /juice/1.0.0/ y /brand/0.3/tokens.css, con defer." data-en="The official source is brandkit.jorgesuarez.com.mx/juice/1.0.0/, but each site serves a fixed, versioned copy from its own host, at /juice/1.0.0/ and /brand/0.3/tokens.css, with defer.">La fuente oficial es brandkit.jorgesuarez.com.mx/juice/1.0.0/, pero cada sitio sirve una copia fija y versionada desde su propio host, en /juice/1.0.0/ y /brand/0.3/tokens.css, con defer.</p>
+<pre class="jz-import"><code>&lt;link rel="stylesheet" href="/brand/0.3/tokens.css"&gt;
+&lt;link rel="stylesheet" href="/juice/1.0.0/juice.css"&gt;
+&lt;link rel="stylesheet" href="/juice/1.0.0/juice-menu.css"&gt;
+&lt;script src="/juice/1.0.0/juice.js" defer&gt;&lt;/script&gt;
+&lt;script src="/juice/1.0.0/juice-menu.js" defer&gt;&lt;/script&gt;</code></pre>
+      <p class="fineprint" data-es="Esa copia no se edita y no lleva encabezado. El origen, la versión y el sha256 de cada archivo van en manifest.json junto a los archivos, y una prueba los compara. Una versión nueva va en una carpeta nueva." data-en="That copy is not edited and carries no header. The origin, version and sha256 of each file live in manifest.json next to the files, and a test compares them. A new version goes in a new folder.">Esa copia no se edita y no lleva encabezado. El origen, la versión y el sha256 de cada archivo van en manifest.json junto a los archivos, y una prueba los compara. Una versión nueva va en una carpeta nueva.</p>
+    </section>
+
+    <section id="demo" class="section" aria-labelledby="demo-title">
+      <div class="sectionhead"><span class="status approved" data-es="En vivo" data-en="Live">En vivo</span></div>
+      <h2 id="demo-title" data-es="Demo en vivo" data-en="Live demo">Demo en vivo</h2>
+      <p class="sectionlead" data-es="Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto viene por defecto." data-en="The buttons fire each preset. The level menu is up top, next to sound. You can also change the level here. Subtle is the default.">Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto viene por defecto.</p>
+      <div class="jz-live" role="group" aria-label="Nivel">
+        <button type="button" class="btn btn--ghost" data-set-level="off" data-es="Apagado" data-en="Off">Apagado</button>
+        <button type="button" class="btn btn--ghost" data-set-level="subtle" data-es="Discreto" data-en="Subtle">Discreto</button>
+        <button type="button" class="btn btn--ghost" data-set-level="full" data-es="Completo" data-en="Full">Completo</button>
+      </div>
+      <p class="jz-now" data-jz-now></p>
+      <span hidden data-jz-lab="off" data-es="Apagado" data-en="Off">Apagado</span>
+      <span hidden data-jz-lab="subtle" data-es="Discreto" data-en="Subtle">Discreto</span>
+      <span hidden data-jz-lab="full" data-es="Completo" data-en="Full">Completo</span>
+
+      <div class="jz-grid">
+        <article class="jz-card jz-host">
+          <h3>jz-tap</h3>
+          <p data-es="press + flash + ripple + sonido tap." data-en="press + flash + ripple + tap sound.">press + flash + ripple + sonido tap.</p>
+          <button type="button" class="btn btn--primary jz-antic" data-jz="jz-tap" data-es="Probar tap" data-en="Try tap">Probar tap</button>
+        </article>
+        <article class="jz-card jz-host" data-jz-stamp>
+          <h3>jz-success</h3>
+          <p data-es="impact, check, burst, stamp, hop y éxito." data-en="impact, check, burst, stamp, hop, and success.">impact, check, burst, stamp, hop y éxito.</p>
+          <ol class="jz-steps">
+            <li class="jz-ok"><span class="jz-check">✓</span><span data-es="Paso" data-en="Step">Paso</span></li>
+          </ol>
+          <button type="button" class="btn btn--primary" data-jz="jz-success" data-es="Probar éxito" data-en="Try success">Probar éxito</button>
+        </article>
+        <article class="jz-card jz-host">
+          <h3>jz-error</h3>
+          <p data-es="Shake, sonido de error y texto que dice qué pasó." data-en="Shake, error sound, and text that says what happened.">Shake, sonido de error y texto que dice qué pasó.</p>
+          <button type="button" class="btn btn--primary" data-jz="jz-error" data-es="Probar error" data-en="Try error">Probar error</button>
+          <p class="jz-err" role="status" aria-live="polite"></p>
+        </article>
+        <article class="jz-card jz-host">
+          <h3>jz-pay</h3>
+          <p data-es="Pausa de impacto, fiesta una vez, hop y éxito. Solo este preset lanza la fiesta." data-en="Impact pause, party once, hop, and success. Only this preset fires the party.">Pausa de impacto, fiesta una vez, hop y éxito. Solo este preset lanza la fiesta.</p>
+          <button type="button" class="btn btn--primary" data-jz="jz-pay" data-es="Probar pago" data-en="Try pay">Probar pago</button>
+        </article>
+      </div>
+    </section>
+
+    <footer class="papacito-footer" aria-label="Créditos y actualizaciones" data-footer-version="1.0.0">
+      <div class="papacito-footer__identity">
+        <a class="wordmark" href="https://jorgesuarez.com.mx">JorgeSuarez<span>.com.mx</span></a>
+        <p data-es="Kaizen &amp; Play · Sistema unificado 0.6" data-en="Kaizen &amp; Play · Unified system 0.6">Kaizen &amp; Play · Sistema unificado 0.6</p>
+      </div>
+      <p class="papacito-footer__signature">
+        <span data-es="Hecho con amor ❤️🎮 por" data-en="Made with love ❤️🎮 by">Hecho con amor ❤️🎮 por</span>
+        <a href="https://jorgesuarez.com.mx/">JorgeSuarez.com.mx</a>
+      </p>
+      <p><a class="jz-back" href="https://jorgesuarez.com.mx">← JorgeSuarez.com.mx</a></p>
+      <div class="papacito-footer__meta">
+        <p data-es="Actualizado 18 oct 2026 · Juice 1.0.0" data-en="Updated 18 Oct 2026 · Juice 1.0.0">Actualizado 18 oct 2026 · Juice 1.0.0</p>
+      </div>
+    </footer>
+  </main>
+</div>
+<script src="1.0.0/juice.js" defer></script>
+<script src="1.0.0/juice-menu.js" defer></script>
+<script src="lang.js" defer></script>
+<script src="page.js" defer></script>
+</body>
+</html>
