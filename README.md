@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<img src="./assets/readme-banner.svg" width="1000" alt="Jorge Suárez: construyendo juegos, escalando estudios y documentando el viaje." />
+<img src="./assets/readme-banner.svg" width="1000" alt="Jorge Suárez — construyendo juegos, escalando estudios y documentando el viaje." />
 
 [🎮 Visitar sitio](https://jorgesuarez.com.mx) · [🎨 Sistema de marca](./brand-guidelines.md) · [👾 GitHub](https://github.com/jorgefsb)
 

@@ -3,6 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <style>
+    .hud{position:fixed;inset:0 0 auto 0;height:72px;z-index:40}
+    .quest{position:fixed;left:0;right:0;bottom:14px;z-index:39;width:min(760px,calc(100% - 40px));height:56px;margin-inline:auto}
+    @media(max-width:760px){.quest{bottom:10px;width:calc(100% - 24px);height:48px}}
+    .quest__moki{width:36px;height:auto;max-width:36px;display:block}
+    .quest__flags{position:absolute;inset:0;margin:0;padding:0;list-style:none}
+    .quest__flag{position:absolute}
+    .quest__hint,.quest__label{position:fixed;left:50%;bottom:calc(48px + 10px + 10px);transform:translateX(-50%);white-space:nowrap;font-size:12px}
+    .hero{height:220vh}
+    .hero__stage{min-height:100vh;overflow:hidden}
+    .sc-grain{position:fixed;inset:0;pointer-events:none}
+  </style>
   <title data-es="Jorge Suárez | Construyendo Juegos, Escalando Estudios, Documentando el Viaje" data-en="Jorge Suárez | Building Games, Scaling Studios, Documenting the Journey">Jorge Suárez | Construyendo Juegos, Escalando Estudios, Documentando el Viaje</title>
   <meta name="description" content="Jorge Suárez & Equipos - 20+ años construyendo videojuegos y escalando compañías. De KaraOkulta a GM de Amber México. Documentando el viaje colectivo de la industria." data-es="Jorge Suárez & Equipos - 20+ años construyendo videojuegos y escalando compañías. De KaraOkulta a GM de Amber México. Documentando el viaje colectivo de la industria." data-en="Jorge Suárez & Teams - 20+ years building video games and scaling companies. From KaraOkulta to GM of Amber Mexico. Documenting the collective industry journey.">
   <meta name="author" content="Jorge Suárez">
@@ -38,7 +50,7 @@
   <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="brand/0.3/tokens.css">
   <link rel="stylesheet" href="engine/scrollcraft.css?v=d8f7ce998b">
-  <link rel="stylesheet" href="css/v2.css?v=juice100">
+  <link rel="stylesheet" href="css/v2.css?v=juice101">
   <link rel="stylesheet" href="juice/1.0.1/juice.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="juice/1.0.1/juice-menu.css" media="print" onload="this.media='all'">
   <noscript>
@@ -121,10 +133,10 @@
   </div>
 </header>
 
-<nav class="quest" data-quest aria-label="Capítulos">
+<nav class="quest" data-quest aria-label="Capítulos" hidden>
   <div class="quest__track"><div class="quest__fill"></div></div>
   <ol class="quest__flags"></ol>
-  <span class="quest__moki-slot"><img class="quest__moki" data-jz-moki src="assets/v2/moki-token.webp" width="160" height="157" alt=""></span>
+  <span class="quest__moki-slot"><img class="quest__moki" data-jz-moki src="assets/v2/moki-token.webp" width="36" height="35" alt=""></span>
   <p class="quest__label" aria-live="polite"></p>
   <p class="quest__hint" aria-hidden="true"><span data-es="Desliza" data-en="Scroll">Desliza</span><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></p>
 </nav>
@@ -133,7 +145,7 @@
 
 <section id="home" class="chapter hero" data-chapter data-sc-act="scrub" data-sc-span="2.2" data-sc-dwell="0.3">
   <div data-sc-stage class="hero__stage">
-    <img class="sc-stage__poster" src="assets/v2/hero-poster.webp" alt="" fetchpriority="high">
+    <img class="sc-stage__poster" src="assets/v2/hero-poster.webp" alt="" width="1920" height="1080" fetchpriority="high">
     <video data-sc-scrub data-sc-src="assets/v2/hero.mp4" data-sc-src-mobile="assets/v2/hero-m.mp4" muted playsinline preload="none"></video>
     <div class="hero__glow" hidden aria-hidden="true"></div>
     <div class="hero__scrim" aria-hidden="true"></div>
@@ -152,7 +164,7 @@
         <img src="assets/v2/hero-jorge-moki-v3.webp" width="906" height="1074" alt="Jorge Suárez - GM Amber México">
       </picture>
     </figure>
-    <div class="hero__front" aria-hidden="true"><img src="assets/v2/hero-nubes-v2.webp" alt="" width="1600" height="327"></div>
+    <div class="hero__front" aria-hidden="true"><img src="assets/v2/hero-nubes-v2.webp" alt="" width="1600" height="342"></div>
     <div class="hero__proof" data-sc-cue="0.3 1 0.18 0">
       <ul class="hero__stats">
         <li><strong>20+</strong><span data-es="años en videojuegos" data-en="years in games">años en videojuegos</span></li>
@@ -345,7 +357,7 @@
 <script src="juice/1.0.1/juice.js" defer></script>
 <script src="juice/1.0.1/juice-menu.js" defer></script>
 <script src="engine/scrollcraft.js?v=fbcc500738" defer></script>
-<script src="js/v2.js?v=juice100" defer></script>
-<script src="vfx/fluid-v2.js?v=juice100" defer></script>
+<script src="js/v2.js?v=juice101" defer></script>
+<script src="vfx/fluid-v2.js?v=juice101" defer></script>
 </body>
 </html>

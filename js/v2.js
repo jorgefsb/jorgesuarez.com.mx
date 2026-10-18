@@ -197,6 +197,7 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
   relabel();
   measure();
+  quest.hidden = false;
 
   var foot = document.querySelector('.foot');
   if (foot && 'IntersectionObserver' in window) {
