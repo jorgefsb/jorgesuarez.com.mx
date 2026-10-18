@@ -1,3 +1,4 @@
+/* juice 1.0.0 core. Does not load fonts (no @import, no @font-face). Host page must load Outfit 700 and Inter 400. */
 :root{--jz-dur-base:.2s;--jz-dur-slow:.32s;--jz-ease-out:cubic-bezier(.2,.8,.2,1);--jz-ease-pop:cubic-bezier(.34,1.56,.64,1);--jz-dur-flash:.25s;--jz-dur-ripple:.4s;--jz-dur-pop:.3s;--jz-dur-stamp:.25s}
 .jz-host,[class*=-card],.ia-sponsor__form,.btn--primary,[data-jz]{isolation:isolate;position:relative}
 .jz-host{overflow:hidden}
@@ -27,7 +28,7 @@ html[data-jz-off~=anticipation] .jz-antic:hover{transform:none}
 .jz-ripple-clip{overflow:hidden}
 .jz-ripple{position:absolute;border-radius:50%;background:#F4E8D5;opacity:0;transform:scale(0);animation:jz-ripple var(--jz-dur-ripple) var(--jz-ease-out) forwards}
 @keyframes jz-ripple{0%{transform:scale(0);opacity:.4}100%{transform:scale(1);opacity:0}}
-.jz-steps{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0;padding:0;list-style:none;font-size:14px}
+.jz-steps{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0;padding:0;list-style:none;font:400 14px var(--brand-font-body,Inter,system-ui,sans-serif)}
 .jz-steps li{display:inline-flex;align-items:center;gap:8px}
 .jz-check{display:inline-grid;place-content:center;width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.15);color:transparent;font-weight:700;font-size:13px;line-height:1}
 .jz-steps li.is-done{color:#fff}
@@ -36,7 +37,7 @@ html[data-jz-off~=anticipation] .jz-antic:hover{transform:none}
 .jz-pop .jz-check{animation:jz-pop var(--jz-dur-pop) var(--jz-ease-out)}
 .jz-locked input,.jz-locked textarea,.jz-locked select{opacity:.6}
 [data-jz-stamp]>:is(h1,h2,h3){padding-right:126px;text-wrap:balance}
-.jz-stamp{position:absolute;top:8px;right:16px;padding:6px 16px;border:3px solid #FF6B35;border-radius:10px;background:#0A0A0A;color:#FF6B35;font:700 22px/1.1 Outfit,sans-serif;text-transform:uppercase;pointer-events:none;animation:jz-stamp var(--jz-dur-stamp) cubic-bezier(.55,0,1,.45) both}
+.jz-stamp{position:absolute;top:8px;right:16px;padding:6px 16px;border:3px solid #FF6B35;border-radius:10px;background:#0A0A0A;color:#FF6B35;font:700 22px/1.1 var(--brand-font-heading,Outfit,Inter,system-ui,sans-serif);text-transform:uppercase;pointer-events:none;animation:jz-stamp var(--jz-dur-stamp) cubic-bezier(.55,0,1,.45) both}
 .jz-stamp__ring{position:absolute;inset:-3px;border:2px solid #FFA500;border-radius:inherit;opacity:0;animation:jz-ring .32s var(--jz-ease-out) var(--jz-dur-stamp) both}
 @keyframes jz-stamp{0%{transform:scale(3);opacity:0}100%{transform:scale(1);opacity:1}}
 @keyframes jz-ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.35);opacity:0}}

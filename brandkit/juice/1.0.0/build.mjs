@@ -117,6 +117,19 @@ if (!/function init\(/.test(src) || !/init:init/.test(src)) {
 }
 const menuCssSrc = readFileSync(join(dir, 'juice-menu.src.css'), 'utf8');
 const menuJsSrc = readFileSync(join(dir, 'juice-menu.src.js'), 'utf8');
+const BODY = 'var(--brand-font-body,Inter,system-ui,sans-serif)';
+const HEAD = 'var(--brand-font-heading,Outfit,Inter,system-ui,sans-serif)';
+const menuCssOut = built['juice-menu.css'];
+if (/@import|@font-face/.test(css + menuCssOut)) throw new Error('package must not load fonts');
+if (!css.includes(HEAD) || !/\.jz-stamp\{[^}]*font:700 22px\/1\.1 var\(--brand-font-heading/.test(css)) {
+  throw new Error('stamp must use heading stack at 700');
+}
+if (!css.includes(BODY) || !menuCssOut.includes(BODY)) {
+  throw new Error('body text must use brand-font-body stack at 400');
+}
+if (/font:700 13px Outfit/.test(menuCssSrc + menuCssOut) || !/\.jz-panel legend\{font:400 13px var\(--brand-font-body/.test(menuCssOut)) {
+  throw new Error('legend must use body stack at 400, not Outfit 700');
+}
 if (/padding-right:8em/.test(menuCssSrc) || /\.jz-host>h1/.test(menuCssSrc)) {
   throw new Error('stamp title padding belongs in core CSS, only on stamped cards');
 }

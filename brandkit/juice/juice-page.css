@@ -179,6 +179,12 @@ h1,h2,h3,h4,.wordmark,.button,.jz-back,.jz-lang a{
   color:#FF6B35;
   font-size:14px;
 }
+.sectionlead,
+.fineprint,
+#importar,
+#importar p{
+  overflow-wrap:anywhere;
+}
 .jz-import{
   margin-top:24px;
   padding:16px;
@@ -190,6 +196,10 @@ h1,h2,h3,h4,.wordmark,.button,.jz-back,.jz-lang a{
   font-size:13px;
   line-height:1.6;
   max-width:100%;
+}
+.jz-import code{
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
 }
 
 .jz-token{
@@ -260,7 +270,20 @@ h1,h2,h3,h4,.wordmark,.button,.jz-back,.jz-lang a{
   .topbar{flex-wrap:wrap;gap:8px}
   .jz-tools{margin-left:auto}
 }
+@media(max-width:850px){
+  .rail,
+  .rail nav{
+    max-width:100%;
+    min-width:0;
+  }
+  .rail nav{
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+  }
+}
 @media(max-width:375px){
   .jz-bar,.jz-subnav,.jz-live,.jz-card{max-width:100%}
   .jz-import{padding:12px}
+  .hero .lead,
+  .hero .muted{max-width:100%}
 }
