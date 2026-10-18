@@ -1,0 +1,9 @@
+/* Cream (#F4E8D5) never as text on dark. juice/1.0.1/juice-menu.css pins
+   .jz-panel{color:#F4E8D5}; this sheet loads after it and wins on html .jz-panel. */
+html .jz-panel {
+  background: var(--brand-surface, #161616);
+  color: var(--brand-text-on-dark, #FFFFFF);
+}
+html .jz-panel__note {
+  color: var(--brand-text-muted, #B7B3AD);
+}
