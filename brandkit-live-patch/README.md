@@ -6,7 +6,7 @@ El BrandKit vivo no vive en este repositorio: se publica desde un sitio de ChatG
 
 - `original/` — HTML, CSS y JS bajados de https://brandkit.jorgesuarez.com.mx/ el 18-oct-2026 (sin imágenes ni ZIP).
 - `propuesta/` — la misma base, con el bloque Juice y `juice/1.0.0/`.
-- `juice/1.0.0/` — paquete oficial (misma copia que `propuesta/juice/1.0.0/`) para servir en https://brandkit.jorgesuarez.com.mx/juice/1.0.0/.
+- `juice/1.0.0/` — copia exacta de `jorgefsb/game-industry-resources@471e322` (PR #23). Misma carpeta en `propuesta/juice/1.0.0/`, para servir en https://brandkit.jorgesuarez.com.mx/juice/1.0.0/.
 - `cambios.diff` — `diff -ru original propuesta`.
 - `juice-index.css` — estilos aditivos de la tarjeta (también copiado en `propuesta/`).
 
@@ -14,7 +14,7 @@ El BrandKit vivo no vive en este repositorio: se publica desde un sitio de ChatG
 
 1. Liga **Juice** en el rail del índice.
 2. Tarjeta **Juice** después de la sección Movimiento, con la bajada y un botón a https://jorgesuarez.com.mx/brandkit/juice/.
-3. Paquete `juice/1.0.0/` (juice.js, juice.css, juice-menu.js, juice-menu.css) para que todo sitio importe desde el brandkit, no desde gamedev.
+3. Paquete `juice/1.0.0/` exacto de GIR @471e322 (PR #23) para que todo sitio importe desde el brandkit, no desde gamedev.
 
 No toca wordmark, footer, tokens, Moki, ni ninguna sección existente.
 

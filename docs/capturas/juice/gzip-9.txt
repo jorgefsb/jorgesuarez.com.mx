@@ -1,6 +1,6 @@
 juice.js        4394
 juice.css       1499
-core            5893   (tope 6000)
+core            5893
 juice-menu.js   1277
 juice-menu.css  717
-pack            7887   (tope 8000)
+pack            7887
