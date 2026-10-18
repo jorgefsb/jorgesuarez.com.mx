@@ -184,12 +184,13 @@
     <section id="importar" class="section" aria-labelledby="importar-title">
       <div class="sectionhead"><span class="status approved">/juice/1.0.0/</span></div>
       <h2 id="importar-title" data-es="Cómo importar" data-en="How to import">Cómo importar</h2>
-      <p class="sectionlead" data-es="Todo sitio importa de https://brandkit.jorgesuarez.com.mx/juice/1.0.0/ con defer. No de gamedev. El paquete no carga fuentes: usa var(--brand-font-body) y var(--brand-font-heading) con fallback a Inter y Outfit. Importa también tokens.css del brandkit." data-en="Every site imports from https://brandkit.jorgesuarez.com.mx/juice/1.0.0/ with defer. Not from gamedev. The package does not load fonts: it uses var(--brand-font-body) and var(--brand-font-heading) with Inter and Outfit fallbacks. Also import the brandkit tokens.css.">Todo sitio importa de https://brandkit.jorgesuarez.com.mx/juice/1.0.0/ con defer. No de gamedev. El paquete no carga fuentes: usa var(--brand-font-body) y var(--brand-font-heading) con fallback a Inter y Outfit. Importa también tokens.css del brandkit.</p>
-<pre class="jz-import"><code>&lt;link rel="stylesheet" href="https://brandkit.jorgesuarez.com.mx/juice/1.0.0/juice.css"&gt;
-&lt;link rel="stylesheet" href="https://brandkit.jorgesuarez.com.mx/juice/1.0.0/juice-menu.css"&gt;
-&lt;script src="https://brandkit.jorgesuarez.com.mx/juice/1.0.0/juice.js" defer&gt;&lt;/script&gt;
-&lt;script src="https://brandkit.jorgesuarez.com.mx/juice/1.0.0/juice-menu.js" defer&gt;&lt;/script&gt;</code></pre>
-      <p class="fineprint" data-es="El brandkit hospeda el paquete. Esta demo carga la misma copia local. En apps con bundle se copia dentro del bundle." data-en="The brandkit hosts the package. This demo loads the same local copy. Bundled apps copy it into the bundle.">El brandkit hospeda el paquete. Esta demo carga la misma copia local. En apps con bundle se copia dentro del bundle.</p>
+      <p class="sectionlead" data-es="La fuente oficial es brandkit.jorgesuarez.com.mx/juice/1.0.0/, pero cada sitio sirve una copia fija y versionada desde su propio host, en /juice/1.0.0/ y /brand/0.3/tokens.css, con defer." data-en="The official source is brandkit.jorgesuarez.com.mx/juice/1.0.0/, but each site serves a fixed, versioned copy from its own host, at /juice/1.0.0/ and /brand/0.3/tokens.css, with defer.">La fuente oficial es brandkit.jorgesuarez.com.mx/juice/1.0.0/, pero cada sitio sirve una copia fija y versionada desde su propio host, en /juice/1.0.0/ y /brand/0.3/tokens.css, con defer.</p>
+<pre class="jz-import"><code>&lt;link rel="stylesheet" href="/brand/0.3/tokens.css"&gt;
+&lt;link rel="stylesheet" href="/juice/1.0.0/juice.css"&gt;
+&lt;link rel="stylesheet" href="/juice/1.0.0/juice-menu.css"&gt;
+&lt;script src="/juice/1.0.0/juice.js" defer&gt;&lt;/script&gt;
+&lt;script src="/juice/1.0.0/juice-menu.js" defer&gt;&lt;/script&gt;</code></pre>
+      <p class="fineprint" data-es="Esa copia no se edita. Lleva un encabezado con el origen y el sha256, y una prueba que lo verifica. Una versión nueva va en una carpeta nueva." data-en="That copy is not edited. It carries a header with the origin and the sha256, and a test that verifies it. A new version goes in a new folder.">Esa copia no se edita. Lleva un encabezado con el origen y el sha256, y una prueba que lo verifica. Una versión nueva va en una carpeta nueva.</p>
     </section>
 
     <section id="demo" class="section" aria-labelledby="demo-title">
