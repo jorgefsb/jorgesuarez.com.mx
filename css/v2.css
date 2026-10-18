@@ -677,9 +677,6 @@ strong, b { font-weight: inherit; color: var(--text); }
   color: var(--brand-ink, #22211F);
   border-color: var(--brand-border, #8A7E70);
 }
-.hud[data-ground="papel"] .jz-panel legend {
-  font-family: var(--brand-font-heading, Outfit, sans-serif);
-}
 @media (max-width: 1240px) {
   .hud .juice-sfx__label,
   .hud .jz-lvl__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
