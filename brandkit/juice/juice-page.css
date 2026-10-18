@@ -248,7 +248,7 @@ h1,h2,h3,h4,.wordmark,.button,.jz-back,.jz-lang a{
   color:#c7c2ba;
   max-width:75ch;
 }
-.jz-list li:before{content:"—";position:absolute;left:0;color:#FF6B35}
+.jz-list li:before{content:"·";position:absolute;left:0;color:#FF6B35}
 .jz-list strong{color:#F4E8D5}
 
 .jz-levels{

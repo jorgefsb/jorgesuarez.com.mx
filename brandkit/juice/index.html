@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="juice-page.css">
 </head>
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
+<a class="skip" href="#contenido" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
 <header class="topbar">
   <a class="wordmark" href="https://jorgesuarez.com.mx">JorgeSuarez<span>.com.mx</span></a>
   <div class="topmeta">
@@ -34,7 +34,7 @@
 </div>
 <div class="layout">
   <aside class="rail">
-    <p class="eyebrow">BrandKit de trabajo</p>
+    <p class="eyebrow" data-es="BrandKit de trabajo" data-en="Working BrandKit">BrandKit de trabajo</p>
     <nav aria-label="Secciones del BrandKit">
       <a href="#inicio">Juice</a>
       <a href="#tokens" data-es="Tokens" data-en="Tokens">Tokens</a>
@@ -46,7 +46,7 @@
       <a href="#importar" data-es="Importar" data-en="Import">Importar</a>
       <a href="#demo">Demo</a>
     </nav>
-    <div class="railnote">Una base común.<br>Decisiones visibles.<br>Trabajo en construcción.</div>
+    <div class="railnote" data-es="Una base común.<br>Decisiones visibles.<br>Trabajo en construcción." data-en="A shared base.<br>Visible decisions.<br>Work in progress.">Una base común.<br>Decisiones visibles.<br>Trabajo en construcción.</div>
   </aside>
   <main id="contenido">
     <nav class="jz-subnav" aria-label="Juice">
@@ -101,7 +101,7 @@
     <section id="niveles" class="section" aria-labelledby="niveles-title">
       <div class="sectionhead"><span class="status approved" data-es="Visitante y sitio" data-en="Visitor and site">Visitante y sitio</span></div>
       <h2 id="niveles-title" data-es="Niveles" data-en="Levels">Niveles</h2>
-      <p class="sectionlead" data-es="El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. En inglés: Off, Subtle y Full. La elección se guarda en localStorage (jz-level) y en html data-jz-level." data-en="The Juice menu sits next to the sound button. Three levels: Off, Subtle (default), and Full. The choice is stored in localStorage (jz-level) and on html data-jz-level.">El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. En inglés: Off, Subtle y Full. La elección se guarda en localStorage (jz-level) y en html data-jz-level.</p>
+      <p class="sectionlead" data-es="El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. La elección se guarda en localStorage (jz-level) y en html data-jz-level." data-en="The Juice menu sits next to the sound button. Three levels: Off, Subtle (default), and Full. The choice is stored in localStorage (jz-level) and on html data-jz-level.">El menú Juice va junto al botón de sonido. Tres niveles: Apagado, Discreto (por defecto) y Completo. La elección se guarda en localStorage (jz-level) y en html data-jz-level.</p>
       <div class="jz-levels">
         <article class="jz-card">
           <p class="eyebrow" data-es="Apagado" data-en="Off">Apagado</p>
@@ -109,7 +109,7 @@
           <p data-es="Quedan color, texto de estado, foco, palomita y sello fijos. La pausa de impacto es 0 ms. Moki se queda quieto." data-en="Color, status text, focus, a static check, and a static stamp stay. Impact pause is 0 ms. Moki stays still.">Quedan color, texto de estado, foco, palomita y sello fijos. La pausa de impacto es 0 ms. Moki se queda quieto.</p>
         </article>
         <article class="jz-card">
-          <p class="eyebrow" data-es="Discreto · default" data-en="Subtle · default">Discreto · default</p>
+          <p class="eyebrow" data-es="Discreto · por defecto" data-en="Subtle · default">Discreto · por defecto</p>
           <h3 data-es="Lo que se siente" data-en="What you feel">Lo que se siente</h3>
           <p data-es="Press, flash, ripple, shake, impact, check, stamp, hop, mirada, burst y fiesta de pago (una vez). Anticipación a la mitad. Stagger solo en menús." data-en="Press, flash, ripple, shake, impact, check, stamp, hop, look, burst, and the pay party (once). Anticipation at half strength. Stagger on menus only.">Press, flash, ripple, shake, impact, check, stamp, hop, mirada, burst y fiesta de pago (una vez). Anticipación a la mitad. Stagger solo en menús.</p>
         </article>
@@ -196,7 +196,7 @@
     <section id="demo" class="section" aria-labelledby="demo-title">
       <div class="sectionhead"><span class="status approved" data-es="En vivo" data-en="Live">En vivo</span></div>
       <h2 id="demo-title" data-es="Demo en vivo" data-en="Live demo">Demo en vivo</h2>
-      <p class="sectionlead" data-es="Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto es el default." data-en="The buttons fire each preset. The level menu is up top, next to sound. You can also change the level here. Subtle is the default.">Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto es el default.</p>
+      <p class="sectionlead" data-es="Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto viene por defecto." data-en="The buttons fire each preset. The level menu is up top, next to sound. You can also change the level here. Subtle is the default.">Los botones disparan cada preset. El menú de niveles está arriba, junto al sonido. También puedes cambiar el nivel aquí. Discreto viene por defecto.</p>
       <div class="jz-live" role="group" aria-label="Nivel">
         <button type="button" class="btn btn--ghost" data-set-level="off" data-es="Apagado" data-en="Off">Apagado</button>
         <button type="button" class="btn btn--ghost" data-set-level="subtle" data-es="Discreto" data-en="Subtle">Discreto</button>
@@ -238,7 +238,7 @@
     <footer class="papacito-footer" aria-label="Créditos y actualizaciones" data-footer-version="1.0.0">
       <div class="papacito-footer__identity">
         <a class="wordmark" href="https://jorgesuarez.com.mx">JorgeSuarez<span>.com.mx</span></a>
-        <p>Kaizen &amp; Play · Sistema unificado 0.6</p>
+        <p data-es="Kaizen &amp; Play · Sistema unificado 0.6" data-en="Kaizen &amp; Play · Unified system 0.6">Kaizen &amp; Play · Sistema unificado 0.6</p>
       </div>
       <p class="papacito-footer__signature">
         <span data-es="Hecho con amor ❤️🎮 por" data-en="Made with love ❤️🎮 by">Hecho con amor ❤️🎮 por</span>
