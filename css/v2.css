@@ -651,7 +651,7 @@ strong, b { font-weight: inherit; color: var(--text); }
   .hud__right { gap: var(--sp-3); }
 }
 
-/* juice 1.0.0: dock en el HUD, sin empujar el layout a 375/320 */
+/* juice 1.0.1: dock en el HUD, sin empujar el layout a 375/320 */
 .hud__right .jz-dock { flex: none; }
 .hud .juice-sfx,
 .hud .jz-lvl,

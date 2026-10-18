@@ -269,7 +269,7 @@
     b.replaceWith(f);
   });
 
-  /* 9. Juice 1.0.0: squash, partículas naranja, Moki. Sonido apagado por defecto (paquete). */
+  /* 9. Juice 1.0.1: squash, partículas naranja, Moki. Sonido apagado por defecto (paquete). */
   (function bindJuice() {
     var jz = window.JZ;
     if (!jz) return;

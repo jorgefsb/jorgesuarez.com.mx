@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const manifests = [
   join(root, 'brand/0.3/manifest.json'),
-  join(root, 'juice/1.0.0/manifest.json'),
+  join(root, 'juice/1.0.1/manifest.json'),
 ];
 const checkOrigin = process.env.VERIFY_ORIGIN !== '0';
 const failures = [];
@@ -23,7 +23,7 @@ function originUrl(file) {
   if (/^https?:\/\//.test(origin)) return origin;
   const git = origin.match(/^([^/]+\/[^@]+)@([0-9a-f]{7,40})$/i);
   if (git) {
-    return 'https://raw.githubusercontent.com/' + git[1] + '/' + git[2] + '/juice/1.0.0/' + file.path;
+    return 'https://raw.githubusercontent.com/' + git[1] + '/' + git[2] + '/juice/' + file.version + '/' + file.path;
   }
   throw new Error('origen no es URL ni owner/repo@sha: ' + origin);
 }
