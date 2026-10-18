@@ -1,0 +1,19 @@
+/* Papacito OS footer 1.0.0. Inherits each site's existing brand tokens. */
+footer.papacito-footer{display:block;clear:both;border-top:1px solid var(--line,var(--border,#34312e));padding-top:28px;padding-bottom:32px;color:inherit;min-width:0}
+.papacito-footer .papacito-footer__identity{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin:0 0 24px;min-width:0}
+.papacito-footer .papacito-footer__identity p,.papacito-footer .papacito-footer__identity>span{margin:0;order:initial;flex-basis:auto;color:var(--muted,#b7b3ad);font-size:12px;line-height:1.6;text-align:left}
+.papacito-footer .papacito-footer__identity .brand{font-family:var(--head,Outfit,Arial,sans-serif);font-size:21px;color:inherit}
+.papacito-footer .papacito-footer__signature{display:block;margin:0;max-width:100%;font-size:clamp(11px,3.5vw,14px);line-height:1.7;white-space:nowrap;color:inherit;order:initial;flex-basis:auto;text-align:left}
+.papacito-footer .papacito-footer__signature a{font-weight:inherit;color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+.papacito-footer .papacito-footer__meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;margin:12px 0 0;color:var(--muted,#b7b3ad);font-size:12px;line-height:1.7}
+.papacito-footer .papacito-footer__meta p{margin:0;max-width:100%;font:inherit;color:inherit;order:initial;flex-basis:auto;text-align:left}
+.papacito-footer .papacito-footer__meta strong{font-weight:600}
+.papacito-footer details.papacito-footer__updates{display:block;width:100%;max-width:760px;margin:12px 0 0;padding:0;border:0;background:transparent;color:var(--muted,#b7b3ad);font-size:12px;line-height:1.7;box-shadow:none;border-radius:0}
+.papacito-footer .papacito-footer__updates summary{display:list-item;width:fit-content;min-height:44px;padding:10px 0;margin:0;font:inherit;font-weight:400;color:inherit;cursor:pointer;list-style:disclosure-closed;background:transparent;border:0}
+.papacito-footer .papacito-footer__updates[open] summary{list-style:disclosure-open}
+.papacito-footer .papacito-footer__updates summary::after{content:none}
+.papacito-footer .papacito-footer__updates ol{display:block;margin:0 0 10px;padding:0 0 0 18px;color:inherit}
+.papacito-footer .papacito-footer__updates li{display:list-item;margin:0;padding:0 0 6px;font:inherit;color:inherit;background:transparent;border:0}
+.papacito-footer .papacito-footer__updates p{margin:0;max-width:70ch;font:inherit;color:inherit;text-align:left}
+@media(max-width:600px){.papacito-footer .papacito-footer__identity{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:20px;gap:8px}.papacito-footer .papacito-footer__identity>span{margin-left:0}.papacito-footer .papacito-footer__meta{display:block}.papacito-footer .papacito-footer__meta p+p{margin-top:4px}}
+@media(forced-colors:active){.papacito-footer a{color:LinkText}.papacito-footer summary{color:ButtonText}}
