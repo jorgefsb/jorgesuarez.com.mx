@@ -66,6 +66,13 @@
     var open = burger.getAttribute('aria-expanded') !== 'true';
     burger.setAttribute('aria-expanded', String(open));
     nav.classList.toggle('is-open', open);
+    if (window.JZ) {
+      window.JZ.press(burger);
+      window.JZ.snd('tap');
+      if (open) {
+        setTimeout(function () { window.JZ.stagger(nav, 'menu'); }, 0);
+      }
+    }
   });
   nav.addEventListener('click', function (e) {
     if (e.target.closest('a')) { burger.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); }
@@ -74,7 +81,7 @@
   /* 6. Firma: Moki camina por el riel y planta una bandera por capítulo. */
   var quest = document.querySelector('[data-quest]');
   var flagsEl = quest.querySelector('.quest__flags');
-  var moki = quest.querySelector('.quest__moki');
+  var mokiSlot = quest.querySelector('.quest__moki-slot') || quest.querySelector('.quest__moki');
   var track = quest.querySelector('.quest__track');
   var label = quest.querySelector('.quest__label');
   var chapters = Array.prototype.slice.call(document.querySelectorAll('[data-chapter]'));
@@ -161,13 +168,13 @@
     if (!reduce) {
       var dy = y - lastY;
       var tilt = Math.max(-8, Math.min(8, dy * 0.25));
-      moki.style.setProperty('--tilt', tilt.toFixed(1) + 'deg');
+      mokiSlot.style.setProperty('--tilt', tilt.toFixed(1) + 'deg');
       if (Math.abs(dy) > 0.5) {
         quest.classList.add('is-walking');
         clearTimeout(walkT);
         walkT = setTimeout(function () {
           quest.classList.remove('is-walking');
-          moki.style.setProperty('--tilt', '0deg');
+          mokiSlot.style.setProperty('--tilt', '0deg');
         }, 180);
       }
     }
@@ -190,6 +197,7 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
   relabel();
   measure();
+  quest.hidden = false;
 
   var foot = document.querySelector('.foot');
   if (foot && 'IntersectionObserver' in window) {
@@ -204,6 +212,8 @@
     var section = document.getElementById('lo-ultimo');
     var grid = document.getElementById('latest-grid');
     if (!section || !grid || !window.fetch) return;
+    var host = location.hostname;
+    if (host !== 'jorgesuarez.com.mx' && host !== 'www.jorgesuarez.com.mx') return;
     var API = 'https://muro.jorgesuarez.com.mx';
     var NAMES = { youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram', linkedin: 'LinkedIn', x: 'X', facebook: 'Facebook', threads: 'Threads', bluesky: 'Bluesky' };
     var items = [];
@@ -248,6 +258,10 @@
     var b = e.target.closest('.vframe__play');
     if (!b) return;
     var id = b.getAttribute('data-yt');
+    if (!id) {
+      if (window.JZ) window.JZ.play('jz-error', b);
+      return;
+    }
     var f = document.createElement('iframe');
     f.src = 'https://www.youtube.com/embed/' + id + (id.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
     f.title = b.getAttribute('data-title');
@@ -255,4 +269,28 @@
     f.allowFullscreen = true;
     b.replaceWith(f);
   });
+
+  /* 9. Juice 1.0.1: squash, partículas naranja, Moki. Sonido apagado por defecto (paquete). */
+  (function bindJuice() {
+    var jz = window.JZ;
+    if (!jz) return;
+    jz.feedback('jz-cta', [
+      { fx: 'press' }, { fx: 'flash' }, { fx: 'ripple' },
+      { fx: 'burst' }, { fx: 'moki-hop' }, { fx: 'tap' }
+    ]);
+    onLang.push(function () { jz.paint(); });
+    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    document.addEventListener('pointermove', function (e) {
+      if (!fine || jz.red() || e.pointerType === 'touch') return;
+      jz.look(e.target);
+    }, { passive: true });
+    document.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.closest('.juice-sfx, .jz-lvl, .jz-feel, [data-jz], .hud__burger')) return;
+      var live = t.closest('[data-jz-moki]');
+      if (live) { jz.snd('tap'); jz.hop(live); return; }
+      var sq = t.closest('.btn, .social, .lang-switcher a, .row__cta, .tag--link');
+      if (sq) jz.press(sq);
+    });
+  })();
 })();

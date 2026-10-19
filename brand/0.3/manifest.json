@@ -1,0 +1,13 @@
+{
+  "version": "0.3",
+  "origin_base": "https://brandkit.jorgesuarez.com.mx/assets/brand-kit-0.3/",
+  "files": [
+    {
+      "path": "tokens.css",
+      "origin": "https://brandkit.jorgesuarez.com.mx/assets/brand-kit-0.3/tokens.css",
+      "version": "0.3",
+      "sha256": "8d8f3a345d359a99dd48b98289b9a7d39e2be06179322949ff2e217395ef3152",
+      "bytes": 1211
+    }
+  ]
+}

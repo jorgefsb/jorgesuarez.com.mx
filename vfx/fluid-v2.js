@@ -163,19 +163,24 @@ const FluidSimulation = (() => {
     function init(canvasElement) {
         // 1. Mobile & Resize Safety Check
         if (window.innerWidth < 768 || 'ontouchstart' in window) {
-            console.log("Fluid Simulation V2: Mobile detection. Effect disabled for performance.");
             return;
         }
 
         canvas = canvasElement;
-        const { gl: ctx, ext: extensions } = getWebGLContext(canvas);
-        gl = ctx;
-        ext = extensions;
-
-        applyStyles();
-        setupEvents();
-        initFramebuffers();
-        requestAnimationFrame(update);
+        let booted = false;
+        const boot = () => {
+            if (booted) return;
+            booted = true;
+            const { gl: ctx, ext: extensions } = getWebGLContext(canvas);
+            if (!ctx) return;
+            gl = ctx;
+            ext = extensions;
+            applyStyles();
+            setupEvents();
+            initFramebuffers();
+            requestAnimationFrame(update);
+        };
+        window.addEventListener('pointermove', boot, { once: true, passive: true });
     }
 
     function applyStyles() {
@@ -195,8 +200,11 @@ const FluidSimulation = (() => {
         let gl = canvas.getContext('webgl2', params);
         const isWebGL2 = !!gl;
         if (!isWebGL2) gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+        if (!gl) return { gl: null, ext: null };
 
-        let halfFloat = isWebGL2 ? gl.HALF_FLOAT : gl.getExtension('OES_texture_half_float').HALF_FLOAT_OES;
+        const halfFloatExt = isWebGL2 ? null : gl.getExtension('OES_texture_half_float');
+        const halfFloat = isWebGL2 ? gl.HALF_FLOAT : halfFloatExt && halfFloatExt.HALF_FLOAT_OES;
+        if (!halfFloat) return { gl: null, ext: null };
         gl.getExtension('EXT_color_buffer_float');
         gl.getExtension('OES_texture_float_linear');
 
@@ -286,11 +294,10 @@ const FluidSimulation = (() => {
             const dy = (e.clientY - lastY) * 10;
             lastX = e.clientX; lastY = e.clientY;
 
-            // Neon RGB Cycle based on time
-            const time = performance.now() * CONFIG.COLOR_SPEED;
-            const r = Math.sin(time) * 0.5 + 0.5;
-            const g = Math.sin(time + 2) * 0.5 + 0.5;
-            const b = Math.sin(time + 4) * 0.5 + 0.5;
+            // Acento único de marca #FF6B35. Sin ciclo RGB / neón.
+            const r = 1;
+            const g = 107 / 255;
+            const b = 53 / 255;
 
             splatStack.push({ x: e.clientX, y: e.clientY, dx, dy, color: { r, g, b } });
         });

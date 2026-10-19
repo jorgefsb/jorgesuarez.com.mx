@@ -4,7 +4,8 @@
   "description": "Landing page oficial de Jorge Suárez (jorgesuarez.com.mx)",
   "scripts": {
     "start": "serve .",
-    "dev": "serve ."
+    "dev": "serve .",
+    "test": "node scripts/verify-vendor-sha256.mjs"
   },
   "keywords": [
     "landing-page",
