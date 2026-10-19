@@ -10,7 +10,21 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const manifests = [
   join(root, 'brand/0.3/manifest.json'),
   join(root, 'juice/1.0.1/manifest.json'),
+  join(root, 'juice/1.2.0/manifest.json'),
 ];
+/* Desde juice 1.1.0 el manifest trae files como objeto {ruta: {sha256}} y un origin sin commit.
+   Aquí se fija el commit del repo canónico del que se copió cada versión. */
+const PIN = {
+  '1.2.0': 'jorgefsb/game-industry-resources@1c56fa425555fca00e33b7907b32ab28c9336dbb',
+};
+function normalize(manifest) {
+  if (Array.isArray(manifest.files)) return manifest;
+  const origin = PIN[manifest.version];
+  return {
+    version: manifest.version,
+    files: Object.entries(manifest.files || {}).map(([path, f]) => ({ path, sha256: f.sha256, version: manifest.version, origin })),
+  };
+}
 const checkOrigin = process.env.VERIFY_ORIGIN !== '0';
 const failures = [];
 
@@ -36,7 +50,7 @@ async function fetchOrigin(url) {
 
 for (const manifestPath of manifests) {
   const dir = dirname(manifestPath);
-  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  const manifest = normalize(JSON.parse(await readFile(manifestPath, 'utf8')));
   if (!manifest.version || !Array.isArray(manifest.files) || !manifest.files.length) {
     failures.push(manifestPath + ': manifest sin version o files');
     continue;
