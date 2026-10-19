@@ -15,7 +15,7 @@ const manifests = [
 /* Desde juice 1.1.0 el manifest trae files como objeto {ruta: {sha256}} y un origin sin commit.
    Aquí se fija el commit del repo canónico del que se copió cada versión. */
 const PIN = {
-  '1.2.0': 'jorgefsb/game-industry-resources@1c56fa425555fca00e33b7907b32ab28c9336dbb',
+  '1.2.0': 'jorgefsb/game-industry-resources@f1b3b9c77a43ffbcbd331bb88420a436614fdbc3',
 };
 function normalize(manifest) {
   if (Array.isArray(manifest.files)) return manifest;
