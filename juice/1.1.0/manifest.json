@@ -1,0 +1,46 @@
+{
+  "name": "juice",
+  "version": "1.1.0",
+  "origin": "jorgefsb/game-industry-resources",
+  "files": {
+    "juice.css": {
+      "sha256": "2d02b3e2d968cd5afe9b6174979255b97aa7ad8793c682273a85976f06058981"
+    },
+    "juice.js": {
+      "sha256": "b2b52215f9859a1b1e5e738ac4870715a3f6ee1698f26f93bcd4caab1410bdc7"
+    },
+    "juice-menu.css": {
+      "sha256": "fd2b4d34ff91369e42053b7d9108f18a831e19b12a14f4694a24bcb30ad17e2c"
+    },
+    "juice-menu.js": {
+      "sha256": "abfeb0adceed140375056c4c80d32798c6fd38662926db976f4314995cbaae38"
+    },
+    "moki/moki.css": {
+      "sha256": "ed7dafe6e7608fd453000543b3ff979e5901230e81d40d76ed685e9a05e5e745"
+    },
+    "moki/moki.js": {
+      "sha256": "027a9ea264740b14fb4a1bf6c64fcfec5fd1b00fab1910f6edf831b028ec807a"
+    },
+    "moki/moki-asoma.webp": {
+      "sha256": "120bab003c3c676429d88c765dc151a141456845bf22a0674b5c8daf6104f6c0"
+    },
+    "moki/moki-espalda.webp": {
+      "sha256": "fd927e2b4a0c65945271679da92a36a81790a94f96e5e03ac8428a2df56446d1"
+    },
+    "moki/moki-frente.webp": {
+      "sha256": "8de9419f11168bfaf619c81951257e93793ca92b2b960f234b3a5868e699bb15"
+    },
+    "moki/moki-lado.webp": {
+      "sha256": "0917c50e6d02c2666443b91598c4ffb698790ed5cab53f34cbb92eb9532fc376"
+    },
+    "moki/moki-parche.webp": {
+      "sha256": "593d96de0c148d0aeaaaa1323193a7c3fbd9e5b96fb072c3d4be6918044e2a9f"
+    },
+    "moki/moki-saluda.webp": {
+      "sha256": "8d1f8624634a9f89a52df3edb910ec073e90fa5a5c6263f241b8dca93ea4dfa0"
+    },
+    "moki/moki-tres-cuartos.webp": {
+      "sha256": "35e671758b36e8219287a04ed6ad6ca1eae26d7da980be8b48a71a3a705580d6"
+    }
+  }
+}
