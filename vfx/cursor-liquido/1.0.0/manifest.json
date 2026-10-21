@@ -1,0 +1,49 @@
+{
+  "name": "cursor-liquido",
+  "version": "1.0.0",
+  "origin": "https://github.com/jorgefsb/cursor-liquido",
+  "golden_engine_sha256": "3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230",
+  "approved_demo_sha256": "cccb53b6c3bfe93cb0d39e6542de181e8165ae1a886071cb01a29f9f48f3f914",
+  "load_order": [
+    "fluid-engine.js",
+    "engine-adapter.js",
+    "liquid-cursor.js"
+  ],
+  "files": [
+    {
+      "path": "fluid-engine.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/4571e8b759ba3232affd02adabcff25652c3fb55/src/approved-fluid-v3.1.js",
+      "version": "1.0.0",
+      "sha256": "3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230",
+      "bytes": 31176
+    },
+    {
+      "path": "engine-adapter.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/4571e8b759ba3232affd02adabcff25652c3fb55/src/approved-engine-adapter.js",
+      "version": "1.0.0",
+      "sha256": "570bb84eea0856393c106d28a8cc01a18a269ffae31c453d30d88be72372ab2c",
+      "bytes": 663
+    },
+    {
+      "path": "liquid-cursor.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/4571e8b759ba3232affd02adabcff25652c3fb55/src/liquid-cursor.js",
+      "version": "1.0.0",
+      "sha256": "979d1a05c6912c16d7b3c42ec37a8ddb48ce261b89bded5c937b7cf1f9ebfe1b",
+      "bytes": 9566
+    },
+    {
+      "path": "liquid-cursor.css",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/4571e8b759ba3232affd02adabcff25652c3fb55/src/liquid-cursor.css",
+      "version": "1.0.0",
+      "sha256": "6d3194b8848c62962abf5469c99b71b7913ca1afd518f269ed1a6adbe57c650c",
+      "bytes": 480
+    },
+    {
+      "path": "PAVEL-LICENSE.txt",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/4571e8b759ba3232affd02adabcff25652c3fb55/src/PAVEL-LICENSE.txt",
+      "version": "1.0.0",
+      "sha256": "1be448ae1212de2bee77b4cf851ab0acea0a7f7f32d21cd73095dd94dc173f66",
+      "bytes": 1072
+    }
+  ]
+}

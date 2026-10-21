@@ -664,10 +664,13 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 
 
-/* cursor de fluido del v1: encima del contenido en modo screen, sin bloquear clics */
-#fluid-canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 30; pointer-events: none; mix-blend-mode: screen; opacity: .6; transition: opacity 400ms var(--ease); }
-.hud[data-ground="papel"] ~ #fluid-canvas { opacity: 0; }
-@media (prefers-reduced-motion: reduce) { #fluid-canvas { display: none; } }
+/* Cursor líquido owns pointer feedback. Keep all other Juice effects intact.
+   The published Hardcore vendor has no pointer-trail disable hook. Hide only
+   its bounded .jzh-t nodes while this page-owned conductor is active. */
+html[data-liquid-cursor="on"] .jzh-t { display: none; }
+/* Override Scrollcraft's global canvas max-width without changing its vendor.
+   The preserved renderer and adapter share the exact innerWidth viewport. */
+.liquid-cursor-layer { max-width: none; }
 
 /* ventanas altas (más altas que anchas): la escena de frameworks va arriba y el texto no la pisa */
 @media (min-width: 861px) and (max-aspect-ratio: 5/6) {
