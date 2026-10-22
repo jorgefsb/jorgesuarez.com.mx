@@ -1,0 +1,7 @@
+/* Game Feel cursor adapter 1.0.1. MIT, (c) 2026 Jorge Suárez.
+ * One cursor owner: while GameFeelCursor is mounted, Cursor líquido draws the
+ * pointer trail and the older Hardcore dots (.jzh-t) stay hidden. Hardcore
+ * celebrations (.jzh-p, .jzh-b, .jzh-ring, .jzh-pop), sounds and combos are
+ * untouched. hardcore.js still creates and animates the hidden dots.
+ */
+html[data-game-feel-cursor="liquid"] .jzh-t { display: none !important; }

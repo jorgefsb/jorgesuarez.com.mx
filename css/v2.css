@@ -434,7 +434,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .ecosystem > .wrap { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: clamp(32px, 5vw, 80px); }
 .eco__head { align-self: end; }
 .eco__fig { border-radius: var(--r-editorial); overflow: hidden; aspect-ratio: 3 / 2; box-shadow: 0 18px 40px -18px rgba(34,33,31,.45); margin-bottom: var(--sp-7); }
-.eco__fig img { width: 100%; height: 118%; margin-top: -9%; object-fit: cover; max-width: none; }
+.eco__fig > img { width: 100%; height: 118%; margin-top: -9%; object-fit: cover; max-width: none; }
 .groups { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--sp-7) clamp(24px, 4vw, 64px); padding-bottom: var(--sp-9); }
 .group:nth-child(1) { grid-column: 1 / -1; }
 .group:nth-child(1) .rows { columns: 2; column-gap: clamp(24px, 4vw, 64px); }
@@ -472,7 +472,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .podcast { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; margin-bottom: var(--sp-9); }
 .podcast__copy { display: grid; gap: var(--sp-4); justify-items: start; }
 .podcast__media { position: relative; min-height: 440px; }
-.podcast__media img { position: absolute; border-radius: var(--r-card); box-shadow: var(--shadow-lg); border: 1px solid var(--border); max-width: none; }
+.podcast__media > img { position: absolute; border-radius: var(--r-card); box-shadow: var(--shadow-lg); border: 1px solid var(--border); max-width: none; }
 .podcast__a { width: 78%; left: 0; top: 0; }
 .podcast__b { width: 56%; right: 0; bottom: 0; }
 .mgrid { display: grid; gap: var(--sp-9); }
@@ -664,10 +664,11 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 
 
-/* cursor de fluido del v1: encima del contenido en modo screen, sin bloquear clics */
-#fluid-canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 30; pointer-events: none; mix-blend-mode: screen; opacity: .6; transition: opacity 400ms var(--ease); }
-.hud[data-ground="papel"] ~ #fluid-canvas { opacity: 0; }
-@media (prefers-reduced-motion: reduce) { #fluid-canvas { display: none; } }
+/* Game Feel's released stylesheet owns legacy-trail suppression and restores
+   it on profile.destroy(); do not keep a second page-level ownership flag. */
+/* Override Scrollcraft's global canvas max-width without changing its vendor.
+   The preserved renderer and adapter share the exact innerWidth viewport. */
+.liquid-cursor-layer { max-width: none; }
 
 /* ventanas altas (más altas que anchas): la escena de frameworks va arriba y el texto no la pisa */
 @media (min-width: 861px) and (max-aspect-ratio: 5/6) {
@@ -719,6 +720,7 @@ strong, b { font-weight: inherit; color: var(--text); }
   color: var(--brand-ink, #22211F);
   border-color: var(--brand-border, #8A7E70);
 }
+.hud[data-ground="papel"] .jz-panel__note { color: var(--brand-ink, #22211F); }
 .hud .jz-lvl__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .hud .jz-lvl { width: 44px; min-width: 44px; padding: 0; }
 @media (max-width: 1240px) {

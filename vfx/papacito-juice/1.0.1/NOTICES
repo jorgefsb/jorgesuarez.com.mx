@@ -1,0 +1,34 @@
+NOTICES for Papacito Juice 1.0.1
+
+Scope of the MIT license
+  LICENSE covers only the code and written instructions in this repository:
+  src/, scripts/, tests/, examples/ (markup and script), docs/, skills/ and
+  README.md. It grants nothing over the material listed below.
+
+Moki and the personal brand
+  Moki, its poses and artwork, its name, its voice lines and the personal
+  brand of Jorge Suárez (name, wordmark, look) are NOT licensed under MIT and
+  are not included in this repository. The artwork is downloaded by
+  `npm run setup` into vendor/, which Git ignores, only for the authorized
+  personal-brand integration. Do not redistribute it, do not create new
+  poses from it and do not use it to represent another person or brand.
+  This profile is not a license to impersonate Jorge Suárez.
+
+Material that is downloaded, never committed
+  juice 1.2.0 (core, Juega menu, Hardcore module, Moki module and artwork)
+    Source: https://github.com/jorgefsb/game-industry-resources
+    Path:   juice/1.2.0 at commit f1b3b9c77a43ffbcbd331bb88420a436614fdbc3
+    Author: Jorge Suárez
+    License: at that commit the repository declares no license file. This
+    repository does not redistribute juice and grants no right over it.
+
+  Game Feel 1.0.1 adapter (game-feel-cursor.js, game-feel-cursor.css)
+    Intended source: https://github.com/jorgefsb/game-feel (tag v1.0.1)
+    License: MIT, (c) 2026 Jorge Suárez. Used unchanged, pinned by sha256.
+
+  Cursor líquido 1.0.1
+    Intended source: https://github.com/jorgefsb/cursor-liquido (release v1.0.1)
+    License: MIT, (c) 2026 Jorge Suárez. Its fluid display shading is adapted
+    from WebGL Fluid Simulation, (c) 2017 Pavel Dobryakov, MIT. The renderer is
+    used byte for byte (sha256
+    3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230).

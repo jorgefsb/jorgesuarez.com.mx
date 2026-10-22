@@ -5,7 +5,8 @@
   "scripts": {
     "start": "serve .",
     "dev": "serve .",
-    "test": "node scripts/verify-vendor-sha256.mjs"
+    "test": "node scripts/verify-vendor-sha256.mjs",
+    "test:cursor": "node scripts/test-cursor-liquido.cjs"
   },
   "keywords": [
     "landing-page",

@@ -1,0 +1,24 @@
+{
+  "version": "1.0.1",
+  "commit": "443d51b5e2dbfe083770e030d77d82b372ffd664",
+  "files": [
+    {
+      "path": "game-feel-cursor.js",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/game-feel/443d51b5e2dbfe083770e030d77d82b372ffd664/src/game-feel-cursor.js",
+      "sha256": "a6ff2126157a75102a2bb3c5babc8d9ab818ab8e603cf8d76727fe68148adb3b"
+    },
+    {
+      "path": "game-feel-cursor.css",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/game-feel/443d51b5e2dbfe083770e030d77d82b372ffd664/src/game-feel-cursor.css",
+      "sha256": "da9ec736ac75246b76881a23e00f7b48cbd87ed5b429ea91bd2f490b5fd44d9d"
+    },
+    {
+      "path": "LICENSE",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/game-feel/443d51b5e2dbfe083770e030d77d82b372ffd664/LICENSE",
+      "sha256": "f4864217781bc66ed142a648e070f2e83e94d74d4e1079ef22c3ff7fa4c654aa"
+    }
+  ]
+}

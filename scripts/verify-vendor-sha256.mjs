@@ -7,9 +7,15 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+// pin: commit fijado para manifests de upstream que traen files como objeto y origin sin SHA.
 const manifests = [
-  join(root, 'brand/0.3/manifest.json'),
-  join(root, 'juice/1.0.1/manifest.json'),
+  { path: join(root, 'brand/0.3/manifest.json') },
+  { path: join(root, 'juice/1.0.1/manifest.json') },
+  { path: join(root, 'juice/1.2.0/manifest.json'), pin: 'jorgefsb/game-industry-resources@f1b3b9c77a43ffbcbd331bb88420a436614fdbc3' },
+  { path: join(root, 'vfx/cursor-liquido/1.0.0/manifest.json') },
+  { path: join(root, 'vfx/cursor-liquido/1.0.1/manifest.json') },
+  { path: join(root, 'vfx/game-feel/1.0.1/manifest.json') },
+  { path: join(root, 'vfx/papacito-juice/1.0.1/manifest.json') },
 ];
 const checkOrigin = process.env.VERIFY_ORIGIN !== '0';
 const failures = [];
@@ -34,14 +40,19 @@ async function fetchOrigin(url) {
   return Buffer.from(await res.arrayBuffer());
 }
 
-for (const manifestPath of manifests) {
+for (const { path: manifestPath, pin } of manifests) {
   const dir = dirname(manifestPath);
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
-  if (!manifest.version || !Array.isArray(manifest.files) || !manifest.files.length) {
+  const files = Array.isArray(manifest.files) ? manifest.files
+    : Object.entries(manifest.files || {}).map(([path, f]) => ({ path, origin: pin, version: manifest.version, sha256: f.sha256 }));
+  if (!manifest.version || !files.length) {
     failures.push(manifestPath + ': manifest sin version o files');
     continue;
   }
-  for (const file of manifest.files) {
+  if (manifest.golden_engine_sha256 && !files.some((f) => f.sha256 === manifest.golden_engine_sha256)) {
+    failures.push(manifestPath + ': ningún archivo coincide con golden_engine_sha256');
+  }
+  for (const file of files) {
     const label = file.path + ' (' + manifestPath + ')';
     if (!file.origin || !file.version || !file.sha256) {
       failures.push(label + ': falta origin, version o sha256');
@@ -52,7 +63,8 @@ for (const manifestPath of manifests) {
     if (localHash !== file.sha256) {
       failures.push(label + ': local ' + localHash + ' != manifest ' + file.sha256);
     }
-    if (!checkOrigin) continue;
+    // local: = copia aprobada sin origen público todavía; solo cuenta el hash local.
+    if (!checkOrigin || file.origin.startsWith('local:')) continue;
     try {
       const remoteBuf = await fetchOrigin(originUrl(file));
       const remoteHash = sha256(remoteBuf);

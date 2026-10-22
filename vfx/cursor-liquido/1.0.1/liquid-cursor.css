@@ -1,0 +1,14 @@
+/* Cursor líquido 1.0.1. Layers never take input, never hide the native cursor. */
+.liquid-cursor-layer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--liquid-cursor-z, 30);
+}
+/* The fluid emits light over dark grounds. Poquito dots use normal compositing. */
+.liquid-cursor-layer[data-liquid-layer="fluid"] { mix-blend-mode: screen; }
+@media (prefers-reduced-motion: reduce) {
+  .liquid-cursor-layer { display: none; }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "cursor-liquido",
+  "version": "1.0.1",
+  "origin": "https://github.com/jorgefsb/cursor-liquido",
+  "commit": "6035bbd24c06b23be353d9af68bd67d33b22f34e",
+  "golden_engine_sha256": "3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230",
+  "approved_demo_sha256": "cccb53b6c3bfe93cb0d39e6542de181e8165ae1a886071cb01a29f9f48f3f914",
+  "load_order": [
+    "fluid-engine.js",
+    "engine-adapter.js",
+    "quality-input-guard.js",
+    "liquid-cursor.js"
+  ],
+  "files": [
+    {
+      "path": "fluid-engine.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/approved-fluid-v3.1.js",
+      "version": "1.0.1",
+      "sha256": "3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230",
+      "bytes": 31176
+    },
+    {
+      "path": "engine-adapter.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/approved-engine-adapter.js",
+      "version": "1.0.1",
+      "sha256": "570bb84eea0856393c106d28a8cc01a18a269ffae31c453d30d88be72372ab2c",
+      "bytes": 663
+    },
+    {
+      "path": "quality-input-guard.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/quality-input-guard.js",
+      "version": "1.0.1",
+      "sha256": "baeb7ce87fe8d62801331af5b7452657594a3cf40b82cd9255c945fa97e33561",
+      "bytes": 824
+    },
+    {
+      "path": "liquid-cursor.js",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/liquid-cursor.js",
+      "version": "1.0.1",
+      "sha256": "1ad9cdba9e10be125e4a102aa14b969aedf0b0d7e572386255a9271264bea8d0",
+      "bytes": 9566
+    },
+    {
+      "path": "liquid-cursor.css",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/liquid-cursor.css",
+      "version": "1.0.1",
+      "sha256": "48ea2645dd676a870fda373edb4b418707814040032ba38655ab20888d4283b3",
+      "bytes": 480
+    },
+    {
+      "path": "PAVEL-LICENSE.txt",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/src/PAVEL-LICENSE.txt",
+      "version": "1.0.1",
+      "sha256": "1be448ae1212de2bee77b4cf851ab0acea0a7f7f32d21cd73095dd94dc173f66",
+      "bytes": 1072
+    },
+    {
+      "path": "LICENSE",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/LICENSE",
+      "version": "1.0.1",
+      "sha256": "f4864217781bc66ed142a648e070f2e83e94d74d4e1079ef22c3ff7fa4c654aa",
+      "bytes": 1070
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/cursor-liquido/6035bbd24c06b23be353d9af68bd67d33b22f34e/THIRD_PARTY_NOTICES",
+      "version": "1.0.1",
+      "sha256": "b15d4228c822d5c6e1519a48f7cb2d3419c886630de1d80ba25956f643b85d5b",
+      "bytes": 2848
+    }
+  ]
+}
