@@ -13,7 +13,7 @@ El sitio personal de Jorge Suárez: presenta su recorrido en videojuegos, inicia
 Para personas interesadas en videojuegos, emprendimiento y los proyectos públicos de Jorge; también para quienes quieren encontrar una forma de contacto.
 
 ## ¿Por qué existe?
-Para reunir historia, proyectos y aprendizajes en un lugar. El README anterior lo describe como un hub de videojuegos, construcción de estudios, comunidad, emprendimiento e IA; no se añaden aquí biografías, clientes ni resultados medidos.
+Para reunir historia, proyectos y aprendizajes en un lugar. Puedes conocer el trabajo de Jorge en videojuegos y seguir los enlaces de la iniciativa que te interese.
 
 ## ¿Cómo lo uso?
 1. [Visita la página](https://jorgesuarez.com.mx/).
@@ -39,7 +39,7 @@ Amber y las demás empresas conservan su identidad: la marca personal del builde
 ## Recorrido real
 ![Sección del sitio público durante el recorrido](docs/media/02-public.png)
 
-[Video con subtítulos y transcripción ES](docs/WALKTHROUGH.md) · [English captions](docs/WALKTHROUGH.en.md). Grabación de la página pública, sin envíos ni acceso a cuentas.
+[Ver el video real](docs/media/walkthrough.mp4) · [Subtítulos y transcripción ES](docs/WALKTHROUGH.md) · [English captions](docs/WALKTHROUGH.en.md). Grabación de la página pública, sin envíos ni acceso a cuentas.
 
 ## Ruta técnica separada
 [Notas para mantener este repositorio](docs/TECHNICAL.md) · [Guía documental](docs/REPOSITORY-DOCUMENTATION.md) · [Aviso de medios](docs/ASSET-NOTICE.md).

@@ -13,7 +13,7 @@ Jorge Suárez's personal site: a presentation of his game industry journey, init
 People interested in games, entrepreneurship and Jorge's public projects, as well as those looking for a contact route.
 
 ## Why does it exist?
-To bring the story, projects and lessons together. The previous README describes a hub for games, studio building, community, entrepreneurship and AI; no biographies, clients or measured outcomes are added here.
+To bring the story, projects and lessons together. Discover Jorge's work in games and follow the links to an initiative that interests you.
 
 ## How do I use it?
 1. [Visit the page](https://jorgesuarez.com.mx/).
@@ -39,7 +39,7 @@ Use it to discover the journey, explore links and decide what to read next. Do n
 ## Real walkthrough
 ![Public site section during the walkthrough](docs/media/02-public.png)
 
-[Video with English captions and transcript](docs/WALKTHROUGH.en.md) · [Subtítulos y transcripción ES](docs/WALKTHROUGH.md). Public-page recording, without submissions or account access.
+[Watch the real video](docs/media/walkthrough.mp4) · [English captions and transcript](docs/WALKTHROUGH.en.md) · [Subtítulos y transcripción ES](docs/WALKTHROUGH.md). Public-page recording, without submissions or account access.
 
 ## Separate technical path
 [Repository maintenance notes](docs/TECHNICAL.en.md) · [Documentation guide](docs/REPOSITORY-DOCUMENTATION.en.md) · [Media notice](docs/ASSET-NOTICE.en.md).
