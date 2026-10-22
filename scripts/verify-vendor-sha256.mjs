@@ -14,6 +14,8 @@ const manifests = [
   { path: join(root, 'juice/1.2.0/manifest.json'), pin: 'jorgefsb/game-industry-resources@f1b3b9c77a43ffbcbd331bb88420a436614fdbc3' },
   { path: join(root, 'vfx/cursor-liquido/1.0.0/manifest.json') },
   { path: join(root, 'vfx/cursor-liquido/1.0.1/manifest.json') },
+  { path: join(root, 'vfx/game-feel/1.0.1/manifest.json') },
+  { path: join(root, 'vfx/papacito-juice/1.0.1/manifest.json') },
 ];
 const checkOrigin = process.env.VERIFY_ORIGIN !== '0';
 const failures = [];

@@ -5,6 +5,13 @@
 (function () {
   'use strict';
   if (new URLSearchParams(location.search).get('cursor') === 'off') return;
-  window.LiquidCursor.mount({ followJuice: true, obstacleSelector: '[data-liquid-obstacle]' });
-  document.documentElement.setAttribute('data-liquid-cursor', 'on');
+  // The released profile validates core, Juega, Hardcore, Moki and all artwork
+  // before the Game Feel adapter becomes the sole cursor owner.
+  window.papacitoReady = window.PapacitoJuice.mount({
+    page: 'home', obstacleSelector: '[data-liquid-obstacle]'
+  });
+  // Keep the rejection observable to callers without an unhandled rejection.
+  window.papacitoReady.catch(function (error) {
+    console.error('Papacito Juice no pudo iniciar:', error);
+  });
 })();

@@ -1,0 +1,30 @@
+{
+  "version": "1.0.1",
+  "commit": "f05e03427235cd7d5ba52dd3b2af05abb06a2f4b",
+  "files": [
+    {
+      "path": "papacito-juice.js",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/papacito-juice/f05e03427235cd7d5ba52dd3b2af05abb06a2f4b/src/papacito-juice.js",
+      "sha256": "2f3705c79a8d156fffaacca1a40480717b9f12e471c8867bcd990213b034680f"
+    },
+    {
+      "path": "papacito-juice.css",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/papacito-juice/f05e03427235cd7d5ba52dd3b2af05abb06a2f4b/src/papacito-juice.css",
+      "sha256": "f8588c731f5b13295c8c0aa4db7bd8c6e263abbb05112284549d7deb42ed913d"
+    },
+    {
+      "path": "LICENSE",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/papacito-juice/f05e03427235cd7d5ba52dd3b2af05abb06a2f4b/LICENSE",
+      "sha256": "f4864217781bc66ed142a648e070f2e83e94d74d4e1079ef22c3ff7fa4c654aa"
+    },
+    {
+      "path": "NOTICES",
+      "version": "1.0.1",
+      "origin": "https://raw.githubusercontent.com/jorgefsb/papacito-juice/f05e03427235cd7d5ba52dd3b2af05abb06a2f4b/NOTICES",
+      "sha256": "2218d4d4a2ad8b1fb7b83ede5699b8e6a8146c83f56927bf4e802f5bf4b38568"
+    }
+  ]
+}

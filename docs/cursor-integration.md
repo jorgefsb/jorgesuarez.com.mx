@@ -1,6 +1,8 @@
 # Cursor líquido integration
 
-This page uses Cursor líquido 1.0.1 with Juice 1.2.0. The cursor follows the existing Juega selector through `js/cursor-conductor.js`; it never writes the level, sound preference, Moki progress or unlock state.
+This page mounts the published **Papacito Juice profile 1.0.1**, with **core Juice 1.2.0**, mandatory Moki 1.2.0 and Cursor líquido 1.0.1. `js/cursor-conductor.js` calls `PapacitoJuice.mount({ page: 'home' })`; the profile validates the menu, Hardcore, Moki and all twelve artwork files before Game Feel 1.0.1 mounts the cursor. `window.papacitoReady` exposes completion or failure. Neither adapter writes the level, sound preference, Moki progress or unlock state.
+
+The versioned profile and Game Feel adapter are byte-identical to published commits `f05e03427235cd7d5ba52dd3b2af05abb06a2f4b` and `443d51b5e2dbfe083770e030d77d82b372ffd664`. Their manifests pin every copied file, including licenses and the profile's Moki/brand notices. Profile CSS loads before the existing brandkit; the brandkit remains authoritative. No vendor core, shader, artwork or layout is rewritten.
 
 | Juega | Cursor |
 | --- | --- |
@@ -31,12 +33,11 @@ The 1.0.0 vendor directory remains byte-identical as a historical rollback input
 
 ```sh
 npm test
-npm install --no-save --package-lock=false playwright@1.64.1
-npx playwright install chromium
-npm run test:cursor
+PLAYWRIGHT_MODULE=/path/to/existing/node_modules/playwright \
+CURSOR_TEST_OUTPUT=/path/outside/the/site/evidence npm run test:cursor
 ```
 
-The suite checks vendor checksums, the negative checksum guard, ES/EN content against production baseline `673794ffec82acde800df43ed31b5ded3cb0e592`, all four levels, one owner, visible colour, obstacles, native controls, Moki, sound preferences, lifecycle, reduced motion and rollback-query behaviour. It includes touch emulation at 375px and a 320/390/1440px ES/EN matrix. Browser evidence goes into ignored `qa/cursor-liquido/`.
+The suite checks vendor checksums, the negative checksum guard, ES/EN content against production baseline `673794ffec82acde800df43ed31b5ded3cb0e592`, all four levels, one owner, visible colour, obstacles, native controls, Moki, sound preferences, profile lifecycle, reduced motion and rollback-query behaviour. It includes touch emulation at 375px, a trusted CDP scroll gesture, no-WebGL fallback, a 320/390/1440px ES/EN matrix and lock-text contrast on light/dark sections. Injected dates 2026-10-22 and 2026-10-23 exercise five real pointer clicks, unique poses, artwork aspect ratios, hit testing and actual Hardcore unlock at 320/390/1280px, without calling `Moki.poke` or overriding the lock. Use the existing cached Playwright installation; no project dependencies are needed. `CURSOR_TEST_OUTPUT` redirects screenshots, videos and JSON outside the site; the default remains ignored `qa/cursor-liquido/`.
 
 Software-rendered Chromium and emulated touch do not certify Safari, physical phones, GPU frame rates or battery use.
 

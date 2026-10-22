@@ -664,10 +664,8 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 
 
-/* Cursor líquido owns pointer feedback. Keep all other Juice effects intact.
-   The published Hardcore vendor has no pointer-trail disable hook. Hide only
-   its bounded .jzh-t nodes while this page-owned conductor is active. */
-html[data-liquid-cursor="on"] .jzh-t { display: none; }
+/* Game Feel's released stylesheet owns legacy-trail suppression and restores
+   it on profile.destroy(); do not keep a second page-level ownership flag. */
 /* Override Scrollcraft's global canvas max-width without changing its vendor.
    The preserved renderer and adapter share the exact innerWidth viewport. */
 .liquid-cursor-layer { max-width: none; }

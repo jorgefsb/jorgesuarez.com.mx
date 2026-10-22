@@ -10,7 +10,7 @@ const crypto = require('crypto'), assert = require('assert/strict'), { execFileS
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 
 const root = path.join(__dirname, '..');
-const out = path.join(root, 'qa', 'cursor-liquido');
+const out = process.env.CURSOR_TEST_OUTPUT || path.join(root, 'qa', 'cursor-liquido');
 const BASE_SHA = '673794ffec82acde800df43ed31b5ded3cb0e592';
 const BASE_INDEX_SHA256 = '408c9c7aba875e6dc71061739584af8f98ff7bb601ad78d5ca5ace04190bb5a7';
 const GOLDEN_ENGINE = '3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230';
@@ -77,6 +77,7 @@ async function open(browser, url, opts) {
   const log = watch(page);
   await page.goto(url, { waitUntil: 'load' });
   await page.waitForFunction(() => window.JZ && document.querySelector('.jz-dock'));
+  if (!url.includes('cursor=off')) await page.evaluate(() => window.papacitoReady);
   await page.waitForTimeout(300);
   return { ctx, page, log };
 }
@@ -91,7 +92,7 @@ async function setLevel(page, value) {
 // SwiftShader es lento y el motor se pausa solo (budget-paused) tras varios cuadros lentos; eso es la
 // protección de hardware bajo funcionando, no un error.
 async function remount(page) {
-  await page.evaluate(() => LiquidCursor.mount({ followJuice: true, obstacleSelector: '[data-liquid-obstacle]' }));
+  await page.evaluate(() => PapacitoJuice.mount({ page: 'home', obstacleSelector: '[data-liquid-obstacle]' }));
 }
 
 async function stroke(page, x0, y0, n = 36) {
@@ -141,7 +142,7 @@ async function chromaDiff(page, before, after) {
     });
     await test('vendor / el guard falla si se toca un byte del motor', async () => {
       const copy = path.join(tmp, 'guard');
-      for (const d of ['scripts', 'brand/0.3', 'juice/1.0.1', 'juice/1.2.0', 'vfx/cursor-liquido']) fs.cpSync(path.join(root, d), path.join(copy, d), { recursive: true });
+      for (const d of ['scripts', 'brand/0.3', 'juice/1.0.1', 'juice/1.2.0', 'vfx']) fs.cpSync(path.join(root, d), path.join(copy, d), { recursive: true });
       const engine = path.join(copy, VENDOR, 'fluid-engine.js'), buf = fs.readFileSync(engine); buf[100] ^= 1; fs.writeFileSync(engine, buf);
       let code = 0;
       try { execFileSync(process.execPath, [path.join(copy, 'scripts/verify-vendor-sha256.mjs')], { env: Object.assign({}, process.env, { VERIFY_ORIGIN: '0' }), stdio: 'pipe' }); }
@@ -151,14 +152,15 @@ async function chromaDiff(page, before, after) {
     });
     await test('fuente / página sin cursor viejo, sin juice 1.0.1 y un solo mount', async () => {
       const html = read('index.html').toString();
-      assert(!/id="fluid-canvas"/.test(html)); assert(!/fluid-v2\.js/.test(html)); assert(!/juice\/1\.0\.1\//.test(html));
+      assert(!/id="fluid-canvas"/.test(html)); assert(!/fluid-v2\.js/.test(html)); assert(!/(?:src|href)="juice\/1\.0\.1\//.test(html));
       assert(!/github\.com\/jorgefsb\/cursor-liquido/.test(html));
       assert.match(html, /data-jz-shake="\.jzh-layer"/, 'shake targets only particles, never the full-height main');
       const order = ['juice/1.2.0/juice.js', 'juice/1.2.0/juice-menu.js', 'juice/1.2.0/hardcore/hardcore.js', 'juice/1.2.0/moki/moki.js',
-        VENDOR + 'fluid-engine.js', VENDOR + 'engine-adapter.js', VENDOR + 'quality-input-guard.js', VENDOR + 'liquid-cursor.js', 'js/cursor-conductor.js'];
+        VENDOR + 'fluid-engine.js', VENDOR + 'engine-adapter.js', VENDOR + 'quality-input-guard.js', VENDOR + 'liquid-cursor.js',
+        'vfx/game-feel/1.0.1/game-feel-cursor.js', 'vfx/papacito-juice/1.0.1/papacito-juice.js', 'js/cursor-conductor.js'];
       const at = order.map((s) => html.indexOf('<script src="' + s));
       assert(at.every((i, k) => i > 0 && (k === 0 || i > at[k - 1])), 'orden de scripts ' + at);
-      const mounts = ['js/v2.js', 'js/cursor-conductor.js'].map((f) => (read(f).toString().match(/LiquidCursor\.mount\(/g) || []).length);
+      const mounts = ['js/v2.js', 'js/cursor-conductor.js'].map((f) => (read(f).toString().match(/PapacitoJuice\.mount\(/g) || []).length);
       assert.deepEqual(mounts, [0, 1]);
       assert.equal(fs.existsSync(path.join(root, 'vfx/fluid-v2.js')), true, 'el archivo viejo se conserva');
       return { scripts: order.length, mounts };
@@ -200,15 +202,18 @@ async function chromaDiff(page, before, after) {
       assert.deepEqual(d.log.errors, []); assert.deepEqual(d.log.bad, []); assert.deepEqual(site.missing, []);
       return { ok: true };
     });
-    await test('perfil / PapacitoJuice 1.2.0 completo: sonido, Mucho de arranque, Hardcore con candado, Moki', async () => {
+    await test('perfil / PapacitoJuice 1.0.1 completo: core 1.2.0, sonido, Mucho de arranque, Hardcore con candado, Moki', async () => {
       const v = await P.evaluate(() => ({
         html: ['data-jz-sound', 'data-jz-default', 'data-moki-show', 'data-jz-hard'].map((a) => document.documentElement.getAttribute(a)),
         level: JZ.level, hzh: window.JZH && JZH.version, moki: window.Moki && Moki.version,
+        profile: PapacitoJuice.version, page: PapacitoJuice.current.page,
+        adapter: GameFeelCursor.version, sameOwner: PapacitoJuice.current.cursor === GameFeelCursor.current && GameFeelCursor.current.cursor === LiquidCursor.current,
         radios: [...document.querySelectorAll('.jz-panel input[name=jz-level]')].map((r) => r.value + (r.disabled ? ':locked' : '')),
         lock: document.querySelector('.jz-hard__lock').textContent
       }));
       assert.deepEqual(v.html, ['on', 'full', '5', null]);
       assert.equal(v.level, 'full'); assert.equal(v.hzh, '1.2.0'); assert.equal(v.moki, '1.2.0');
+      assert.equal(v.profile, '1.0.1'); assert.equal(v.adapter, '1.0.1'); assert.equal(v.page, 'home'); assert(v.sameOwner);
       assert.deepEqual(v.radios, ['off', 'subtle', 'full', 'hard:locked']);
       assert.match(v.lock, /Mokis/);
       return v;
@@ -219,15 +224,34 @@ async function chromaDiff(page, before, after) {
         cursorLayers: document.querySelectorAll('.liquid-cursor-layer').length,
         dotHosts: document.querySelectorAll('.liquid-original-dots').length,
         old: !!document.getElementById('fluid-canvas'), auto: !!window.fluidCursor, v2: typeof window.FluidSimulation,
-        owner: document.documentElement.getAttribute('data-liquid-cursor'), version: LiquidCursor.version,
+        owner: document.documentElement.getAttribute('data-game-feel-cursor'), version: LiquidCursor.version,
         source: LiquidCursor.current.stats.source, pe: [...document.querySelectorAll('.liquid-cursor-layer,.liquid-original-dots')].map((c) => getComputedStyle(c).pointerEvents),
         cursor: getComputedStyle(document.body).cursor
       }));
       assert.equal(v.layers, 2); assert.equal(v.cursorLayers, 2); assert.equal(v.dotHosts, 1);
       assert.equal(v.old, false); assert.equal(v.auto, false); assert.equal(v.v2, 'undefined');
-      assert.equal(v.owner, 'on'); assert.equal(v.version, '1.0.1'); assert.equal(v.source, 'data-jz-level');
+      assert.equal(v.owner, 'liquid'); assert.equal(v.version, '1.0.1'); assert.equal(v.source, 'data-jz-level');
       assert(v.pe.every((x) => x === 'none')); assert.notEqual(v.cursor, 'none');
       return v;
+    });
+    await test('candado / contraste WCAG sobre papel y fondo oscuro', async () => {
+      const rows=[];
+      for (const sel of ['#home','#journey','#media']) {
+        await P.evaluate(s => scrollTo(0,document.querySelector(s).getBoundingClientRect().top+scrollY+150),sel);
+        await P.waitForFunction(ground => document.querySelector('.hud').dataset.ground === ground, sel === '#journey' ? 'papel' : 'oscuro');
+        await P.waitForTimeout(300);
+        await P.click('.hud .jz-lvl');
+        const v=await P.evaluate(() => {
+          const el=document.querySelector('.jz-hard__lock'), panel=document.querySelector('.jz-panel');
+          const fg=getComputedStyle(el).color,bg=getComputedStyle(panel).backgroundColor;
+          const lum=s=>s.match(/[\d.]+/g).slice(0,3).map(Number).map(n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;}).reduce((a,n,i)=>a+n*[.2126,.7152,.0722][i],0);
+          const a=lum(fg),b=lum(bg);return {fg,bg,contrast:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};
+        });
+        assert(v.contrast>=4.5,JSON.stringify(v)); rows.push({section:sel,...v});
+        if(sel==='#journey') await P.screenshot({path:path.join(out,'candado-papel.png')});
+        await P.keyboard.press('Escape');
+      }
+      await P.evaluate(()=>scrollTo(0,0)); return rows;
     });
     await test('niveles / menú Juega → Nada, Poquito, Mucho, Hardcore (candado abierto solo en la prueba)', async () => {
       const seen = [];
@@ -398,16 +422,20 @@ async function chromaDiff(page, before, after) {
       return { opened, closed, hash };
     });
     await test('ciclo de vida / destroy y remount sin capas duplicadas', async () => {
-      const v = await P.evaluate(() => {
-        LiquidCursor.current.destroy(); const gone = document.querySelectorAll('.liquid-cursor-layer,.liquid-original-dots').length;
-        LiquidCursor.mount({ followJuice: true, obstacleSelector: '[data-liquid-obstacle]' });
-        LiquidCursor.mount({ followJuice: true, obstacleSelector: '[data-liquid-obstacle]' });
-        return { gone, layers: document.querySelectorAll('.liquid-cursor-layer').length, hosts: document.querySelectorAll('.liquid-original-dots').length, intensity: LiquidCursor.current.intensity };
+      const v = await P.evaluate(async () => {
+        PapacitoJuice.current.destroy(); const gone = document.querySelectorAll('.liquid-cursor-layer,.liquid-original-dots').length;
+        const ownerAfterDestroy=document.documentElement.getAttribute('data-game-feel-cursor');
+        const probe=document.createElement('i'); probe.className='jzh-t'; document.body.append(probe);
+        const trailAfterDestroy=getComputedStyle(probe).display; probe.remove();
+        await PapacitoJuice.mount({ page:'home', obstacleSelector: '[data-liquid-obstacle]' });
+        await PapacitoJuice.mount({ page:'home', obstacleSelector: '[data-liquid-obstacle]' });
+
+        return { gone, ownerAfterDestroy, trailAfterDestroy, layers: document.querySelectorAll('.liquid-cursor-layer').length, hosts: document.querySelectorAll('.liquid-original-dots').length, intensity: LiquidCursor.current.intensity };
       });
       await P.evaluate(() => scrollTo(0, 0)); await P.waitForTimeout(300);
       await stroke(P, 300, 400, 12);
       const frames = await P.evaluate(() => LiquidCursor.current.engine.stats.frames);
-      assert.equal(v.gone, 0); assert.equal(v.layers, 2); assert.equal(v.hosts, 1); assert.equal(v.intensity, 'mucho'); assert(frames > 0);
+      assert.equal(v.gone, 0); assert.equal(v.ownerAfterDestroy, null); assert.notEqual(v.trailAfterDestroy, 'none'); assert.equal(v.layers, 2); assert.equal(v.hosts, 1); assert.equal(v.intensity, 'mucho'); assert(frames > 0);
       return Object.assign(v, { frames });
     });
     await test('movimiento reducido / dinámico: juice a Nada, motor destruido, sin animación', async () => {
@@ -445,7 +473,7 @@ async function chromaDiff(page, before, after) {
       for (let i = 0; i < 10; i++) { await r.page.mouse.move(300 + i * 25, 380); await r.page.waitForTimeout(45);
         const c = await r.page.evaluate(() => [document.querySelectorAll('.jzh-t').length, [...document.querySelectorAll('.jzh-t')].filter((t) => getComputedStyle(t).display !== 'none').length]);
         made = Math.max(made, c[0]); visible = Math.max(visible, c[1]); }
-      const v = await r.page.evaluate(() => ({ current: LiquidCursor.current, layers: document.querySelectorAll('.liquid-cursor-layer').length, owner: document.documentElement.getAttribute('data-liquid-cursor') }));
+      const v = await r.page.evaluate(() => ({ current: LiquidCursor.current, layers: document.querySelectorAll('.liquid-cursor-layer').length, owner: document.documentElement.getAttribute('data-game-feel-cursor') }));
       await r.page.evaluate(() => localStorage.clear());
       assert.deepEqual(r.log.errors, []); await r.ctx.close();
       assert.equal(v.current, null); assert.equal(v.layers, 0); assert.equal(v.owner, null); assert(made > 0); assert(visible > 0);
@@ -512,15 +540,88 @@ async function chromaDiff(page, before, after) {
               assert(row.sw <= row.iw, JSON.stringify(row));
               assert.equal(row.mainTransform, 'none', 'Hardcore must not rotate the full-height document');
               rows.push(row);
+              if (level === 'full') await r.page.screenshot({ path: path.join(out, 'matrix-' + width + '-' + lang + '-normal.png') });
             }
             await r.page.emulateMedia({ reducedMotion: 'reduce' });
             await r.page.waitForFunction(() => JZ.level === 'off' && LiquidCursor.current.intensity === 'nada' && LiquidCursor.current.engine === null);
             const row = await r.page.evaluate(() => ({ sw:document.documentElement.scrollWidth, iw:innerWidth, level:JZ.level, lang:document.documentElement.lang, reduced:true }));
             assert(row.sw <= row.iw, JSON.stringify(row)); rows.push(row);
+            await r.page.screenshot({ path: path.join(out, 'matrix-' + width + '-' + lang + '-reduced.png') });
           }
         }
         assert.deepEqual(r.log.errors, []); assert.deepEqual(r.log.bad, []);
         return { checks:rows.length, rows };
+      } finally { await r.ctx.close(); }
+    });
+    for (const date of ['2026-10-22', '2026-10-23']) {
+      for (const width of [1280, 320, 390]) {
+        await test('Moki real / ' + date + ' ' + width + 'px: cinco clics desbloquean Hardcore', async () => {
+          const ctx = await browser.newContext({ viewport: { width, height: 900 }, locale: 'es-MX', timezoneId: 'America/Mexico_City' });
+          await ctx.addInitScript((iso) => {
+            const NativeDate = Date, now = new NativeDate(iso + 'T12:00:00-06:00').getTime();
+            window.Date = class extends NativeDate { constructor(...args) { super(...(args.length ? args : [now])); } static now() { return now; } };
+          }, date);
+          const p = await ctx.newPage(), log = watch(p), spots = [];
+          try {
+            await p.goto(site.url, { waitUntil: 'load' }); await p.evaluate(() => papacitoReady);
+            assert.equal(await p.locator('.moki').count(), 5);
+            assert.equal(await p.locator('input[value=hard]').isDisabled(), true);
+            const ids = await p.locator('.moki').evaluateAll(ms => ms.map(m => m.dataset.mokiSpot));
+            for (const id of ids) {
+              const m = p.locator('[data-moki-spot="' + id + '"]');
+              await m.scrollIntoViewIfNeeded(); await m.focus();
+              await p.waitForFunction(id => { const m = document.querySelector('[data-moki-spot="' + id + '"]'); return m.classList.contains('is-out') && m.querySelector('.moki__img').naturalWidth > 0; }, id);
+              await p.waitForTimeout(750);
+              const info = await m.evaluate(m => {
+                const img = m.querySelector('.moki__img'), r = img.getBoundingClientRect(), c = m.querySelector('.moki__clip').getBoundingClientRect();
+                const v = { left: Math.max(r.left,c.left,0), top: Math.max(r.top,c.top,0), right: Math.min(r.right,c.right,innerWidth), bottom: Math.min(r.bottom,c.bottom,innerHeight) };
+                let hit = null;
+                for (const a of [.5,.25,.75]) for (const b of [.5,.25,.75]) {
+                  const x = v.left + (v.right-v.left)*a, y = v.top+(v.bottom-v.top)*b;
+                  const el = document.elementFromPoint(x,y); if (el && m.contains(el)) hit = {x,y};
+                }
+                // Layout dimensions exclude the intentional waving rotation;
+                // its axis-aligned bounding box is not an image aspect ratio.
+                const css = getComputedStyle(img);
+                return { id:m.dataset.mokiSpot, pose:m.dataset.mokiPose, width:r.width, height:r.height, ratio:parseFloat(css.width)/parseFloat(css.height), natural:img.naturalWidth/img.naturalHeight, visibleWidth:v.right-v.left, visibleHeight:v.bottom-v.top, hit, top:r.top+scrollY };
+              });
+              assert(info.visibleWidth > 20 && info.visibleHeight > 20, JSON.stringify(info));
+              assert(Math.abs(info.ratio-info.natural) < .03, 'stretched Moki ' + JSON.stringify(info));
+              assert(info.hit, 'Moki covered or clipped ' + JSON.stringify(info));
+              await p.mouse.click(info.hit.x, info.hit.y);
+              await p.waitForFunction(n => Moki.found().length === n, spots.length + 1);
+              spots.push(info);
+            }
+            await p.waitForFunction(() => localStorage.getItem('jz-hard') === '1' && !document.querySelector('input[value=hard]').disabled);
+            assert.equal(new Set(spots.map(s => s.pose)).size,5, 'duplicate daily pose');
+            await p.screenshot({path:path.join(out,'moki-unlocked-'+date+'-'+width+'.png')});
+            assert.deepEqual(log.errors,[]); assert.deepEqual(log.bad,[]);
+            return { spots, found:await p.evaluate(() => Moki.found().length), unlocked:true };
+          } finally { await ctx.close(); }
+        });
+      }
+    }
+    await test('fallback / sin WebGL: perfil completo y navegación sin errores', async () => {
+      const ctx = await browser.newContext();
+      await ctx.addInitScript(() => { const get = HTMLCanvasElement.prototype.getContext; HTMLCanvasElement.prototype.getContext = function(type,...args) { return /webgl|experimental-webgl/.test(type) ? null : get.call(this,type,...args); }; });
+      const p = await ctx.newPage(), log = watch(p);
+      try {
+        await p.goto(site.url); await p.evaluate(() => papacitoReady); await stroke(p,200,400,12);
+        await p.click('.lang-switcher .en-btn'); assert.equal(await p.getAttribute('html','lang'),'en');
+        const v = await p.evaluate(() => ({ profile:PapacitoJuice.current.profile.version, stats:LiquidCursor.current.stats }));
+        assert.deepEqual(log.errors,[]); assert.deepEqual(log.bad,[]); return v;
+      } finally { await ctx.close(); }
+    });
+    await test('touch / gesto CDP confiable desplaza, cancela y no se previene', async () => {
+      const r = await open(browser, site.url, {viewport:{width:390,height:844}, isMobile:true,hasTouch:true});
+      try {
+        await r.page.evaluate(() => { window.__touch={cancel:0,prevented:0,trusted:0}; for(const type of ['touchmove','pointermove','pointercancel']) addEventListener(type,e=>{ if(e.defaultPrevented) __touch.prevented++; if(e.isTrusted) __touch.trusted++; if(type==='pointercancel') __touch.cancel++; },{passive:true}); });
+        const cdp = await r.ctx.newCDPSession(r.page);
+        await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:180,y:700}]});
+        for(let y=680;y>=220;y-=20) { await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:180,y}]}); await r.page.waitForTimeout(16); }
+        await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]}); await r.page.waitForTimeout(500);
+        const v = await r.page.evaluate(() => ({...__touch,y:scrollY}));
+        assert(v.y>100); assert(v.cancel>0); assert(v.trusted>0); assert.equal(v.prevented,0); assert.deepEqual(r.log.errors,[]); return v;
       } finally { await r.ctx.close(); }
     });
   } finally {
