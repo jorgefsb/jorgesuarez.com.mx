@@ -1,0 +1,5 @@
+
+> jorgesuarez-landing-page@1.0.0 test
+> node scripts/verify-vendor-sha256.mjs
+
+verify-vendor-sha256 OK (2 manifiestos)
