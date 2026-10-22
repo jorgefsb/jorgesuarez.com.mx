@@ -1,0 +1,24 @@
+{
+  "brandkit": "https://brandkit.jorgesuarez.com.mx/",
+  "brandkit_version": "0.6",
+  "naming": "moki_chr_<pose>_v001_approved.png",
+  "model": {
+    "appearance": "https://brandkit.jorgesuarez.com.mx/assets/moki-parche-derecho.png",
+    "rules": [
+      "Visor oscuro opaco, sin facciones y sin borde gris o bisel alrededor.",
+      "Cartón con fibra y capas; se rechaza cartón liso o plástico."
+    ]
+  },
+  "assets": [
+    {
+      "name": "moki_chr_three_quarter_v001_approved.png",
+      "pose": "three_quarter",
+      "source_url": "https://brandkit.jorgesuarez.com.mx/assets/moki-parche-derecho.png",
+      "width": 1215,
+      "height": 1295,
+      "bytes": 1247681,
+      "sha256": "4980c46331c1fef308ab9505c7cf311466584af16adc741e7f8717e8dcf2e171",
+      "status": "approved"
+    }
+  ]
+}
