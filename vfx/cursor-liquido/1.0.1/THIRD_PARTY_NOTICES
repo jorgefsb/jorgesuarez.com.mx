@@ -1,0 +1,54 @@
+THIRD-PARTY NOTICES for Cursor líquido 1.0.0
+============================================
+
+Cursor líquido is MIT licensed, copyright (c) 2026 Jorge Suárez (see LICENSE).
+It has no runtime dependencies. This file lists the third-party material that
+the distributed code contains or derives from.
+
+1. WebGL Fluid Simulation, by Pavel Dobryakov
+   Source:     https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
+   Licence:    MIT, copyright (c) 2017 Pavel Dobryakov (full text below)
+   Used in:    src/approved-fluid-v3.1.js, and therefore dist/cursor-liquido.js
+   What:       the display pass normal/shading is adapted from that project.
+   Our changes: the rest of the engine (advection, vorticity confinement,
+               pressure projection, obstacle walls with rounded corners,
+               contact splats, colour modes, lifecycle, reduced motion and
+               budget handling) is original code by Jorge Suárez, released
+               under this repository's MIT licence. The engine file is kept
+               byte-identical to the approved renderer; its header comment
+               carries the original attribution.
+   Not included: no proprietary Arcade source code or Arcade assets.
+
+2. Not included and not licensed by this repository
+   - Moki, the personal-brand mascot used by the separate Papacito Juice
+     profile. No Moki artwork, poses or other assets are in this repository,
+     and the MIT licence here grants no right to them.
+   - Brand identities, logos or fonts of any company.
+
+3. Development-only tools (not distributed in dist/)
+   - Playwright (Apache-2.0), used only by the browser regression suite.
+
+----------------------------------------------------------------------------
+Full licence text for WebGL Fluid Simulation:
+
+MIT License
+
+Copyright (c) 2017 Pavel Dobryakov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

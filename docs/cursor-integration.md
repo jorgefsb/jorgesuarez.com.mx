@@ -1,6 +1,6 @@
 # Cursor líquido integration
 
-This page uses Cursor líquido 1.0.0 with Juice 1.2.0. The cursor follows the existing Juega selector through `js/cursor-conductor.js`; it never writes the level, sound preference, Moki progress or unlock state.
+This page uses Cursor líquido 1.0.1 with Juice 1.2.0. The cursor follows the existing Juega selector through `js/cursor-conductor.js`; it never writes the level, sound preference, Moki progress or unlock state.
 
 | Juega | Cursor |
 | --- | --- |
@@ -9,9 +9,16 @@ This page uses Cursor líquido 1.0.0 with Juice 1.2.0. The cursor follows the ex
 | Mucho (`full`) | Approved fluid renderer, 10 CSS px |
 | Hardcore (`hard`) | Approved fluid renderer, 18 CSS px |
 
-The frozen renderer SHA256 is `3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230`. Local vendor filenames map to the public source paths in `vfx/cursor-liquido/1.0.0/manifest.json`. The MIT license and Pavel Dobryakov attribution travel with the vendor. Moki artwork is not licensed by the cursor's MIT license.
+The frozen renderer SHA256 is `3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230`. Local vendor filenames map to the public source paths in `vfx/cursor-liquido/1.0.1/manifest.json`. The MIT license and Pavel Dobryakov attribution travel with the vendor. Moki artwork is not licensed by the cursor's MIT license.
 
 ## Page configuration
+
+The 1.0.1 load order is approved renderer, approved engine adapter, external
+quality-input guard, then the LiquidCursor wrapper. The guard preserves only
+real queued input through adaptive quality reduction; actual viewport resize,
+scroll cancellation and the sustained-budget GPU shutdown remain intact.
+Sources are pinned to public release commit `6035bbd24c06b23be353d9af68bd67d33b22f34e`.
+The 1.0.0 vendor directory remains byte-identical as a historical rollback input.
 
 - `data-jz-shake=".jzh-layer"` sends Hardcore shake to its decorative particles, not the full-height document. Rotating a long `main` around its center had displaced and cropped the hero at a 320px viewport. The vendor and renderer are unchanged.
 - `data-liquid-obstacle` marks the HUD, quest rail, light sections and video frames as fluid boundaries.

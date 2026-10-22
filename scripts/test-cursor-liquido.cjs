@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Pruebas del cursor líquido 1.0.0 + Juice 1.2.0 en index.html, en Chromium real.
+/* Pruebas del cursor líquido 1.0.1 + Juice 1.2.0 en index.html, en Chromium real.
    Uso: npm run test:cursor  (PLAYWRIGHT_MODULE=<ruta a playwright> si no está instalado en el proyecto).
    Compara texto, ligas e imágenes ES/EN contra la línea base de main (673794f), sirve todo por HTTP
    efímero y deja capturas y video en qa/cursor-liquido/ (ignorado por git).
@@ -14,7 +14,7 @@ const out = path.join(root, 'qa', 'cursor-liquido');
 const BASE_SHA = '673794ffec82acde800df43ed31b5ded3cb0e592';
 const BASE_INDEX_SHA256 = '408c9c7aba875e6dc71061739584af8f98ff7bb601ad78d5ca5ace04190bb5a7';
 const GOLDEN_ENGINE = '3d478cc836969c216812c7e479724e0e204bbb76a26df24c2414568883021230';
-const VENDOR = 'vfx/cursor-liquido/1.0.0/';
+const VENDOR = 'vfx/cursor-liquido/1.0.1/';
 const LAUNCH = { headless: true, ignoreDefaultArgs: ['--hide-scrollbars'],
   args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] };
 const LEVELS = [['off', 'nada', 'off', 0], ['subtle', 'poquito', 'dots', 0], ['full', 'mucho', 'fluid', 10], ['hard', 'hardcore', 'fluid', 18]];
@@ -130,7 +130,7 @@ async function chromaDiff(page, before, after) {
       assert.equal(m.golden_engine_sha256, GOLDEN_ENGINE);
       for (const f of m.files) assert.equal(sha(read(VENDOR + f.path)), f.sha256, f.path);
       const wrapper = read(VENDOR + 'liquid-cursor.js').toString();
-      assert.match(wrapper, /version: '1\.0\.0'/);
+      assert.match(wrapper, /version: '1\.0\.1'/);
       return { engine: GOLDEN_ENGINE, files: m.files.map((f) => f.path + ' ' + f.sha256.slice(0, 12)) };
     });
     await test('vendor / juice 1.2.0 byte por byte contra su manifest', async () => {
@@ -141,7 +141,7 @@ async function chromaDiff(page, before, after) {
     });
     await test('vendor / el guard falla si se toca un byte del motor', async () => {
       const copy = path.join(tmp, 'guard');
-      for (const d of ['scripts', 'brand/0.3', 'juice/1.0.1', 'juice/1.2.0', 'vfx/cursor-liquido/1.0.0']) fs.cpSync(path.join(root, d), path.join(copy, d), { recursive: true });
+      for (const d of ['scripts', 'brand/0.3', 'juice/1.0.1', 'juice/1.2.0', 'vfx/cursor-liquido']) fs.cpSync(path.join(root, d), path.join(copy, d), { recursive: true });
       const engine = path.join(copy, VENDOR, 'fluid-engine.js'), buf = fs.readFileSync(engine); buf[100] ^= 1; fs.writeFileSync(engine, buf);
       let code = 0;
       try { execFileSync(process.execPath, [path.join(copy, 'scripts/verify-vendor-sha256.mjs')], { env: Object.assign({}, process.env, { VERIFY_ORIGIN: '0' }), stdio: 'pipe' }); }
@@ -155,7 +155,7 @@ async function chromaDiff(page, before, after) {
       assert(!/github\.com\/jorgefsb\/cursor-liquido/.test(html));
       assert.match(html, /data-jz-shake="\.jzh-layer"/, 'shake targets only particles, never the full-height main');
       const order = ['juice/1.2.0/juice.js', 'juice/1.2.0/juice-menu.js', 'juice/1.2.0/hardcore/hardcore.js', 'juice/1.2.0/moki/moki.js',
-        VENDOR + 'fluid-engine.js', VENDOR + 'engine-adapter.js', VENDOR + 'liquid-cursor.js', 'js/cursor-conductor.js'];
+        VENDOR + 'fluid-engine.js', VENDOR + 'engine-adapter.js', VENDOR + 'quality-input-guard.js', VENDOR + 'liquid-cursor.js', 'js/cursor-conductor.js'];
       const at = order.map((s) => html.indexOf('<script src="' + s));
       assert(at.every((i, k) => i > 0 && (k === 0 || i > at[k - 1])), 'orden de scripts ' + at);
       const mounts = ['js/v2.js', 'js/cursor-conductor.js'].map((f) => (read(f).toString().match(/LiquidCursor\.mount\(/g) || []).length);
@@ -225,7 +225,7 @@ async function chromaDiff(page, before, after) {
       }));
       assert.equal(v.layers, 2); assert.equal(v.cursorLayers, 2); assert.equal(v.dotHosts, 1);
       assert.equal(v.old, false); assert.equal(v.auto, false); assert.equal(v.v2, 'undefined');
-      assert.equal(v.owner, 'on'); assert.equal(v.version, '1.0.0'); assert.equal(v.source, 'data-jz-level');
+      assert.equal(v.owner, 'on'); assert.equal(v.version, '1.0.1'); assert.equal(v.source, 'data-jz-level');
       assert(v.pe.every((x) => x === 'none')); assert.notEqual(v.cursor, 'none');
       return v;
     });
