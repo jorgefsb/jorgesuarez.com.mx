@@ -263,8 +263,43 @@ strong, b { font-weight: inherit; color: var(--text); }
 @keyframes hint-bob { 50% { translate: 0 -6px; } }
 /* Phone landscape: URL-bar chrome already fights the scroll. Don't add
    decorative bob on top. Portrait + desktop keep the motion. Sticky /
-   scrollcraft stay on. */
+   scrollcraft stay on.
+   Width is often ~844 (>760) so the portrait CTA hide never fires, and
+   the 72px HUD has no fill until .is-scrolled — logo/lang/juice/CTA/burger
+   pile up and hero copy (z-index 8) reads through the cluster. */
 @media (orientation: landscape) and (max-height: 500px) {
+  :root { --nav-h: 52px; }
+  .hud {
+    height: var(--nav-h);
+    gap: var(--sp-2);
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background: rgba(10,10,10,.92);
+    border-bottom-color: var(--border);
+  }
+  .hud.is-scrolled,
+  .hud[data-ground="papel"].is-scrolled {
+    background: rgba(10,10,10,.92);
+    border-bottom-color: var(--border);
+    color: var(--text);
+  }
+  .hud:has(.hud__nav.is-open) { overflow: visible; }
+  .hud__cta { display: none; }
+  .hud__right { gap: var(--sp-2); min-width: 0; }
+  .hud__right .juice-sfx,
+  .hud__right .jz-dock {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .hud .juice-sfx__label,
+  .hud .jz-feel__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .hud .juice-sfx,
+  .hud .jz-lvl,
+  .hud .jz-feel {
+    width: 44px; min-width: 44px; max-width: 44px; height: 44px; padding: 0;
+  }
+  .js-wordmark { font-size: 15px; }
   .quest:not(.is-started) .quest__hint,
   .quest:not(.is-started) .quest__moki-slot,
   .quest.is-walking .quest__moki-slot {
