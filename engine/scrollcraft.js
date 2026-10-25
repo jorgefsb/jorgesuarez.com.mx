@@ -597,8 +597,11 @@
       // updated() arriving after destroyed() enters them directly.
       if (scDead) return;
       vh = innerHeight; vw = innerWidth;
+      // Pins in px from the measured vh, not N*100vh: CSS vh on iOS Safari
+      // landscape tracks the URL bar, while .sc-stage is 100svh. Same ruler
+      // as the worldflight spacers below.
       acts.forEach(function (a) {
-        if (a.pinned) a.el.style.height = (a.span * 100) + 'vh';
+        if (a.pinned) a.el.style.height = Math.round(a.span * vh) + 'px';
       });
       // The spacer is the whole document flow of a worldflight. Its height is
       // the sum of the leg weights plus one viewport: without that extra screen
@@ -1234,10 +1237,13 @@
 
     var lastW = innerWidth;
     on('resize', function () {
-      // Ignore URL-bar-only height changes on phones. Relaying out on those
-      // makes the page jump under the reader's thumb for no reason.
+      // Ignore URL-bar-only height changes on phones. Relaying out OR
+      // updating vh on those makes the page jump: iOS Safari landscape
+      // toggles the chrome, innerHeight oscillates, and read() recomputes
+      // progress/parallax/pins against a moving ruler. Freeze the last
+      // layout vh until the width actually changes.
       if (scDead) return;
-      if (innerWidth === lastW && isMobile()) { vh = innerHeight; return; }
+      if (innerWidth === lastW && isMobile()) return;
       lastW = innerWidth;
       layout();
     }, { passive: true });

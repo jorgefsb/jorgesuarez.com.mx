@@ -261,6 +261,16 @@ strong, b { font-weight: inherit; color: var(--text); }
   .quest:not(.is-started) .quest__moki-slot { animation: moki-step 700ms var(--ease) infinite alternate; }
 }
 @keyframes hint-bob { 50% { translate: 0 -6px; } }
+/* Phone landscape: URL-bar chrome already fights the scroll. Don't add
+   decorative bob on top. Portrait + desktop keep the motion. Sticky /
+   scrollcraft stay on. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .quest:not(.is-started) .quest__hint,
+  .quest:not(.is-started) .quest__moki-slot,
+  .quest.is-walking .quest__moki-slot {
+    animation: none;
+  }
+}
 .quest.is-done .quest__moki-slot { animation: moki-cheer 700ms var(--ease) 2; }
 @keyframes moki-cheer { 50% { translate: 0 -10px; } }
 
