@@ -1,0 +1,182 @@
+[
+  {
+    "lang": "es",
+    "viewport": "desktop",
+    "preview": {
+      "brokenImages": [],
+      "overflow": false,
+      "outfit": true,
+      "inter": true,
+      "headings": [
+        "¿Qué es?",
+        "¿Para quién?",
+        "¿Por qué existe?",
+        "¿Cómo lo uso?",
+        "¿Cuándo conviene y cuándo no?",
+        "¿Dónde lo encuentro?",
+        "Antes de seguir",
+        "Recorrido real",
+        "Ruta técnica separada"
+      ]
+    },
+    "video": {
+      "duration": 14.76,
+      "width": 1280,
+      "height": 800,
+      "tracks": [
+        {
+          "language": "es",
+          "mode": "showing",
+          "cues": 3,
+          "active": [
+            "Desplazamiento por contenido y enlaces públicos."
+          ]
+        },
+        {
+          "language": "en",
+          "mode": "hidden",
+          "cues": 3,
+          "active": [
+            "Scrolling through public content and links."
+          ]
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "lang": "es",
+    "viewport": "mobile",
+    "preview": {
+      "brokenImages": [],
+      "overflow": false,
+      "outfit": true,
+      "inter": true,
+      "headings": [
+        "¿Qué es?",
+        "¿Para quién?",
+        "¿Por qué existe?",
+        "¿Cómo lo uso?",
+        "¿Cuándo conviene y cuándo no?",
+        "¿Dónde lo encuentro?",
+        "Antes de seguir",
+        "Recorrido real",
+        "Ruta técnica separada"
+      ]
+    },
+    "video": {
+      "duration": 14.76,
+      "width": 1280,
+      "height": 800,
+      "tracks": [
+        {
+          "language": "es",
+          "mode": "showing",
+          "cues": 3,
+          "active": [
+            "Desplazamiento por contenido y enlaces públicos."
+          ]
+        },
+        {
+          "language": "en",
+          "mode": "hidden",
+          "cues": 3,
+          "active": [
+            "Scrolling through public content and links."
+          ]
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "viewport": "desktop",
+    "preview": {
+      "brokenImages": [],
+      "overflow": false,
+      "outfit": true,
+      "inter": true,
+      "headings": [
+        "What is it?",
+        "Who is it for?",
+        "Why does it exist?",
+        "How do I use it?",
+        "When should or shouldn't I use it?",
+        "Where can I find it?",
+        "Before continuing",
+        "Real walkthrough",
+        "Separate technical path"
+      ]
+    },
+    "video": {
+      "duration": 14.76,
+      "width": 1280,
+      "height": 800,
+      "tracks": [
+        {
+          "language": "es",
+          "mode": "hidden",
+          "cues": 3,
+          "active": [
+            "Desplazamiento por contenido y enlaces públicos."
+          ]
+        },
+        {
+          "language": "en",
+          "mode": "showing",
+          "cues": 3,
+          "active": [
+            "Scrolling through public content and links."
+          ]
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "lang": "en",
+    "viewport": "mobile",
+    "preview": {
+      "brokenImages": [],
+      "overflow": false,
+      "outfit": true,
+      "inter": true,
+      "headings": [
+        "What is it?",
+        "Who is it for?",
+        "Why does it exist?",
+        "How do I use it?",
+        "When should or shouldn't I use it?",
+        "Where can I find it?",
+        "Before continuing",
+        "Real walkthrough",
+        "Separate technical path"
+      ]
+    },
+    "video": {
+      "duration": 14.76,
+      "width": 1280,
+      "height": 800,
+      "tracks": [
+        {
+          "language": "es",
+          "mode": "hidden",
+          "cues": 3,
+          "active": [
+            "Desplazamiento por contenido y enlaces públicos."
+          ]
+        },
+        {
+          "language": "en",
+          "mode": "showing",
+          "cues": 3,
+          "active": [
+            "Scrolling through public content and links."
+          ]
+        }
+      ]
+    },
+    "errors": []
+  }
+]

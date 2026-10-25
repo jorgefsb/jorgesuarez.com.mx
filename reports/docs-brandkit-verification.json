@@ -1,0 +1,1074 @@
+{
+  "repository": "jorgesuarez.com.mx",
+  "baseline": "673794ffec82acde800df43ed31b5ded3cb0e592",
+  "baseline_origin_main": "673794ffec82acde800df43ed31b5ded3cb0e592",
+  "branch": "docs/brandkit-es-en-20261022",
+  "scope": "local documentation only; no push, PR, merge, deploy, private access or GBrain operations",
+  "protected_files_compared": 61,
+  "protected_byte_identical": true,
+  "protected_differences": [],
+  "six_questions": {
+    "es": {
+      "expected": 6,
+      "present": 6
+    },
+    "en": {
+      "expected": 6,
+      "present": 6
+    }
+  },
+  "paired_languages": true,
+  "local_links": [
+    {
+      "from": "README.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "README.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/media/02-public.png",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/WALKTHROUGH.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/WALKTHROUGH.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/TECHNICAL.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/REPOSITORY-DOCUMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "docs/ASSET-NOTICE.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "README.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/media/02-public.png",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/WALKTHROUGH.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/WALKTHROUGH.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/TECHNICAL.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/REPOSITORY-DOCUMENTATION.en.md",
+      "exists": true
+    },
+    {
+      "from": "README.en.md",
+      "target": "docs/ASSET-NOTICE.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.md",
+      "target": "TECHNICAL.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.md",
+      "target": "TECHNICAL.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.md",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.md",
+      "target": "REPOSITORY-DOCUMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.en.md",
+      "target": "TECHNICAL.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.en.md",
+      "target": "TECHNICAL.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.en.md",
+      "target": "../README.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/TECHNICAL.en.md",
+      "target": "REPOSITORY-DOCUMENTATION.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ASSET-NOTICE.md",
+      "target": "ASSET-NOTICE.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ASSET-NOTICE.md",
+      "target": "ASSET-NOTICE.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "WALKTHROUGH.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "WALKTHROUGH.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "media/player-en.html",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "media/walkthrough.mp4",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "media/walkthrough-en.vtt",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.en.md",
+      "target": "../README.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ASSET-NOTICE.en.md",
+      "target": "ASSET-NOTICE.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ASSET-NOTICE.en.md",
+      "target": "ASSET-NOTICE.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "WALKTHROUGH.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "WALKTHROUGH.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "media/player-es.html",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "media/walkthrough.mp4",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "media/walkthrough-es.vtt",
+      "exists": true
+    },
+    {
+      "from": "docs/WALKTHROUGH.md",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.en.md",
+      "target": "REPOSITORY-DOCUMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.en.md",
+      "target": "REPOSITORY-DOCUMENTATION.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.en.md",
+      "target": "ASSET-NOTICE.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.md",
+      "target": "REPOSITORY-DOCUMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.md",
+      "target": "REPOSITORY-DOCUMENTATION.en.md",
+      "exists": true
+    },
+    {
+      "from": "docs/REPOSITORY-DOCUMENTATION.md",
+      "target": "ASSET-NOTICE.md",
+      "exists": true
+    }
+  ],
+  "local_links_pass": true,
+  "public_page": {
+    "url": "https://jorgesuarez.com.mx/",
+    "status": 200,
+    "error": null,
+    "title": "Jorge Suárez | Building Games, Scaling Studios, Documenting the Journey",
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "https://jorgesuarez.com.mx/#journey"
+      },
+      {
+        "text": "JorgeSuarez.com.mx",
+        "href": "https://jorgesuarez.com.mx/#home"
+      },
+      {
+        "text": "Journey",
+        "href": "https://jorgesuarez.com.mx/#journey"
+      },
+      {
+        "text": "Amber Mexico",
+        "href": "https://jorgesuarez.com.mx/#amber"
+      },
+      {
+        "text": "Products",
+        "href": "https://jorgesuarez.com.mx/#ecosystem"
+      },
+      {
+        "text": "Frameworks",
+        "href": "https://jorgesuarez.com.mx/#frameworks"
+      },
+      {
+        "text": "Connect",
+        "href": "https://jorgesuarez.com.mx/#contact"
+      },
+      {
+        "text": "ES",
+        "href": "https://jorgesuarez.com.mx/#"
+      },
+      {
+        "text": "EN",
+        "href": "https://jorgesuarez.com.mx/#"
+      },
+      {
+        "text": "Club Access",
+        "href": "https://vip.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Club Access",
+        "href": "https://vip.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "My Story",
+        "href": "https://jorgesuarez.com.mx/#journey"
+      },
+      {
+        "text": "“Jorge is a visionary leader, whose humanity shines bright and inspires all those around him.”\nMihai Pohonţu\nCEO of Amber",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“The heart and soul of Game Development in Mexico. He leads by inspiring others.”\nBradd McBrearty\nCreative Director (Ex-Apple, Disney, EA)",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Amazing gaming veteran who leads by example. Always guided by kind soul and sharp instincts.”\nVlad Popovici\nCOO | Tech Leader | Board Member",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“One of these rare people that can create something out of nothing, anytime, anywhere.”\nBogdan Constantinescu\nHead of Product & Innovation",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Persistence beats resistance. If I know someone who definitely does not give up, it is Jorge.”\nAlvaro Jauregui\nConcept Artist | Visual Developer (AAA)",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Dynamic, visionary, and inspiring. One of the most remarkable professionals.”\nMihaela Duță\nIT Project Manager",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“He's pure energy. Working with Jorge is akin to working with the Duracell Teddy bear.”\nGwenael Heliou\nRegional GM @ Kabam",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Instrumental to Amber's international presence. His positive attitude made this possible.”\nVlad Anghelahar\nHead of Engineering at Amber",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“The living example of Kaizen. Always looking for a way of improving whatever he is working on.”\nAlberto Ramírez\nGame Designer",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Extraordinary person. Maintains a personal touch, helping you feel valued and heard.”\nStone Perales\nSenior Art Director",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Charisma and a great sparkle to ignite fire into projects. I am happy to consider him my friend.”\nHector Padilla Perez\nDirector of Engineering",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Persistence and determination to achieve goals are truly inspiring. Sharing is caring.”\nAbraham Lara\n3D Animation Director",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Jorge is a visionary leader, whose humanity shines bright and inspires all those around him.”\nMihai Pohonţu\nCEO of Amber",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“The heart and soul of Game Development in Mexico. He leads by inspiring others.”\nBradd McBrearty\nCreative Director (Ex-Apple, Disney, EA)",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Amazing gaming veteran who leads by example. Always guided by kind soul and sharp instincts.”\nVlad Popovici\nCOO | Tech Leader | Board Member",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“One of these rare people that can create something out of nothing, anytime, anywhere.”\nBogdan Constantinescu\nHead of Product & Innovation",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Persistence beats resistance. If I know someone who definitely does not give up, it is Jorge.”\nAlvaro Jauregui\nConcept Artist | Visual Developer (AAA)",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Dynamic, visionary, and inspiring. One of the most remarkable professionals.”\nMihaela Duță\nIT Project Manager",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“He's pure energy. Working with Jorge is akin to working with the Duracell Teddy bear.”\nGwenael Heliou\nRegional GM @ Kabam",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Instrumental to Amber's international presence. His positive attitude made this possible.”\nVlad Anghelahar\nHead of Engineering at Amber",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“The living example of Kaizen. Always looking for a way of improving whatever he is working on.”\nAlberto Ramírez\nGame Designer",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Extraordinary person. Maintains a personal touch, helping you feel valued and heard.”\nStone Perales\nSenior Art Director",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Charisma and a great sparkle to ignite fire into projects. I am happy to consider him my friend.”\nHector Padilla Perez\nDirector of Engineering",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "“Persistence and determination to achieve goals are truly inspiring. Sharing is caring.”\nAbraham Lara\n3D Animation Director",
+        "href": "https://www.linkedin.com/in/yorgenmeister/details/recommendations/?detailScreenTabIndex=0"
+      },
+      {
+        "text": "2004 - PRESENT\nKaraOkulta / KOGameStudios\n\nWe founded the studio that set a milestone in the national industry by becoming the first Jalisco studio to be acquired by an international firm (Amber).\n\nVisit Site →",
+        "href": "https://www.karaokulta.com/"
+      },
+      {
+        "text": "2015 - PRESENT\nSparkplug Technologies\n\nA creative services subscription (not retail software, not a game studio). Revolutionizing the industry with Creative Services as a Subscription. We offer software development, AAA art, and VFX under a flexible and scalable model.\n\nVisit Site →",
+        "href": "https://getsparkplug.com/"
+      },
+      {
+        "text": "2019 - PRESENT\nAmber Mexico\n\nAfter the acquisition, we drove the studio's growth from 20 to 200+ artisans, overseeing strategic operations and expanding AAA influence in the region.\n\nVisit Site →",
+        "href": "https://amberstudio.com/location-guadalajara"
+      },
+      {
+        "text": "2021 - PRESENT\nUETC (U-Echo Training Center)\n\nFounded to professionalize the industry and scale talent to AAA standards. We are the only Epic Games authorized center in Mexico focused on Unreal Engine. UETC is not UNITEC: it is the U-Echo Training Center, an Unreal Engine training center.\n\nVisit Site →",
+        "href": "https://uetc.mx/"
+      },
+      {
+        "text": "2026 - PRESENT\nTecni Moto Garage\n\nFounding partner with my uncle. Motorcycle shop in Acoxpa, Mexico City. We will open on November 1, 2026.\n\nVisit Site →",
+        "href": "https://tecnimoto.jorgefsb.workers.dev/"
+      },
+      {
+        "text": "Altered Ventures",
+        "href": "https://venturecapital.game/"
+      },
+      {
+        "text": "Official Website",
+        "href": "https://amberstudio.com/location-guadalajara"
+      },
+      {
+        "text": "Overview Deck",
+        "href": "https://amberstudio.com/overview-deck/"
+      },
+      {
+        "text": "Steam Store",
+        "href": "https://store.steampowered.com/app/3764970/Mexican_Ninja/"
+      },
+      {
+        "text": "Xbox",
+        "href": "https://www.xbox.com/games/store/mexican-ninja/9png370lktv1"
+      },
+      {
+        "text": "PlayStation",
+        "href": "https://store.playstation.com/concept/10018714"
+      },
+      {
+        "text": "Steam Store",
+        "href": "https://store.steampowered.com/app/3757660/Station_58/"
+      },
+      {
+        "text": "Android",
+        "href": "https://play.google.com/store/apps/details?id=com.amberstudio.squishums&hl=es_MX"
+      },
+      {
+        "text": "iOS",
+        "href": "https://apps.apple.com/us/app/squishems-drop-and-pop/id6739646005"
+      },
+      {
+        "text": "Disney+",
+        "href": "https://www.disneyplus.com/"
+      },
+      {
+        "text": "Marvel",
+        "href": "https://www.marvel.com/"
+      },
+      {
+        "text": "Epic Games",
+        "href": "https://www.epicgames.com/"
+      },
+      {
+        "text": "Ubisoft",
+        "href": "https://www.ubisoft.com/"
+      },
+      {
+        "text": "Bandai Namco",
+        "href": "https://www.bandainamcoent.com/"
+      },
+      {
+        "text": "Roblox",
+        "href": "https://www.roblox.com/"
+      },
+      {
+        "text": "Amazon Games",
+        "href": "https://games.amazon.com/"
+      },
+      {
+        "text": "Visit Gamedev →",
+        "href": "https://gamedev.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Watch El Motor on YouTube →",
+        "href": "https://www.youtube.com/@JorgeSuarezGM?sub_confirmation=1"
+      },
+      {
+        "text": "Meet EchoMentor AI →",
+        "href": "https://echomentor.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "View Channel →",
+        "href": "https://www.youtube.com/channel/UCvja7Q0AIlJO2N_lDkMLsAw?sub_confirmation=1"
+      },
+      {
+        "text": "Join on Facebook →",
+        "href": "http://comunidad.karaokulta.com/"
+      },
+      {
+        "text": "Join the Club →",
+        "href": "https://club.uetc.mx/"
+      },
+      {
+        "text": "Listen on Spotify →",
+        "href": "https://open.spotify.com/playlist/1hwRvxU7lMmIXLpqLdQLAL?si=5d16031f69e34cfa"
+      },
+      {
+        "text": "Visit Moki →",
+        "href": "https://moki.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Explore Rich Life →",
+        "href": "https://richlife.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Create my Prompt →",
+        "href": "https://mpb.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Subscribe on YouTube →",
+        "href": "https://www.youtube.com/@jorgefsb/shorts?sub_confirmation=1"
+      },
+      {
+        "text": "Explore Repositories →",
+        "href": "https://github.com/jorgefsb"
+      },
+      {
+        "text": "Get Club Access →",
+        "href": "https://vip.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Explore Chatbots →",
+        "href": "https://www.sparkchatbots.com/"
+      },
+      {
+        "text": "Official Website",
+        "href": "https://brandcade.com/"
+      },
+      {
+        "text": "View Plans",
+        "href": "https://brandcade.com/#plans"
+      },
+      {
+        "text": "Logrus",
+        "href": "https://logrus.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Join the Community →",
+        "href": "https://www.youtube.com/@jorgefsb"
+      },
+      {
+        "text": "Media Contact",
+        "href": "mailto:jorgefsb@gmail.com?cc=jorge@amberstudio.com,maria.murillo@amberstudio.com&subject=Contacto%20de%20Medios%20-%20jorgesuarez.com.mx&body=Hola%20Jorge,%0D%0A%0D%0AMe%20pongo%20en%20contacto%20para%20[Motivo%20de%20la%20entrevista/art%C3%ADculo].%0D%0A%0D%0ASaludos."
+      },
+      {
+        "text": "Watch all episodes →",
+        "href": "https://www.youtube.com/channel/UCpbL_UkaU85RiLhr8xABcHA/search?query=SUPERNOVA%20DEVS%20CHALLENGE"
+      },
+      {
+        "text": "Watch Full Q&A",
+        "href": "https://youtu.be/S8eRBgu1Qds"
+      },
+      {
+        "text": "Start a Partnership →",
+        "href": "mailto:jorgefsb@gmail.com?cc=jorge@amberstudio.com&subject=Alianza%20de%20Contenido%20/%20Sponsorship%20-%20jorgesuarez.com.mx&body=Hola%20Jorge,%0D%0A%0D%0AHe%20visto%20tu%20trayectoria%20y%20el%20ecosistema%20que%20has%20construido.%20Me%20gustar%C3%ADa%20explorar%20c%C3%B3mo%20mi%20marca%20puede%20colaborar%20como%20partner%20de%20contenido%20o%20patrocinador.%0D%0A%0D%0AQuedo%20atento%20para%20agendar%20una%20breve%20charla.%0D%0A%0D%0ASaludos."
+      },
+      {
+        "text": "Watch Historical Retrospective",
+        "href": "https://www.youtube.com/watch?v=v7Xr6w4M36I"
+      },
+      {
+        "text": "KaraOkulta Report 2025 ↗",
+        "href": "https://static.metricool.com/report-engine-v2/reports/oneshot/202601/5357487-20250101-KaraOkulta-ntrxynme.pdf"
+      },
+      {
+        "text": "jorgesuarez.com.mx Report 2025 ↗",
+        "href": "https://static.metricool.com/report-engine-v2/reports/oneshot/202601/5357288-20250101-JorgeSurezBasezPage-epeoagnr.pdf"
+      },
+      {
+        "text": "Play Brandcade on Roblox →",
+        "href": "http://roblox.brandcade.com/"
+      },
+      {
+        "text": "Subscribe to Substack and Nano Podcasts →",
+        "href": "https://jorgesuarez.substack.com/?r=43ucq&utm_campaign=pub-share-checklist"
+      },
+      {
+        "text": "LinkedIn",
+        "href": "https://linkedin.com/in/yorgenmeister"
+      },
+      {
+        "text": "X / Twitter",
+        "href": "https://x.com/jorgefsb"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/jorgesuarez.com.mx/"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/jorgefsb"
+      },
+      {
+        "text": "Instagram",
+        "href": "https://instagram.com/jorgefsb"
+      },
+      {
+        "text": "YouTube",
+        "href": "https://www.youtube.com/@jorgefsb"
+      },
+      {
+        "text": "TikTok",
+        "href": "https://tiktok.com/@jorgesuarez.com.mx"
+      },
+      {
+        "text": "FACEBOOK · YESTERDAY",
+        "href": "https://facebook.com/1026556979094764/posts/1814858793597908"
+      },
+      {
+        "text": "FACEBOOK · YESTERDAY",
+        "href": "https://facebook.com/1026556979094764/posts/1814858566931264"
+      },
+      {
+        "text": "See the live wall",
+        "href": "https://muro.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Put it on a TV",
+        "href": "https://muro.jorgesuarez.com.mx/?tv=1"
+      },
+      {
+        "text": "Club Access",
+        "href": "https://vip.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Moki",
+        "href": "https://moki.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "Gamedev",
+        "href": "https://gamedev.jorgesuarez.com.mx/"
+      },
+      {
+        "text": "PapacitoOS",
+        "href": "https://os.jorgesuarez.com.mx/"
+      }
+    ],
+    "formsSubmitted": 0,
+    "source": "public page; not proof of deployment source revision"
+  },
+  "video": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 800
+      }
+    ],
+    "format": {
+      "duration": "14.760000",
+      "size": "391201"
+    }
+  },
+  "media": [
+    {
+      "path": "docs/media/01-public.png",
+      "bytes": 1127561,
+      "sha256": "c93d82211b69e7a97cae7edf13c3aeeb847896e8b01a54404a2aff2ea9be7387",
+      "dimensions": [
+        1280,
+        800
+      ]
+    },
+    {
+      "path": "docs/media/02-public.png",
+      "bytes": 928130,
+      "sha256": "a0bc5489631dacf78dc904a090f7408b3a7fc1055b6767d9c04ddb77344fa7a5",
+      "dimensions": [
+        1280,
+        800
+      ]
+    },
+    {
+      "path": "docs/media/Inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "docs/media/Inter-static.ttf",
+      "bytes": 341396,
+      "sha256": "6bd75f77a5941117f794cdb9cf4ee983acf45f2e96be56e74db55029454a988c"
+    },
+    {
+      "path": "docs/media/Outfit-OFL.txt",
+      "bytes": 4389,
+      "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+    },
+    {
+      "path": "docs/media/Outfit-static.ttf",
+      "bytes": 55304,
+      "sha256": "cad43a79db1b8204a28d8a161d90c938ed80971affbf6768e357f090c7a2ed02"
+    },
+    {
+      "path": "docs/media/cover-en-mobile.png",
+      "bytes": 280915,
+      "sha256": "66e157c534ec94c99092239f6aadd6745765cf4eb02d04e7a68fd212b3cc36c7",
+      "dimensions": [
+        780,
+        1000
+      ]
+    },
+    {
+      "path": "docs/media/cover-en.png",
+      "bytes": 505965,
+      "sha256": "201bde8b180a51bb4d4aafc71f00c04a02991bbc56dcec1386b54c54ebc62c59",
+      "dimensions": [
+        1600,
+        760
+      ]
+    },
+    {
+      "path": "docs/media/cover-es-mobile.png",
+      "bytes": 281827,
+      "sha256": "819135dc4aa6d3e2ecd01eadcc75b9e216df6e0079b90a6d136c1d7ddf135109",
+      "dimensions": [
+        780,
+        1000
+      ]
+    },
+    {
+      "path": "docs/media/cover-es.png",
+      "bytes": 507219,
+      "sha256": "88f7217ff4b6330f9a6c7fdba24c099a0f89694de434b758ad8796f83734d560",
+      "dimensions": [
+        1600,
+        760
+      ]
+    },
+    {
+      "path": "docs/media/mobile-public.png",
+      "bytes": 393643,
+      "sha256": "e90f80098f351e6ad35fe7f67772b9ab81b4e43b224ed0cb34bcd511db9754d2",
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "docs/media/player-en.html",
+      "bytes": 955,
+      "sha256": "c4d326b7d4e24258f8c003e8e947328483f45d6c5386686e3ef74098e54f025a"
+    },
+    {
+      "path": "docs/media/player-es.html",
+      "bytes": 964,
+      "sha256": "8f2721981c8fb9cc7cd8a1fa92382ab374328deab0f45fd6b73148fabab331da"
+    },
+    {
+      "path": "docs/media/walkthrough-en.vtt",
+      "bytes": 247,
+      "sha256": "b570a93cef7b9b254bfd4f692b533eed50b50cd88d196fe1bda626394d42faea"
+    },
+    {
+      "path": "docs/media/walkthrough-es.vtt",
+      "bytes": 265,
+      "sha256": "694cb37dd37ce6ceb83707916ef3a79c629eb1102adf5bf3459c228142cd55b9"
+    },
+    {
+      "path": "docs/media/walkthrough.mp4",
+      "bytes": 391201,
+      "sha256": "97627556ece18b1a88d73236a2015c7e7c3f8a8525f4f4ff44d8ff53d0d8a8df"
+    }
+  ],
+  "tests": {
+    "command": "npm test",
+    "result": "PASS: verify-vendor-sha256 OK (2 manifiestos)"
+  },
+  "limits": [
+    "Public pages do not establish deployed revision or hosting chain.",
+    "Read-only public visit and scrolling; no forms, private app, checkout, club or authentication tested.",
+    "Recording retains original UI language; ES/EN captions and transcripts explain the same recording.",
+    "Preview is a faithful local Markdown rendering, not proof of GitHub rendering or publication."
+  ],
+  "browser_previews": [
+    {
+      "lang": "es",
+      "viewport": "desktop",
+      "preview": {
+        "brokenImages": [],
+        "overflow": false,
+        "outfit": true,
+        "inter": true,
+        "headings": [
+          "¿Qué es?",
+          "¿Para quién?",
+          "¿Por qué existe?",
+          "¿Cómo lo uso?",
+          "¿Cuándo conviene y cuándo no?",
+          "¿Dónde lo encuentro?",
+          "Antes de seguir",
+          "Recorrido real",
+          "Ruta técnica separada"
+        ]
+      },
+      "video": {
+        "duration": 14.76,
+        "width": 1280,
+        "height": 800,
+        "tracks": [
+          {
+            "language": "es",
+            "mode": "showing",
+            "cues": 3,
+            "active": [
+              "Desplazamiento por contenido y enlaces públicos."
+            ]
+          },
+          {
+            "language": "en",
+            "mode": "hidden",
+            "cues": 3,
+            "active": [
+              "Scrolling through public content and links."
+            ]
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "lang": "es",
+      "viewport": "mobile",
+      "preview": {
+        "brokenImages": [],
+        "overflow": false,
+        "outfit": true,
+        "inter": true,
+        "headings": [
+          "¿Qué es?",
+          "¿Para quién?",
+          "¿Por qué existe?",
+          "¿Cómo lo uso?",
+          "¿Cuándo conviene y cuándo no?",
+          "¿Dónde lo encuentro?",
+          "Antes de seguir",
+          "Recorrido real",
+          "Ruta técnica separada"
+        ]
+      },
+      "video": {
+        "duration": 14.76,
+        "width": 1280,
+        "height": 800,
+        "tracks": [
+          {
+            "language": "es",
+            "mode": "showing",
+            "cues": 3,
+            "active": [
+              "Desplazamiento por contenido y enlaces públicos."
+            ]
+          },
+          {
+            "language": "en",
+            "mode": "hidden",
+            "cues": 3,
+            "active": [
+              "Scrolling through public content and links."
+            ]
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "lang": "en",
+      "viewport": "desktop",
+      "preview": {
+        "brokenImages": [],
+        "overflow": false,
+        "outfit": true,
+        "inter": true,
+        "headings": [
+          "What is it?",
+          "Who is it for?",
+          "Why does it exist?",
+          "How do I use it?",
+          "When should or shouldn't I use it?",
+          "Where can I find it?",
+          "Before continuing",
+          "Real walkthrough",
+          "Separate technical path"
+        ]
+      },
+      "video": {
+        "duration": 14.76,
+        "width": 1280,
+        "height": 800,
+        "tracks": [
+          {
+            "language": "es",
+            "mode": "hidden",
+            "cues": 3,
+            "active": [
+              "Desplazamiento por contenido y enlaces públicos."
+            ]
+          },
+          {
+            "language": "en",
+            "mode": "showing",
+            "cues": 3,
+            "active": [
+              "Scrolling through public content and links."
+            ]
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "lang": "en",
+      "viewport": "mobile",
+      "preview": {
+        "brokenImages": [],
+        "overflow": false,
+        "outfit": true,
+        "inter": true,
+        "headings": [
+          "What is it?",
+          "Who is it for?",
+          "Why does it exist?",
+          "How do I use it?",
+          "When should or shouldn't I use it?",
+          "Where can I find it?",
+          "Before continuing",
+          "Real walkthrough",
+          "Separate technical path"
+        ]
+      },
+      "video": {
+        "duration": 14.76,
+        "width": 1280,
+        "height": 800,
+        "tracks": [
+          {
+            "language": "es",
+            "mode": "hidden",
+            "cues": 3,
+            "active": [
+              "Desplazamiento por contenido y enlaces públicos."
+            ]
+          },
+          {
+            "language": "en",
+            "mode": "showing",
+            "cues": 3,
+            "active": [
+              "Scrolling through public content and links."
+            ]
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "external_links": [
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/",
+      "status": 200,
+      "final_url": "https://brandkit.jorgesuarez.com.mx/"
+    },
+    {
+      "url": "https://github.com/jorgefsb",
+      "status": 200,
+      "final_url": "https://github.com/jorgefsb"
+    },
+    {
+      "url": "https://github.com/jorgefsb/jorgesuarez.com.mx/issues",
+      "status": 200,
+      "final_url": "https://github.com/jorgefsb/jorgesuarez.com.mx/issues"
+    },
+    {
+      "url": "https://jorgesuarez.com.mx/",
+      "status": 200,
+      "final_url": "https://jorgesuarez.com.mx/"
+    }
+  ],
+  "brand_source_manifest_verified": true,
+  "brand_sources": [
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/styles.css",
+      "path": "brand-assets/styles.css",
+      "bytes": 26777,
+      "sha256": "5b2423f1a4fe17e630083e83a9b1d3c1df62ca50d19815ae396c1a17f0e690d2"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/brand-kit-0.3/tokens.json",
+      "path": "brand-assets/assets/brand-kit-0.3/tokens.json",
+      "bytes": 2872,
+      "sha256": "2581a3ef74deb1c95c770a0f4ccb5baf145b9477cd6b24de086f503a973b5a87"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/brand-kit-0.3/tokens.css",
+      "path": "brand-assets/assets/brand-kit-0.3/tokens.css",
+      "bytes": 1211,
+      "sha256": "8d8f3a345d359a99dd48b98289b9a7d39e2be06179322949ff2e217395ef3152"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/masters-1.0/signature/JorgeSuarez-A-oscuro-bicolor.svg",
+      "path": "brand-assets/assets/masters-1.0/signature/JorgeSuarez-A-oscuro-bicolor.svg",
+      "bytes": 13475,
+      "sha256": "52443c3b04c03265eaa6a9732020eb1ab6aaa8be23e37d422567fe4166c47b37"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/masters-1.0/signature/JorgeSuarez-C-oscuro-monocromo.svg",
+      "path": "brand-assets/assets/masters-1.0/signature/JorgeSuarez-C-oscuro-monocromo.svg",
+      "bytes": 13477,
+      "sha256": "f6c7435cdc185e066ad5007f5df3ccfb92981e1ebc40160705a1c1379f882f01"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/masters-1.0/signature/png/JorgeSuarez-A-oscuro-bicolor-screen-240px-visible.png",
+      "path": "brand-assets/assets/masters-1.0/signature/png/JorgeSuarez-A-oscuro-bicolor-screen-240px-visible.png",
+      "bytes": 4783,
+      "sha256": "560b2a153bb385c17da353de3b4224ac4bb15a4ba8c2fda88c99ad357fa18763"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/moki-parche-derecho.png",
+      "path": "brand-assets/assets/moki-parche-derecho.png",
+      "bytes": 1247681,
+      "sha256": "4980c46331c1fef308ab9505c7cf311466584af16adc741e7f8717e8dcf2e171"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/juice/1.2.0/moki/moki-verifica.webp",
+      "path": "brand-assets/juice/1.2.0/moki/moki-verifica.webp",
+      "bytes": 38784,
+      "sha256": "09f06fa76797e44399112caf0ea41e201869694638da7decf95f3bb49ab3e903"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/Outfit-OFL.txt",
+      "path": "brand-assets/assets/Outfit-OFL.txt",
+      "bytes": 4389,
+      "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/Inter-OFL.txt",
+      "path": "brand-assets/assets/Inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/Outfit-static.ttf",
+      "path": "brand-assets/assets/Outfit-static.ttf",
+      "bytes": 55304,
+      "sha256": "cad43a79db1b8204a28d8a161d90c938ed80971affbf6768e357f090c7a2ed02"
+    },
+    {
+      "url": "https://brandkit.jorgesuarez.com.mx/assets/Inter-static.ttf",
+      "path": "brand-assets/assets/Inter-static.ttf",
+      "bytes": 341396,
+      "sha256": "6bd75f77a5941117f794cdb9cf4ee983acf45f2e96be56e74db55029454a988c"
+    }
+  ],
+  "visual_review": "Desktop ES and mobile EN README previews, desktop profile cover and mobile site cover visually inspected; no overlap observed. Browser checked all ES/EN desktop/mobile combinations."
+}
