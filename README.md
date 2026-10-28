@@ -51,7 +51,7 @@ Esta landing page centraliza el acceso a mis diversas iniciativas:
 
 **Milestone: "2026 Production Launch & Branding Finalization" - COMPLETE ✅**
 - [x] Despliegue en producción con dominio `jorgesuarez.com.mx`.
-- [x] Configuración de DNS profesional e integración con Vercel.
+- [x] Configuración de DNS profesional. Hosting actual: GitHub Pages detrás de Cloudflare; Vercel quedó retirado en oct 2026.
 - [x] Lanzamiento de nueva identidad visual (JS Monogram Favicon).
 - [x] Sincronización completa de repositorios y documentación Kaizen.
 

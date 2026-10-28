@@ -125,7 +125,7 @@ Cómo se aplica:
 
 Umbrales: 4.5:1 para texto normal y 3:1 para texto grande o UI esencial. Texto sobre imágenes, transparencias y estados se prueban en contexto.
 
-### Color por producto (Heredado de v3, por revisar)
+### Color por producto (Heredado)
 
 El naranja `#FF6B35` siempre firma la familia. Un producto puede sumar **un** color funcional, sin arcoíris:
 
@@ -134,7 +134,7 @@ El naranja `#FF6B35` siempre firma la familia. Un producto puede sumar **un** co
 - Game Industry Resources: verde `#22C55E`.
 - LinkedIn Content Automation: azul `#0A66C2`.
 
-SparkCrew sale de esta lista: es de Sparkplug y usa la marca de Sparkplug.
+Todos son de la marca personal y usan este kit. SparkCrew sale de esta lista: es de Sparkplug y usa la marca de Sparkplug.
 
 ### Tipografía (Aprobado como base del kit)
 
@@ -227,7 +227,7 @@ Código canónico: `jorgefsb/game-industry-resources/juice/1.2.0/`. Los sitios c
 
 Lo gamer vive en la arquitectura: player select, slots, builds, achievements, level up y co-op. Sirve para que la navegación se recuerde, no para disfrazar la documentación.
 
-El pixel art es un **acento** (esquinas, cursores, íconos de 8 a 16 px). No se pixela el retrato, el texto ni los logos. El material principal ahora es papercraft; el pixel art queda por validar contra esa dirección.
+El pixel art es un **acento** (esquinas, cursores, íconos de 8 a 16 px). No se pixela el retrato, el texto ni los logos. El material principal es papercraft; el pixel art nunca lo sustituye.
 
 Íconos de trazo simple, esquinas ligeramente redondeadas y alto contraste. Emojis solo como señaladores. Los logos de canales conservan su color reconocido.
 
@@ -278,7 +278,7 @@ No usar badges externos si el dato cabe como texto ni tarjetas de estadísticas 
 - Sitio: `jorgesuarez.com.mx`
 - YouTube: `@jorgefsb` (principal) y `@JorgeSuarezGM` (secundario)
 - LinkedIn: `/in/yorgenmeister`
-- X e Instagram: `@jorgefsb`. Antes de una campaña, confirmar que el marcado del sitio apunte a esas cuentas.
+- X e Instagram: `@jorgefsb`, como aparecen en el marcado `sameAs` del sitio. En metadatos, `twitter:creator` también va como `@jorgefsb`.
 
 ### Piezas recomendadas
 
@@ -334,7 +334,8 @@ Estas son recomendaciones. Las cuentas sociales no se tocan sin autorización ex
 - Se quitan glow y glassmorphism; entra el material papercraft.
 - Radios y espaciado pasan a los candidatos del design system.
 - Nuevas secciones: firma A/B/C, favicon JS, Moki, Juega, fotografía, movimiento, plantillas, ida y vuelta y fronteras de marca.
-- SparkCrew sale del color por producto; se marca la lista como por revisar.
+- SparkCrew sale del color por producto; el resto de la lista se confirma como marca personal.
+- El pixel art queda solo como acento, subordinado al papercraft.
 - Canales: se agregan `@JorgeSuarezGM`, X e Instagram `@jorgefsb`; la miniatura de YouTube cambia glow ámbar por contorno naranja; la tarjeta para compartir pasa a 1200 × 630.
 
 **v3 · commit `f6b5ed5`.** Primera guía operativa: tokens del sitio v1, banners, READMEs y canales.
