@@ -635,6 +635,38 @@ strong, b { font-weight: inherit; color: var(--text); }
 .foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
 .foot__love { color: var(--text); font-size: 14px; }
 .foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
+.foot__map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 32px;
+  width: min(100%, 420px);
+  margin: 4px auto 0;
+  text-align: left;
+}
+.foot__map-col { display: grid; gap: 6px; }
+.foot__map-title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: .9;
+}
+.foot__map-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+@media (max-width: 479px) {
+  .foot__map {
+    grid-template-columns: 1fr;
+    width: min(100%, 240px);
+    gap: 14px;
+  }
+}
 .foot__link {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: var(--tap); min-width: var(--tap); padding-inline: 8px;
