@@ -185,7 +185,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 @media (hover: hover) and (pointer: fine) { .hud__nav a:hover { opacity: 1; } }
 .hud__right { margin-left: auto; display: flex; align-items: center; gap: var(--sp-4); }
 .lang-switcher { display: flex; align-items: center; gap: 4px; font-size: 13px; letter-spacing: .08em; }
-.lang-switcher a { min-height: var(--tap); min-width: 32px; display: inline-flex; align-items: center; justify-content: center; opacity: .6; }
+.lang-switcher a { min-height: var(--tap); min-width: var(--tap); display: inline-flex; align-items: center; justify-content: center; opacity: .6; }
 .lang-switcher a.es-btn,
 .lang-switcher a.en-btn {
   display: inline-flex;
