@@ -632,9 +632,36 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 .finale__copy .lead { margin-inline: auto; }
 .finale__copy .btn { margin-top: var(--sp-3); }
-.foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
+.foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); justify-items: center; }
 .foot__love { color: var(--text); font-size: 14px; }
-.foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
+/* Footer site map: 2 cols desktop, 1 col mobile. Add .foot__col > h2 + ul.foot__list > li > a.foot__link */
+.foot__map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-4) clamp(24px, 6vw, 56px);
+  width: min(100%, 520px);
+  margin: var(--sp-3) auto 0;
+  padding: 0;
+  text-align: center;
+}
+.foot__col { display: grid; gap: 4px; justify-items: center; align-content: start; }
+.foot__col-title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.foot__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  justify-items: center;
+}
 .foot__link {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: var(--tap); min-width: var(--tap); padding-inline: 8px;
@@ -643,6 +670,9 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 @media (hover: hover) and (pointer: fine) { .foot__link:hover { text-decoration-thickness: 2px; } }
 .foot__log { font-size: 12px; letter-spacing: .02em; opacity: .85; }
+@media (max-width: 560px) {
+  .foot__map { grid-template-columns: 1fr; gap: var(--sp-4); width: min(100%, 320px); }
+}
 
 /* ------------------------------------------------- un-pin en pantallas chicas -- */
 .is-flow.journey .journey__stage, .is-flow.frameworks .fw__stage { padding-top: var(--sp-9); padding-bottom: var(--sp-9); }
