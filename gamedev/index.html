@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cómo entrar a gamedev en LATAM (sin humo) | Jorge Suárez</title>
+  <meta name="description" content="Guía sencilla para entrar a la industria de videojuegos desde Latinoamérica: primer juego, Steam, qué estudiar y el error que casi todos cometen.">
+  <meta name="author" content="Jorge Suárez">
+  <link rel="canonical" href="https://jorgesuarez.com.mx/gamedev/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jorgesuarez.com.mx/gamedev/">
+  <meta property="og:title" content="Cómo entrar a gamedev en LATAM (sin humo)">
+  <meta property="og:description" content="Primer juego, Steam, qué estudiar y el error más común. Sin humo.">
+  <meta property="og:image" content="https://jorgesuarez.com.mx/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@jorgefsb">
+  <meta name="theme-color" content="#ff6b35">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/Outfit-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/brand/0.3/tokens.css">
+  <style>
+    body{margin:0;background:var(--brand-background,#0b0b0f);color:var(--brand-text-on-dark,#f5f5f5);font-family:var(--brand-font-body,Inter,system-ui,sans-serif);font-size:var(--brand-body-size,18px);line-height:var(--brand-body-line,1.6)}
+    main{width:min(760px,calc(100% - 40px));margin:0 auto;padding:64px 0 96px}
+    h1,h2{font-family:var(--brand-font-heading,Outfit,system-ui,sans-serif);line-height:1.15}
+    h1{font-size:clamp(32px,6vw,52px);margin:0 0 16px}
+    h2{font-size:clamp(22px,3.5vw,30px);margin:48px 0 12px}
+    a{color:var(--brand-accent,#ff6b35)}
+    .muted{color:var(--brand-text-muted,#a0a0a8)}
+    .crumb{font-size:14px;margin-bottom:32px}
+    .tldr{border-left:4px solid var(--brand-accent,#ff6b35);padding:12px 20px;background:var(--brand-surface,#16161d);border-radius:8px}
+    details{border-bottom:1px solid var(--brand-border,#2a2a33);padding:14px 0}
+    summary{cursor:pointer;font-weight:700}
+    .cta{display:inline-block;margin-top:32px;padding:14px 24px;border-radius:999px;background:var(--brand-accent,#ff6b35);color:#0b0b0f;font-weight:700;text-decoration:none}
+  </style>
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://jorgesuarez.com.mx/#person",
+   "name": "Jorge Suárez",
+   "url": "https://jorgesuarez.com.mx/",
+   "sameAs": [
+    "https://x.com/jorgefsb"
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "Cómo entrar a gamedev en LATAM (sin humo)",
+   "inLanguage": "es-MX",
+   "url": "https://jorgesuarez.com.mx/gamedev/",
+   "mainEntityOfPage": "https://jorgesuarez.com.mx/gamedev/",
+   "author": {
+    "@id": "https://jorgesuarez.com.mx/#person"
+   },
+   "publisher": {
+    "@id": "https://jorgesuarez.com.mx/#person"
+   },
+   "datePublished": "2026-10-28",
+   "dateModified": "2026-10-28",
+   "image": "https://jorgesuarez.com.mx/og-image.jpg"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cómo empiezo en gamedev si vivo en LATAM?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Escoge un motor gratuito (Godot, Unity o Unreal), sigue un tutorial corto completo y termina un juego pequeñito. Lo que abre puertas es haber terminado algo, no la ciudad donde vives."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué tan grande debe ser mi primer juego?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Muy chico: una sola mecánica que puedas terminar en semanas, no meses. Si te da pena de lo simple que es, probablemente va bien."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo publico un juego en Steam?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abres una cuenta en Steamworks, pagas la cuota de Steam Direct por cada juego, armas tu página de tienda y la publicas con anticipación para juntar wishlists antes del lanzamiento. Revisa la cuota y los requisitos actuales en partner.steamgames.com."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué estudio para trabajar en videojuegos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No necesitas una carrera específica para empezar. Escoge un rol (programación, arte, diseño, audio, producción) y aprende lo de ese rol haciendo proyectos. Un portafolio con juegos jugables pesa más que un diploma solo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuál es el error más común al empezar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Querer hacer el juego de tus sueños primero. Se queda a medias y te desanimas. Termina chiquito, publícalo, aprende y luego crece."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo consigo mi primer trabajo o proyecto en la industria?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Comparte tu avance en público, participa en game jams y conoce a la comunidad local. Muchas primeras oportunidades salen de gente que ya vio tu trabajo terminado."
+     }
+    }
+   ]
+  }
+ ]
+}
+  </script>
+</head>
+<body>
+<main>
+<nav class="crumb muted"><a href="https://jorgesuarez.com.mx/">Inicio</a> / Gamedev</nav>
+<article>
+<h1>Cómo entrar a gamedev en LATAM (sin humo)</h1>
+<p class="muted">Por <a href="https://jorgesuarez.com.mx/">Jorge Suárez</a> · Actualizado el 28 de octubre de 2026</p>
+<div class="tldr"><p><strong>En corto:</strong> escoge un motor gratis, termina un juego chiquito, publícalo, compártelo en público y repite. En LATAM no te falta talento; casi siempre lo que falta es terminar y enseñar lo que hiciste.</p></div>
+<p>Llevo años metido en videojuegos y documentando lo que aprendo con mis proyectos. Esto es lo que le diría a alguien que hoy quiere entrar a la industria desde México o cualquier país de Latinoamérica.</p>
+<h2>1. ¿Cómo empiezo en gamedev si vivo en LATAM?</h2>
+<p>Escoge un motor gratuito (Godot, Unity o Unreal), sigue un tutorial corto completo y termina un juego pequeñito. Lo que abre puertas es haber terminado algo, no la ciudad donde vives.</p>
+<h2>2. ¿Qué tan grande debe ser mi primer juego?</h2>
+<p>Muy chico: una sola mecánica que puedas terminar en semanas, no meses. Si te da pena de lo simple que es, probablemente va bien.</p>
+<h2>3. ¿Cómo publico un juego en Steam?</h2>
+<p>Abres una cuenta en Steamworks, pagas la cuota de Steam Direct por cada juego, armas tu página de tienda y la publicas con anticipación para juntar wishlists antes del lanzamiento. Revisa la cuota y los requisitos actuales en partner.steamgames.com.</p>
+<h2>4. ¿Qué estudio para trabajar en videojuegos?</h2>
+<p>No necesitas una carrera específica para empezar. Escoge un rol (programación, arte, diseño, audio, producción) y aprende lo de ese rol haciendo proyectos. Un portafolio con juegos jugables pesa más que un diploma solo.</p>
+<h2>5. ¿Cuál es el error más común al empezar?</h2>
+<p>Querer hacer el juego de tus sueños primero. Se queda a medias y te desanimas. Termina chiquito, publícalo, aprende y luego crece.</p>
+<h2>6. ¿Cómo consigo mi primer trabajo o proyecto en la industria?</h2>
+<p>Comparte tu avance en público, participa en game jams y conoce a la comunidad local. Muchas primeras oportunidades salen de gente que ya vio tu trabajo terminado.</p>
+
+<h2>Sigue el camino</h2>
+<p>Si quieres ver cómo fue mi recorrido, revisa <a href="https://jorgesuarez.com.mx/#journey">mi historia</a>, <a href="https://jorgesuarez.com.mx/#frameworks">los marcos que uso</a> y <a href="https://jorgesuarez.com.mx/#ecosystem">mis proyectos</a>.</p>
+<a class="cta" href="https://jorgesuarez.com.mx/">Conoce más en jorgesuarez.com.mx</a>
+</article>
+</main>
+</body>
+</html>
