@@ -186,6 +186,14 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud__right { margin-left: auto; display: flex; align-items: center; gap: var(--sp-4); }
 .lang-switcher { display: flex; align-items: center; gap: 4px; font-size: 13px; letter-spacing: .08em; }
 .lang-switcher a { min-height: var(--tap); min-width: 32px; display: inline-flex; align-items: center; justify-content: center; opacity: .6; }
+.lang-switcher a.es-btn,
+.lang-switcher a.en-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  min-width: var(--tap);
+}
 .lang-switcher a.active { opacity: 1; color: var(--accent); }
 .hud[data-ground="papel"].is-scrolled .lang-switcher a.active { color: var(--brand-ink, #22211F); }
 .hud__burger { display: none; width: var(--tap); height: var(--tap); flex: none; background: none; border: 1px solid var(--border-strong); border-radius: var(--r-control); color: inherit; cursor: pointer; padding: 0; position: relative; }
