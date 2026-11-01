@@ -505,6 +505,8 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 .row__body { font-size: 15px; line-height: 1.55; }
 .row__cta { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; color: var(--accent-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; font-size: 15px; }
+.row__ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 0 16px; }
+.row__ctas .row__cta { min-height: var(--tap); }
 [data-theme="oscuro"] .row__cta { color: var(--accent); }
 @media (hover: hover) and (pointer: fine) { .row__cta:hover { text-decoration-thickness: 2px; } }
 .status { justify-self: start; font-size: 12px; letter-spacing: .04em; padding: 2px 10px; border-radius: var(--r-chip); background: var(--accent-warm); color: var(--ink); }
