@@ -553,6 +553,8 @@ strong, b { font-weight: inherit; color: var(--text); }
 .brandcade__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
 .mentions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3) var(--sp-6); margin-top: var(--sp-9); padding-top: var(--sp-6); border-top: 1px solid var(--border); }
 .mentions ul { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--text-secondary); }
+.mentions__kit { margin-left: auto; }
+@media (max-width: 760px) { .mentions__kit { margin-left: 0; } }
 .mstats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); margin-top: var(--sp-7); }
 .scard {
   position: relative; overflow: hidden; display: grid; gap: 8px; align-content: start; justify-items: center; text-align: center;
