@@ -798,3 +798,32 @@ strong, b { font-weight: inherit; color: var(--text); }
   .hud { padding-inline: 8px; gap: 4px; }
   .hud__right { gap: 4px; }
 }
+
+/* Menú Laboratorio (1-nov-2026): Moki Studio, Método Moki, GameStory, Gamedev y PapacitoOS con un lugar visible arriba. */
+.hud__grp { position: relative; display: inline-flex; align-items: center; }
+.hud__grpbtn { display: inline-flex; align-items: center; gap: 7px; min-height: var(--tap); padding: 0; border: 0; background: none; color: inherit; font: inherit; font-size: 15px; white-space: nowrap; opacity: .82; cursor: pointer; transition: opacity 160ms var(--ease), color 160ms var(--ease); }
+.hud__grpbtn:hover, .hud__grp.is-open .hud__grpbtn { opacity: 1; }
+.hud__car { width: 7px; height: 7px; margin-top: -4px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(45deg); transition: transform 160ms var(--ease); }
+.hud__grp.is-open .hud__car { transform: translateY(4px) rotate(-135deg); }
+.hud__sub { display: none; position: absolute; top: calc(100% + 6px); left: -14px; z-index: 50; width: 320px; padding: 8px; border-radius: 16px; background: rgba(10,10,10,.97); border: 1px solid var(--border, rgba(244,232,213,.14)); box-shadow: 0 18px 40px rgba(10,10,10,.45); color: var(--text, #F4E8D5); }
+.hud__grp.is-open .hud__sub { display: grid; gap: 2px; }
+.hud__nav .hud__subitem { display: grid; gap: 2px; min-height: 0; padding: 10px 12px; border-radius: 10px; opacity: 1; white-space: normal; }
+.hud__nav .hud__subitem:hover, .hud__nav .hud__subitem:focus-visible { background: rgba(244,232,213,.07); }
+.hud__subt { font-weight: 600; font-size: 15px; color: var(--text, #F4E8D5); }
+.hud__subd { font-size: 13px; line-height: 1.35; color: var(--text-secondary, rgba(244,232,213,.7)); }
+.hud__subitem:hover .hud__subt { color: var(--accent); }
+@media (max-width: 1040px) {
+  .hud__grp { display: block; }
+  .hud__grpbtn { width: 100%; padding: 14px 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); opacity: 1; pointer-events: none; }
+  .hud__car { display: none; }
+  .hud__sub { display: grid; gap: 0; position: static; width: auto; padding: 0 0 6px; border: 0; border-radius: 0; box-shadow: none; background: none; }
+  .hud__nav .hud__subitem { padding: 10px 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+}
+@media (prefers-reduced-motion: reduce) { .hud__car, .hud__grpbtn { transition: none; } }
+
+/* Mapa del sitio en el pie (1-nov-2026): todo a un clic, sin tener que recorrer la página. */
+.foot__map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-5) var(--sp-6); width: 100%; max-width: 920px; margin: var(--sp-4) auto var(--sp-5); text-align: left; }
+.foot__h { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.foot__map ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.foot__map .foot__link { display: inline-flex; min-height: 32px; align-items: center; font-size: 14px; }
+@media (max-width: 760px) { .foot__map { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline: var(--gutter); } }
