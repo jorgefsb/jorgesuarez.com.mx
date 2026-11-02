@@ -1,0 +1,28 @@
+# Candado (1-nov-2026): si cambias un CSS o JS que carga index.html, tienes que cambiar su ?v=
+# en index.html. Si no, Cloudflare deja 4 horas el archivo viejo en los navegadores y la página
+# se ve rota (pasó con el menú Laboratorio, PR #32).
+name: version-assets
+on:
+  pull_request:
+    paths: ['css/**', 'js/**', 'index.html']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Cada CSS/JS cambiado necesita ?v= nuevo en index.html
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          fail=0
+          for f in $(git diff --name-only "$base"...HEAD -- css js); do
+            if grep -qF "\"$f?v=" index.html; then
+              old=$(git show "$base":index.html | grep -o "\"$f?v=[^\"]*\"" || true)
+              new=$(grep -o "\"$f?v=[^\"]*\"" index.html)
+              if [ "$old" = "$new" ]; then
+                echo "::error file=index.html::$f cambió pero su ?v= sigue igual ($new). Súbele la versión."
+                fail=1
+              fi
+            fi
+          done
+          exit $fail

@@ -832,3 +832,15 @@ strong, b { font-weight: inherit; color: var(--text); }
 
 /* Impeccable 1-nov-2026: las tarjetas de co-desarrollo sin liga ya se pueden enfocar con teclado para leer su descripción. */
 .tile[tabindex]:focus-visible { outline: none; box-shadow: var(--ring-focus); }
+
+/* web-design-guidelines 1-nov-2026 (vercel-labs) */
+:root { color-scheme: dark; }
+[data-theme="papel"] { color-scheme: light; }
+/* los anclajes del menú no quedan tapados por la barra de arriba */
+section[id], footer[id] { scroll-margin-top: calc(var(--nav-h, 72px) + 16px); }
+/* sin retraso de doble toque y con aviso de toque propio (el juice ya da el feedback) */
+a, button, [role="button"], summary { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+/* el menú abierto en celular no arrastra la página de fondo */
+.hud__nav.is-open { overscroll-behavior: contain; }
+/* imágenes del podcast con medidas: el ancho manda, el alto sigue la proporción */
+.podcast__media > img { height: auto; }
