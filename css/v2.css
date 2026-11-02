@@ -137,7 +137,8 @@ strong, b { font-weight: inherit; color: var(--text); }
 .btn--lg { min-height: 56px; padding: 14px 30px; font-size: 18px; }
 .btn--sm { padding: 8px 16px; font-size: 15px; }
 @media (hover: hover) and (pointer: fine) {
-  .btn--primary:hover { background: color-mix(in srgb, var(--accent) 85%, var(--ink)); }
+  /* Impeccable 1-nov-2026: el hover oscurecía hacia tinta y bajaba el contraste a 4.46:1; ahora aclara hacia papel (6.3:1) */
+  .btn--primary:hover { background: color-mix(in srgb, var(--accent) 85%, var(--brand-paper, #F4E8D5)); }
   .btn--ghost:hover { border-color: var(--accent); color: var(--accent-text); }
   .btn--ink:hover { background: var(--brand-background, #0A0A0A); }
 }
@@ -805,13 +806,14 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud__grpbtn:hover, .hud__grp.is-open .hud__grpbtn { opacity: 1; }
 .hud__car { width: 7px; height: 7px; margin-top: -4px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(45deg); transition: transform 160ms var(--ease); }
 .hud__grp.is-open .hud__car { transform: translateY(4px) rotate(-135deg); }
-.hud__sub { display: none; position: absolute; top: calc(100% + 6px); left: -14px; z-index: 50; width: 320px; padding: 8px; border-radius: 16px; background: rgba(10,10,10,.97); border: 1px solid var(--border, rgba(244,232,213,.14)); box-shadow: 0 18px 40px rgba(10,10,10,.45); color: var(--text, #F4E8D5); }
+.hud__sub { display: none; position: absolute; top: calc(100% + 6px); left: -14px; z-index: 50; width: 320px; padding: 8px; border-radius: var(--r-panel); background: var(--brand-surface, #161616); border: 1px solid var(--brand-border, #8A7E70); box-shadow: var(--shadow-md); color: var(--brand-text-on-dark, #FFFFFF); }
 .hud__grp.is-open .hud__sub { display: grid; gap: 2px; }
 .hud__nav .hud__subitem { display: grid; gap: 2px; min-height: 0; padding: 10px 12px; border-radius: 10px; opacity: 1; white-space: normal; }
-.hud__nav .hud__subitem:hover, .hud__nav .hud__subitem:focus-visible { background: rgba(244,232,213,.07); }
-.hud__subt { font-weight: 600; font-size: 15px; color: var(--text, #F4E8D5); }
-.hud__subd { font-size: 13px; line-height: 1.35; color: var(--text-secondary, rgba(244,232,213,.7)); }
-.hud__subitem:hover .hud__subt { color: var(--accent); }
+.hud__nav .hud__subitem:hover, .hud__nav .hud__subitem:focus-visible { background: color-mix(in srgb, var(--brand-paper, #F4E8D5) 8%, transparent); }
+.hud__nav .hud__subitem:focus-visible, .hud__grpbtn:focus-visible { outline: none; box-shadow: var(--ring-focus); border-radius: var(--r-control); }
+.hud__subt { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--brand-text-on-dark, #FFFFFF); }
+.hud__subd { font-size: 13px; line-height: 1.4; color: var(--brand-text-muted, #B7B3AD); }
+@media (hover: hover) and (pointer: fine) { .hud__subitem:hover .hud__subt { color: var(--accent); } }
 @media (max-width: 1040px) {
   .hud__grp { display: block; }
   .hud__grpbtn { width: 100%; padding: 14px 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); opacity: 1; pointer-events: none; }
@@ -827,3 +829,6 @@ strong, b { font-weight: inherit; color: var(--text); }
 .foot__map ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .foot__map .foot__link { display: inline-flex; min-height: 32px; align-items: center; font-size: 14px; }
 @media (max-width: 760px) { .foot__map { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline: var(--gutter); } }
+
+/* Impeccable 1-nov-2026: las tarjetas de co-desarrollo sin liga ya se pueden enfocar con teclado para leer su descripción. */
+.tile[tabindex]:focus-visible { outline: none; box-shadow: var(--ring-focus); }
