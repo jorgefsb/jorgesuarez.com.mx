@@ -242,6 +242,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .quest__label {
   position: fixed; left: 50%; bottom: calc(var(--quest-h) + var(--quest-offset) + 10px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
   white-space: nowrap; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  max-width: calc(100vw - 32px); overflow: hidden; text-overflow: ellipsis;
   padding: 4px 12px; border-radius: var(--r-chip); background: var(--accent); color: var(--on-accent);
   opacity: 0; transition: opacity 260ms var(--ease); pointer-events: none;
 }
@@ -635,6 +636,9 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 .finale__copy .lead { margin-inline: auto; }
 .finale__copy .btn { margin-top: var(--sp-3); }
+.finale__kicker { color: var(--accent); margin: 0; }
+.finale__perks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2) var(--sp-3); }
+.finale__perks li { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 16px; border: 1px solid var(--border-strong); border-radius: 999px; background: color-mix(in srgb, var(--brand-paper, #F4E8D5) 6%, transparent); color: var(--text); font-size: 15px; font-weight: 500; }
 .foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
 .foot__love { color: var(--text); font-size: 14px; }
 .foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
@@ -653,7 +657,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .is-flow .fw__states { min-height: 0; display: grid; gap: var(--sp-7); }
 
 /* ----------------------------------------------------------------- mobile -- */
-@media (max-width: 1040px) {
+@media (max-width: 1240px) {
   .hud__nav { display: none; position: absolute; top: var(--nav-h); left: 0; right: 0; flex-direction: column; gap: 0; margin: 0; padding: 8px var(--gutter) 16px; background: rgba(10,10,10,.96); border-bottom: 1px solid var(--border); color: var(--text); }
   .hud__nav.is-open { display: flex; }
   .hud__nav a { border-bottom: 1px solid var(--border); }
@@ -728,11 +732,11 @@ strong, b { font-weight: inherit; color: var(--text); }
   .journey__fig { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
   .fw__scene { position: relative; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: var(--r-editorial); -webkit-mask-image: none; mask-image: none; margin-bottom: var(--sp-5); transform: none; }
 }
-/* menú compacto entre tablet y escritorio ancho */
-@media (min-width: 1041px) and (max-width: 1240px) {
+/* menú compacto entre tablet y escritorio ancho (3-nov: el botón del club se cortaba de 1041 a 1439 px) */
+@media (min-width: 1241px) and (max-width: 1439px) {
   .hud { gap: var(--sp-4); }
   .hud__nav { gap: var(--sp-4); margin-left: 0; }
-  .hud__nav a { font-size: 14px; }
+  .hud__nav a, .hud__grpbtn { font-size: 14px; }
   .hud__right { gap: var(--sp-3); }
 }
 
@@ -771,7 +775,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud[data-ground="papel"] .jz-panel__note { color: var(--brand-ink, #22211F); }
 .hud .jz-lvl__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .hud .jz-lvl { width: 44px; min-width: 44px; padding: 0; }
-@media (max-width: 1240px) {
+@media (max-width: 1439px) {
   .hud .juice-sfx__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .hud .juice-sfx { width: 44px; min-width: 44px; padding: 0; }
 }
@@ -816,7 +820,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud__subt { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--brand-text-on-dark, #FFFFFF); }
 .hud__subd { font-size: 13px; line-height: 1.4; color: var(--brand-text-muted, #B7B3AD); }
 @media (hover: hover) and (pointer: fine) { .hud__subitem:hover .hud__subt { color: var(--accent); } }
-@media (max-width: 1040px) {
+@media (max-width: 1240px) {
   .hud__grp { display: block; }
   .hud__grpbtn { width: 100%; padding: 14px 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); opacity: 1; pointer-events: none; }
   .hud__car { display: none; }

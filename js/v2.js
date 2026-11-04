@@ -92,7 +92,10 @@
 
   function titleOf(sec) {
     var h = sec.querySelector('h1, h2');
-    return h ? h.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!h) return '';
+    // Título corto opcional para la barra de banderas: data-quest-es / data-quest-en
+    var corto = h.getAttribute('data-quest-' + (document.documentElement.lang === 'en' ? 'en' : 'es'));
+    return corto || h.textContent.replace(/\s+/g, ' ').trim();
   }
 
   chapters.forEach(function (_, i) {
