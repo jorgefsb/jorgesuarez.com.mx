@@ -242,6 +242,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .quest__label {
   position: fixed; left: 50%; bottom: calc(var(--quest-h) + var(--quest-offset) + 10px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
   white-space: nowrap; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  max-width: calc(100vw - 32px); overflow: hidden; text-overflow: ellipsis;
   padding: 4px 12px; border-radius: var(--r-chip); background: var(--accent); color: var(--on-accent);
   opacity: 0; transition: opacity 260ms var(--ease); pointer-events: none;
 }
@@ -635,6 +636,9 @@ strong, b { font-weight: inherit; color: var(--text); }
 }
 .finale__copy .lead { margin-inline: auto; }
 .finale__copy .btn { margin-top: var(--sp-3); }
+.finale__kicker { color: var(--accent); margin: 0; }
+.finale__perks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2) var(--sp-3); }
+.finale__perks li { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 16px; border: 1px solid var(--border-strong); border-radius: 999px; background: color-mix(in srgb, var(--brand-paper, #F4E8D5) 6%, transparent); color: var(--text); font-size: 15px; font-weight: 500; }
 .foot { margin-top: auto; width: 100%; padding: var(--sp-7) 0 var(--cta-clearance); display: grid; gap: 6px; font-size: 13px; color: var(--text-secondary); }
 .foot__love { color: var(--text); font-size: 14px; }
 .foot__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
@@ -653,7 +657,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .is-flow .fw__states { min-height: 0; display: grid; gap: var(--sp-7); }
 
 /* ----------------------------------------------------------------- mobile -- */
-@media (max-width: 1040px) {
+@media (max-width: 1240px) {
   .hud__nav { display: none; position: absolute; top: var(--nav-h); left: 0; right: 0; flex-direction: column; gap: 0; margin: 0; padding: 8px var(--gutter) 16px; background: rgba(10,10,10,.96); border-bottom: 1px solid var(--border); color: var(--text); }
   .hud__nav.is-open { display: flex; }
   .hud__nav a { border-bottom: 1px solid var(--border); }
@@ -728,11 +732,11 @@ strong, b { font-weight: inherit; color: var(--text); }
   .journey__fig { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
   .fw__scene { position: relative; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: var(--r-editorial); -webkit-mask-image: none; mask-image: none; margin-bottom: var(--sp-5); transform: none; }
 }
-/* menú compacto entre tablet y escritorio ancho */
-@media (min-width: 1041px) and (max-width: 1240px) {
+/* menú compacto entre tablet y escritorio ancho (3-nov: el botón del club se cortaba de 1041 a 1439 px) */
+@media (min-width: 1241px) and (max-width: 1439px) {
   .hud { gap: var(--sp-4); }
   .hud__nav { gap: var(--sp-4); margin-left: 0; }
-  .hud__nav a { font-size: 14px; }
+  .hud__nav a, .hud__grpbtn { font-size: 14px; }
   .hud__right { gap: var(--sp-3); }
 }
 
@@ -771,7 +775,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud[data-ground="papel"] .jz-panel__note { color: var(--brand-ink, #22211F); }
 .hud .jz-lvl__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .hud .jz-lvl { width: 44px; min-width: 44px; padding: 0; }
-@media (max-width: 1240px) {
+@media (max-width: 1439px) {
   .hud .juice-sfx__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .hud .juice-sfx { width: 44px; min-width: 44px; padding: 0; }
 }
@@ -816,7 +820,7 @@ strong, b { font-weight: inherit; color: var(--text); }
 .hud__subt { font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--brand-text-on-dark, #FFFFFF); }
 .hud__subd { font-size: 13px; line-height: 1.4; color: var(--brand-text-muted, #B7B3AD); }
 @media (hover: hover) and (pointer: fine) { .hud__subitem:hover .hud__subt { color: var(--accent); } }
-@media (max-width: 1040px) {
+@media (max-width: 1240px) {
   .hud__grp { display: block; }
   .hud__grpbtn { width: 100%; padding: 14px 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); opacity: 1; pointer-events: none; }
   .hud__car { display: none; }
@@ -846,3 +850,25 @@ a, button, [role="button"], summary { touch-action: manipulation; -webkit-tap-hi
 .hud__nav.is-open { overscroll-behavior: contain; }
 /* imágenes del podcast con medidas: el ancho manda, el alto sigue la proporción */
 .podcast__media > img { height: auto; }
+
+/* Redes (3-nov-2026): íconos en el menú Conecta, en la sección Conecta y en el footer. */
+.follow { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.follow a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--border-strong); color: var(--brand-text-on-dark, #FFFFFF); transition: color 160ms var(--ease), border-color 160ms var(--ease), transform 160ms var(--ease); }
+.follow svg { width: 18px; height: 18px; fill: currentColor; }
+.follow a:focus-visible { outline: none; box-shadow: var(--ring-focus); }
+@media (hover: hover) and (pointer: fine) { .follow a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); } }
+.hud__sub .follow--menu { padding: 12px 12px 6px; margin-top: 4px; border-top: 1px solid var(--border); }
+.follow--menu { justify-content: space-between; }
+.follow--menu a { width: 36px; height: 36px; }
+.follow--menu svg { width: 17px; height: 17px; }
+.follow--foot { justify-content: center; margin: var(--sp-2) 0 var(--sp-3); }
+.follow--foot a { color: var(--text); }
+.social__name { display: inline-flex; align-items: center; gap: 14px; }
+.social__ico { width: 22px; height: 22px; flex: none; fill: currentColor; }
+@media (max-width: 1240px) {
+  /* el menú móvil ya es más alto que la pantalla: que se pueda desplazar */
+  .hud__nav { max-height: calc(100dvh - var(--nav-h)); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .hud__sub .follow--menu { padding: 14px 0 8px; border-top: 0; justify-content: flex-start; gap: 6px; }
+  .follow--menu a { width: 44px; height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .follow a { transition: none; } }

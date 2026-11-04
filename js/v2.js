@@ -92,7 +92,10 @@
 
   function titleOf(sec) {
     var h = sec.querySelector('h1, h2');
-    return h ? h.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!h) return '';
+    // Título corto opcional para la barra de banderas: data-quest-es / data-quest-en
+    var corto = h.getAttribute('data-quest-' + (document.documentElement.lang === 'en' ? 'en' : 'es'));
+    return corto || h.textContent.replace(/\s+/g, ' ').trim();
   }
 
   chapters.forEach(function (_, i) {
@@ -295,14 +298,22 @@
   })();
 })();
 
-/* Menú Laboratorio (1-nov-2026): abre y cierra el submenú; Escape o clic afuera lo cierran. */
+/* Menús del header (Laboratorio y Conecta): abren y cierran su submenú; Escape o clic afuera los cierran. */
 (function () {
-  var grp = document.querySelector('.hud__grp');
-  if (!grp) return;
-  var btn = grp.querySelector('.hud__grpbtn');
-  function set(open) { grp.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); }
-  btn.addEventListener('click', function (e) { e.stopPropagation(); set(!grp.classList.contains('is-open')); });
-  document.addEventListener('click', function (e) { if (!grp.contains(e.target)) set(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-  grp.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  var grps = Array.prototype.slice.call(document.querySelectorAll('.hud__grp'));
+  if (!grps.length) return;
+  function set(grp, open) {
+    grp.classList.toggle('is-open', open);
+    grp.querySelector('.hud__grpbtn').setAttribute('aria-expanded', String(open));
+  }
+  grps.forEach(function (grp) {
+    grp.querySelector('.hud__grpbtn').addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !grp.classList.contains('is-open');
+      grps.forEach(function (g) { set(g, g === grp ? open : false); });
+    });
+    grp.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(grp, false); }); });
+  });
+  document.addEventListener('click', function (e) { grps.forEach(function (g) { if (!g.contains(e.target)) set(g, false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') grps.forEach(function (g) { set(g, false); }); });
 })();
