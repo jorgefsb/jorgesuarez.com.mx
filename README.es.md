@@ -16,7 +16,7 @@
 ---
 
 <p align="center"><img src="docs/readme/tour.gif" width="720" alt="Recorrido de JorgeSuarez.com.mx"></p>
-<p align="center"><sub>Recorrido real del sitio en vivo, grabado el 10 nov 2026 en Chromium (1280×720). Sin retoque. <a href="docs/readme/tour.mp4">Ver el video MP4</a></sub></p>
+<p align="center"><sub>Recorrido real del sitio en vivo, grabado el 10 nov 2026 en Chromium (1280×720). Sin retoque. Se reproduce una sola vez; recarga la página para verlo de nuevo. <a href="docs/readme/tour.mp4">Ver el video MP4</a></sub></p>
 
 ## ¿Qué es?
 
@@ -66,12 +66,14 @@ El v1 quedó respaldado en el tag `v1-final-2026-10-12` y en la rama `v1-legacy`
 
 - El código fuente del v2 vive en un repo privado. Este repo recibe el build y lo publica.
 - Rollback al v1: el deploy del v2 es un solo commit. `git revert` de ese commit y push a `main`.
-- Candado de caché: si cambias un CSS o JS que carga `index.html`, súbele su `?v=` en `index.html`. El workflow `version-assets` revisa eso en cada pull request.
+- Candado de caché: si cambias un CSS o JS que carga `index.html`, súbele su `?v=` en `index.html`. El workflow `version-assets` lo revisa en cada pull request, pero solo para los archivos de `css/` y `js/`. Lo que `index.html` carga desde `engine/` hay que subirlo a mano: ahí no hay candado.
 - Identidad y voz: [brand-guidelines.md](./brand-guidelines.md) y el [BrandKit](https://brandkit.jorgesuarez.com.mx).
 
 ## Licencia
 
-Sin licencia abierta. El contenido, el retrato y la marca conservan todos los derechos.
+El contenido del sitio, el retrato y la marca conservan todos los derechos: no tienen licencia abierta.
+
+Los componentes que el sitio trae empaquetados sí conservan su licencia MIT, cada uno con su archivo: el motor de scroll de `engine/`, que es scroll-craft de Nate Herk ([`engine/LICENSE`](./engine/LICENSE)), y los efectos propios de `vfx/`: [`vfx/game-feel/1.0.1/LICENSE`](./vfx/game-feel/1.0.1/LICENSE), [`vfx/papacito-juice/1.0.1/LICENSE`](./vfx/papacito-juice/1.0.1/LICENSE) y [`vfx/cursor-liquido/1.0.1/LICENSE`](./vfx/cursor-liquido/1.0.1/LICENSE).
 
 ---
 
