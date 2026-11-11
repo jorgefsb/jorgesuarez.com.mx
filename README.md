@@ -1,60 +1,82 @@
-> **v2.0 en producción (12 oct 2026).** El código fuente del v2 vive en el repo privado `jorgefsb/jorgesuarez.com.mx-v2`
-> (Design System v2.0 + scroll-craft). Este repo recibe el build (`site/`) y lo sirve con GitHub Pages.
-> **Rollback al v1:** el deploy del v2 es un solo commit: `git revert <commit del v2>` y push a `main`.
-> Respaldo intacto en el tag/release `v1-final-2026-10-12` y la rama `v1-legacy`.
-
 <div align="center">
 
-<img src="./assets/readme-banner.svg" width="1000" alt="Jorge Suárez: construyendo juegos, escalando estudios y documentando el viaje." />
+<a href="https://jorgesuarez.com.mx"><img src="docs/readme/banner-en.svg" width="1000" alt="JorgeSuarez.com.mx: 20+ years building games, studios and community, told in one place." /></a>
 
-[🎮 Visitar sitio](https://jorgesuarez.com.mx) · [🎨 Sistema de marca](./brand-guidelines.md) · [👾 GitHub](https://github.com/jorgefsb)
+<br />
+
+<img src="docs/readme/lang-en-on.svg" height="44" alt="English, current language" />
+<a href="./README.es.md"><img src="docs/readme/lang-es.svg" height="44" alt="Leer en español" /></a>
+
+<br />
+
+**[▶ Visit the site](https://jorgesuarez.com.mx)** · More projects at [github.com/jorgefsb](https://github.com/jorgefsb)
 
 </div>
 
-> **Dos décadas de lecciones en la trinchera del emprendimiento tecnológico y el gaming global. No somos gurús: estamos documentando el viaje.**
+---
 
-Este es el repositorio oficial de **JorgeSuarez.com.mx**: el hub donde se cruzan videojuegos, construcción de estudios, comunidad, emprendimiento e IA desde Guadalajara.
+<p align="center"><img src="docs/readme/tour.gif" width="720" alt="Walkthrough of JorgeSuarez.com.mx"></p>
+<p align="center"><sub>Real walkthrough of the live site, recorded 10 Nov 2026 in Chromium (1280×720). No retouching. <a href="docs/readme/tour.mp4">Watch the MP4 video</a></sub></p>
 
-## 🧬 Visual & Tech DNA
+## What is it?
 
-La experiencia de usuario está diseñada bajo un enfoque **"High-End / AAA Experience"**, inspirada en los estándares de calidad de **Amber Studio**.
+The personal site of Jorge Suárez. It brings together his story, his work at Amber México, his products, his frameworks, his lab and how to reach him. It is available in Spanish and English.
 
-- **🎨 Estética**: Glassmorphism, tipografía `Outfit` & `Inter`, y una paleta de colores oscuro-premium con acentos en naranja Amber.
-- **✨ VFX**: Simulación de fluidos WebGL personalizada ("Liquid Smoke") para una interactividad atmosférica que no compromete el rendimiento.
-- **🛡️ Branding**: Favicon personalizado con monograma **JS** de alta fidelidad, diseñado para autoridad y simplicidad.
-- **🛠️ Tech Stack**:
-  - **Core**: HTML5 semántico & CSS3 (BEM-ish methodology).
-  - **Motion**: WebGL + GSAP logic para revelaciones y scroll.
-  - **Logic**: Vanilla Javascript para optimización máxima de carga.
-  - **Hosting**: GitHub Pages detrás de Cloudflare (desde el v2, oct 2026).
+## Who is it for?
 
-La guía reutilizable de voz, color, tipografía y aplicación para GitHub/social vive en [`brand-guidelines.md`](./brand-guidelines.md). La implementación y sus exclusiones están registradas en [`BRAND-ROLLOUT-AUDIT.md`](./BRAND-ROLLOUT-AUDIT.md).
+For anyone who wants to know who Jorge is, what he has built and how to play or work with him: gamers, people who make games, entrepreneurs, press and event organizers.
 
-## 🗺️ Estructura del Proyecto
+## What pain does it solve?
 
-- `index.html`: Arquitectura de navegación y contenido narrativo (5W+1H).
-- `styles.css`: Sistema de diseño basado en variables y utility clases personalizadas.
-- `package.json`: Metadatos del proyecto y configuración de despliegue.
-- `SESSION_LOG.md`: Historial operativo de lanzamientos y cambios estratégicos.
-- `REPO_HISTORY.md`: Log detallado de la evolución técnica del repositorio.
+More than 20 years of work were spread across social networks, press clips, channels and projects. People who found one piece did not see the rest.
 
-## 🚀 Ecosistema & Hubs
+## The proposal
 
-Esta landing page centraliza el acceso a mis diversas iniciativas:
+One place that tells the whole story and sends you to each project. It is built to feel like a game: narrative scroll, the «Juega» menu to choose how much the page responds, and Moki hiding at the edges.
 
-- **[Master Prompt Builder](https://mpb.jorgesuarez.com.mx/)**: Herramienta de IA para profesionales.
-- **[PlayPitch](https://playpitch.com)**: Conexión entre juegos Indie y creadores.
-- **[UETC.mx](https://uetc.mx)**: Profesionalización del talento Unreal Engine en México.
-- **[The Builder Lab](https://github.com/jorgefsb)**: Repositorio de experimentos y frameworks.
+## How do I use it?
 
-## 📈 Kaizen Workflow (Milestone Closure)
+1. Go to [jorgesuarez.com.mx](https://jorgesuarez.com.mx).
+2. Switch language with ES / EN.
+3. Use «Juega» to turn the intensity up or down. If your system asks for reduced motion, the page stays still.
 
-**Milestone: "2026 Production Launch & Branding Finalization" - COMPLETE ✅**
-- [x] Despliegue en producción con dominio `jorgesuarez.com.mx`.
-- [x] Configuración de DNS profesional. Hosting actual: GitHub Pages detrás de Cloudflare; Vercel quedó retirado en oct 2026.
-- [x] Lanzamiento de nueva identidad visual (JS Monogram Favicon).
-- [x] Sincronización completa de repositorios y documentación Kaizen.
+## When it fits and when it doesn't
+
+It fits when you want to get to know Jorge, reach his projects or write to him.
+
+It is not the site of Amber or his other companies: each has its own. Do not look for the site's source code here either; this repo receives the finished build.
+
+## Where can I try it?
+
+Live: **[jorgesuarez.com.mx](https://jorgesuarez.com.mx)**
+
+<p align="center">
+  <img src="docs/readme/desktop.jpg" width="620" alt="JorgeSuarez.com.mx on desktop">
+  <img src="docs/readme/mobile.jpg" width="190" alt="JorgeSuarez.com.mx on mobile">
+</p>
+<p align="center"><sub>Real screenshots of the live site, 10 Nov 2026: desktop (1280×720) and mobile (390×780).</sub></p>
+
+## How far we got
+
+Version 2.0 has been in production since 12 October 2026, served with GitHub Pages behind Cloudflare.
+
+The v1 is backed up in the `v1-final-2026-10-12` tag and the `v1-legacy` branch.
+
+## For builders
+
+- The v2 source code lives in a private repo. This repo receives the build and publishes it.
+- Rollback to v1: the v2 deploy is a single commit. `git revert` that commit and push to `main`.
+- Cache lock: if you change a CSS or JS file loaded by `index.html`, bump its `?v=` in `index.html`. The `version-assets` workflow checks this on every pull request.
+- Identity and voice: [brand-guidelines.md](./brand-guidelines.md) and the [BrandKit](https://brandkit.jorgesuarez.com.mx) (both in Spanish).
+
+## License
+
+No open license. All rights are reserved on the content, the portrait and the brand.
 
 ---
 
-*Hecho con amor ❤️ y IA por Jorge Suárez & Antigravity.*
+<div align="center">
+
+<sub>Made with love ❤️🎮 by <a href="https://jorgesuarez.com.mx">JorgeSuarez.com.mx</a> · <a href="https://github.com/jorgefsb">More projects</a> · <a href="./README.es.md">Leer en español</a><br />Documentation updated on 10 Nov 2026.</sub>
+
+</div>
