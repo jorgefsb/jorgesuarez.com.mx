@@ -73,7 +73,9 @@ El v1 quedó respaldado en el tag `v1-final-2026-10-12` y en la rama `v1-legacy`
 
 El contenido del sitio, el retrato y la marca conservan todos los derechos: no tienen licencia abierta.
 
-Los componentes que el sitio trae empaquetados sí conservan su licencia MIT, cada uno con su archivo: el motor de scroll de `engine/`, que es scroll-craft de Nate Herk ([`engine/LICENSE`](./engine/LICENSE)), y los efectos propios de `vfx/`: [`vfx/game-feel/1.0.1/LICENSE`](./vfx/game-feel/1.0.1/LICENSE), [`vfx/papacito-juice/1.0.1/LICENSE`](./vfx/papacito-juice/1.0.1/LICENSE) y [`vfx/cursor-liquido/1.0.1/LICENSE`](./vfx/cursor-liquido/1.0.1/LICENSE).
+Solo estos componentes empaquetados tienen licencia MIT, cada uno con su archivo: el motor de scroll de `engine/`, que es scroll-craft de Nate Herk ([`engine/LICENSE`](./engine/LICENSE)), y los efectos propios de `vfx/`: [`vfx/game-feel/1.0.1/LICENSE`](./vfx/game-feel/1.0.1/LICENSE), [`vfx/papacito-juice/1.0.1/LICENSE`](./vfx/papacito-juice/1.0.1/LICENSE) y [`vfx/cursor-liquido/1.0.1/LICENSE`](./vfx/cursor-liquido/1.0.1/LICENSE).
+
+La carpeta `juice/` (el menú «Juega», el modo Hardcore y el módulo de Moki) no declara licencia: conserva todos los derechos, igual que el arte de Moki. El detalle está en [`vfx/papacito-juice/1.0.1/NOTICES`](./vfx/papacito-juice/1.0.1/NOTICES).
 
 ---
 
