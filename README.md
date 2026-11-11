@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://jorgesuarez.com.mx"><img src="docs/readme/banner-en.svg" width="1000" alt="JorgeSuarez.com.mx: 20+ years building games, studios and community, told in one place." /></a>
+<a href="https://jorgesuarez.com.mx/?lang=en"><img src="docs/readme/banner-en.svg" width="1000" alt="JorgeSuarez.com.mx: 20+ years building games, studios and community, told in one place." /></a>
 
 <br />
 
@@ -9,14 +9,14 @@
 
 <br />
 
-**[▶ Visit the site](https://jorgesuarez.com.mx)** · More projects at [github.com/jorgefsb](https://github.com/jorgefsb)
+**[▶ Visit the site](https://jorgesuarez.com.mx/?lang=en)** · More projects at [github.com/jorgefsb](https://github.com/jorgefsb)
 
 </div>
 
 ---
 
 <p align="center"><img src="docs/readme/tour.gif" width="720" alt="Walkthrough of JorgeSuarez.com.mx"></p>
-<p align="center"><sub>Real walkthrough of the live site, recorded 10 Nov 2026 in Chromium (1280×720). No retouching. <a href="docs/readme/tour.mp4">Watch the MP4 video</a></sub></p>
+<p align="center"><sub>Real walkthrough of the live site, recorded 10 Nov 2026 in Chromium (1280×720). No retouching. It plays once; reload the page to watch it again. <a href="docs/readme/tour.mp4">Watch the MP4 video</a></sub></p>
 
 ## What is it?
 
@@ -36,7 +36,7 @@ One place that tells the whole story and sends you to each project. It is built 
 
 ## How do I use it?
 
-1. Go to [jorgesuarez.com.mx](https://jorgesuarez.com.mx).
+1. Go to [jorgesuarez.com.mx](https://jorgesuarez.com.mx/?lang=en).
 2. Switch language with ES / EN.
 3. Use «Juega» to turn the intensity up or down. If your system asks for reduced motion, the page stays still.
 
@@ -48,7 +48,7 @@ It is not the site of Amber or his other companies: each has its own. Do not loo
 
 ## Where can I try it?
 
-Live: **[jorgesuarez.com.mx](https://jorgesuarez.com.mx)**
+Live: **[jorgesuarez.com.mx](https://jorgesuarez.com.mx/?lang=en)**
 
 <p align="center">
   <img src="docs/readme/desktop.jpg" width="620" alt="JorgeSuarez.com.mx on desktop">
@@ -66,12 +66,14 @@ The v1 is backed up in the `v1-final-2026-10-12` tag and the `v1-legacy` branch.
 
 - The v2 source code lives in a private repo. This repo receives the build and publishes it.
 - Rollback to v1: the v2 deploy is a single commit. `git revert` that commit and push to `main`.
-- Cache lock: if you change a CSS or JS file loaded by `index.html`, bump its `?v=` in `index.html`. The `version-assets` workflow checks this on every pull request.
+- Cache lock: if you change a CSS or JS file loaded by `index.html`, bump its `?v=` in `index.html`. The `version-assets` workflow checks this on every pull request, but only for files under `css/` and `js/`. Anything `index.html` loads from `engine/` has to be bumped by hand: there is no lock there.
 - Identity and voice: [brand-guidelines.md](./brand-guidelines.md) and the [BrandKit](https://brandkit.jorgesuarez.com.mx) (both in Spanish).
 
 ## License
 
-No open license. All rights are reserved on the content, the portrait and the brand.
+All rights are reserved on the site content, the portrait and the brand: they carry no open license.
+
+The components bundled with the site keep their MIT license, each with its own file: the scroll engine in `engine/`, which is scroll-craft by Nate Herk ([`engine/LICENSE`](./engine/LICENSE)), and our own effects in `vfx/`: [`vfx/game-feel/1.0.1/LICENSE`](./vfx/game-feel/1.0.1/LICENSE), [`vfx/papacito-juice/1.0.1/LICENSE`](./vfx/papacito-juice/1.0.1/LICENSE) and [`vfx/cursor-liquido/1.0.1/LICENSE`](./vfx/cursor-liquido/1.0.1/LICENSE).
 
 ---
 
