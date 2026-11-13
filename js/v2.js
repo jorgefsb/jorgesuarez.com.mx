@@ -92,7 +92,10 @@
 
   function titleOf(sec) {
     var h = sec.querySelector('h1, h2');
-    return h ? h.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (!h) return '';
+    // Título corto opcional para la barra de banderas: data-quest-es / data-quest-en
+    var corto = h.getAttribute('data-quest-' + (document.documentElement.lang === 'en' ? 'en' : 'es'));
+    return corto || h.textContent.replace(/\s+/g, ' ').trim();
   }
 
   chapters.forEach(function (_, i) {
@@ -295,14 +298,87 @@
   })();
 })();
 
-/* Menú Laboratorio (1-nov-2026): abre y cierra el submenú; Escape o clic afuera lo cierran. */
+/* Menús del header (Laboratorio y Conecta): abren y cierran su submenú; Escape o clic afuera los cierran. */
 (function () {
-  var grp = document.querySelector('.hud__grp');
-  if (!grp) return;
-  var btn = grp.querySelector('.hud__grpbtn');
-  function set(open) { grp.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); }
-  btn.addEventListener('click', function (e) { e.stopPropagation(); set(!grp.classList.contains('is-open')); });
-  document.addEventListener('click', function (e) { if (!grp.contains(e.target)) set(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-  grp.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  var grps = Array.prototype.slice.call(document.querySelectorAll('.hud__grp'));
+  if (!grps.length) return;
+  function set(grp, open) {
+    grp.classList.toggle('is-open', open);
+    grp.querySelector('.hud__grpbtn').setAttribute('aria-expanded', String(open));
+  }
+  grps.forEach(function (grp) {
+    grp.querySelector('.hud__grpbtn').addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !grp.classList.contains('is-open');
+      grps.forEach(function (g) { set(g, g === grp ? open : false); });
+    });
+    grp.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(grp, false); }); });
+  });
+  document.addEventListener('click', function (e) { grps.forEach(function (g) { if (!g.contains(e.target)) set(g, false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') grps.forEach(function (g) { set(g, false); }); });
+})();
+
+/* Tablero «Alcance de la marca» (9-nov-2026): lee data/alcance.json, pinta las letras
+   y las hace girar como tablero de estación la primera vez que se ve. Sin datos, se queda lo que ya trae el HTML. */
+(function () {
+  var fb = document.querySelector('[data-flapboard]');
+  if (!fb) return;
+  var board = fb.querySelector('[data-fb-board]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var CH = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,';
+  var MES = { es: ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'], en: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] };
+  var data = null, played = false;
+  function lang() { return document.documentElement.lang === 'en' ? 'en' : 'es'; }
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function cells(text, from) {
+    return text.split('').map(function (c, i) {
+      return '<span class="fb__c' + (c === ' ' ? ' fb__c--b' : '') + (i >= from && c !== ' ' ? ' fb__c--n' : '') + '">' + c + '</span>';
+    }).join('');
+  }
+  function render() {
+    if (!data) return;
+    var L = lang(), lbl = L === 'en' ? 'FOLLOWERS ' : 'SEGUIDORES ';
+    var html = '<div class="fb__row fb__row--total" aria-hidden="true">' + cells(lbl + fmt(data.seguidores_total), lbl.length) + '</div>';
+    html += '<div class="fb__cols" aria-hidden="true"><span>' + (L === 'en' ? 'Network' : 'Red') + '</span><span>' + (L === 'en' ? 'Followers' : 'Seguidores') + '</span></div>';
+    data.redes.forEach(function (r, i) {
+      var v = fmt(r.seguidores), name = r.red.toUpperCase(), w = 21;
+      var t = (name + new Array(w).join(' ')).slice(0, w - v.length) + v;
+      html += '<div class="fb__row' + (i >= 3 ? ' fb__row--extra' : '') + '" aria-hidden="true">' + cells(t, w - v.length) + '</div>';
+    });
+    board.innerHTML = html;
+    var d = (data.corte || '').split('-');
+    var dateEl = fb.querySelector('[data-fb-date]');
+    if (d.length === 3 && dateEl) {
+      var m = MES[L][Number(d[1]) - 1], dd = Number(d[2]);
+      dateEl.textContent = L === 'en' ? 'As of ' + m + ' ' + dd + ', ' + d[0] : 'Corte: ' + dd + ' ' + m + ' ' + d[0];
+    }
+    var sr = fb.querySelector('[data-fb-sr]');
+    if (sr) sr.textContent = fmt(data.seguidores_total) + (L === 'en' ? ' followers across ' : ' seguidores en ') + data.perfiles + (L === 'en' ? ' profiles. ' : ' perfiles. ') +
+      data.redes.map(function (r) { return r.red + ': ' + fmt(r.seguidores); }).join('; ') + '.';
+  }
+  function play() {
+    if (reduce) return;
+    Array.prototype.forEach.call(board.querySelectorAll('.fb__row'), function (row, r) {
+      Array.prototype.forEach.call(row.children, function (c, i) {
+        var target = c.textContent;
+        if (target === ' ') return;
+        var steps = 6 + Math.floor(Math.random() * 9), start = (CH.indexOf(target) - steps + CH.length) % CH.length, k = 0;
+        c.textContent = ' ';
+        setTimeout(function tick() {
+          c.textContent = CH[(start + k) % CH.length];
+          c.classList.remove('is-flip'); void c.offsetWidth; c.classList.add('is-flip');
+          if (k++ < steps) setTimeout(tick, 60); else c.textContent = target;
+        }, r * 130 + i * 34);
+      });
+    });
+  }
+  fetch('data/alcance.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { if (j && j.redes) { data = j; if (!played) render(); } }).catch(function () {});
+  new MutationObserver(function () { render(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting && !played) { played = true; io.disconnect(); play(); }
+    }, { threshold: .5 });
+    io.observe(board);
+  }
 })();
